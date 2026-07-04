@@ -19,9 +19,9 @@
       <nav class="navlinks">
         <a href="#about">簡介</a>
         <a href="#academic">學業</a>
-        <a href="#projects">專題</a>
-        <a href="#awards">競賽</a>
-        <a href="#skills">能力</a>
+        <a href="#projects">研究與專題</a>
+        <a href="#awards">競賽與證明</a>
+        <a href="#skills">能力與專長</a>
         <a href="#docs">附件</a>
       </nav>
 
@@ -45,7 +45,10 @@
               class="heroMainImage" 
               alt="個人展示圖片"
               onclick="openImage('assets/images/hero_exhibition.jpg')"
+              
             >
+            <p style="color:#69696d;">我畢業於嘉義高中數理資優班,從小就是教育部檢定的數理資優生,從國小、國中、高中,就開始參加許多競賽,包含奧林匹克、科展、發明展、旺宏科學獎等等的競賽。其中有些得到不錯的名次。<br>大學經由特殊選才考上成功大學電機工程學系目前是二年級學生(暑假升三年級)，研究聚焦於數位邏輯、電路系統、嵌入式感測、Arduino與樹梅派、程式語言 python/C++/Qt 應用與 AI 技術整合。從國小科展、國中 AIoT 機器人、高中 SpeakGrader，到大學的 K-map/QM 布林化簡、IoT 感測模組與 C++ 系統開發，我累積了跨領域軟硬體整合與專題實作經驗。<strong>未來希望以數位 IC 設計為主要研究方向並透過大專研究專題建立研究基礎，銜接未來申請預研生就讀成大電機工程研究所。</strong>。</p>
+
           </div>
 
           <div class="heroActions">
@@ -81,11 +84,13 @@
           </div>
 
           <div class="tagrow">
-            <span class="tag">成大電機</span>
-            <span class="tag">數理資優背景</span>
-            <span class="tag">C++/Qt</span>
+            <span class="tag">嘉義高中數理資優班/成大電機</span>
+            <span class="tag">從小教育檢部定數理資優生背景</span>
+            <span class="tag">從國小開始參加競賽奧林匹克/科展/發明展/旺宏科學獎</span>
+            <span class="tag">python/C++/Qt</span>
             <span class="tag">AIoT</span>
-            <span class="tag">AI/NLP</span>
+            <span class="tag">AI/NLP/OpenCV(電腦視覺)</span>
+            <span class="tag">Arduino/Raspberry Pi</span>
             <span class="tag">跨領域軟硬體整合</span>
           </div>
         </aside>
@@ -97,10 +102,10 @@
       <div class="container">
         <div class="sectionHead">
           <div>
-            <h2>學業成績與排名</h2>
-            <p class="sub">以下依據成大中文成績單與排名圖片整理，適合放在特殊選才、專題申請、指導教授面談或研究計畫履歷中。</p>
+            <h2 style="color:#991ee5;">個人定位與履歷摘要</h2>
+            <p class="sub">以下依據成大中文成績單與排名圖片整理。</p>
           </div>
-          <button class="smallBtn" onclick="openImage('assets/images/rank.png','學期排名')">查看排名圖片</button>
+          <button class="smallBtn" onclick="openImage('assets/images/rank.png','學期排名')" style="color:#e51e1e;">查看排名圖片</button>
         </div>
 
         <div class="grid cols2">
@@ -290,6 +295,30 @@
             </div>
           </article>
 
+
+
+          <article class="card project" data-type="logic">
+            <div class="thumb">
+              <img src="assets/thumbs/lab7_vlsi_cad.jpg" alt="VLSI CAD Lab7 Draw Bounding Box Engine">
+            </div>
+            <div>
+              <div class="accent"></div>
+              <h3>VLSI CAD Lab7：Draw Bounding Box Engine</h3>
+              <p><b>Verilog RTL / FSM / SRAM / 8-Connected CCL / Synthesis</b></p>
+              <p>以硬體 RTL 完成 256×256 RGB 影像處理管線，包含灰階轉換、3×3 Gaussian Filter、Otsu Threshold、Auto-Polarity、8-connected CCL、Bounding Box Extraction 與綠色框線 Overlay。RTL 與 Gate-level P1～P4 皆 0 errors，SuperLint coverage 90.25%。</p>
+              <div class="meta">
+                <span class="mini">VLSI CAD</span>
+                <span class="mini">Class A</span>
+                <span class="mini">Pixel-perfect</span>
+                <span class="mini">可開啟附件</span>
+              </div>
+              <div class="cardActions">
+                <button class="smallBtn" onclick="openDoc('assets/docs/lab7_vlsi_cad.pdf','VLSI CAD Lab7：Draw Bounding Box Engine')">預覽 PDF</button>
+                <a class="smallBtn" target="_blank" href="assets/docs/lab7_vlsi_cad.pdf">外部開啟</a>
+              </div>
+            </div>
+          </article>
+
           <article class="card project" data-type="ai">
             <div class="thumb">
               <img src="assets/thumbs/speakgrader_wanghong.jpg" alt="SpeakGrader 英語口語 AI 自動分級與回饋系統">
@@ -356,7 +385,7 @@
 
           <div class="card">
             <h3>硬體與電機</h3>
-            <p>ESP32、Arduino、HX711、DHT11、OLED、I2C、UART、Wi-Fi、LINE API、Fritzing 接線設計。</p>
+            <p>ESP32、Arduino、Raspberry Pi、HX711、DHT11、OLED、I2C、UART(非同步串列通訊)、Wi-Fi、LINE API、Fritzing 接線設計。</p>
             <p>Embedded / ESP32</p>
             <div class="bar"><i style="--w:84%"></i></div>
             <p>Digital Logic</p>
@@ -690,6 +719,20 @@
             <div class="cardActions">
               <button class="smallBtn" onclick="openDoc('assets/docs/qm_hw2.pdf','邏輯系統 HW2')">網頁內預覽</button>
               <a class="smallBtn" target="_blank" href="assets/docs/qm_hw2.pdf">外部開啟</a>
+            </div>
+          </article>
+
+
+
+          <article class="card doc">
+            <div class="thumb">
+              <img src="assets/thumbs/lab7_vlsi_cad.jpg" onerror="this.src='assets/thumbs/competition_map.jpg'" alt="VLSI CAD Lab7 Draw Bounding Box Engine">
+            </div>
+            <h3>VLSI CAD Lab7 報告</h3>
+            <p>Draw Bounding Box Engine：Verilog RTL、FSM、SRAM、Otsu、8-connected CCL、Synthesis 與 Gate-level verification。</p>
+            <div class="cardActions">
+              <button class="smallBtn" onclick="openDoc('assets/docs/lab7_vlsi_cad.pdf','VLSI CAD Lab7 報告')">網頁內預覽</button>
+              <a class="smallBtn" target="_blank" href="assets/docs/lab7_vlsi_cad.pdf">外部開啟</a>
             </div>
           </article>
 
