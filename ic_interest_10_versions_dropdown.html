@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IC 設計興趣緣由 10 個版本比較</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  padding:32px;
+  font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;
+  background:linear-gradient(135deg,#eef6ff,#f8fafc);
+  color:#172033;
+  line-height:1.75;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  background:#fff;
+  border-radius:22px;
+  padding:34px;
+  box-shadow:0 18px 45px rgba(15,23,42,.12);
+}
+h1{text-align:center;margin:0;color:#0f172a;font-size:32px}
+.subtitle{text-align:center;color:#64748b;margin:8px 0 28px}
+.rank{
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  border-radius:16px;
+  padding:18px 22px;
+  margin-bottom:24px;
+}
+.rank strong{color:#1d4ed8}
+.card{
+  border:1px solid #d8e2ef;
+  border-radius:16px;
+  margin:14px 0;
+  overflow:hidden;
+  background:#f8fafc;
+}
+.card.best{border:2px solid #38bdf8}
+summary{
+  cursor:pointer;
+  list-style:none;
+  padding:18px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  font-size:19px;
+  font-weight:800;
+  background:linear-gradient(90deg,#e0f2fe,#f8fafc);
+}
+summary::-webkit-details-marker{display:none}
+.score{
+  min-width:92px;
+  text-align:center;
+  padding:6px 12px;
+  border-radius:999px;
+  background:#ecfdf5;
+  color:#047857;
+  font-size:15px;
+  font-weight:800;
+}
+.content{padding:22px;background:#fff}
+.tag{
+  display:inline-block;
+  margin:0 8px 8px 0;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#e0f2fe;
+  color:#0369a1;
+  font-weight:700;
+  font-size:14px;
+}
+h3{margin:14px 0 8px;color:#0f172a}
+textarea{
+  width:100%;
+  min-height:145px;
+  border:1px solid #cbd5e1;
+  border-radius:12px;
+  padding:14px;
+  font-size:16px;
+  line-height:1.8;
+  resize:vertical;
+  font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;
+  background:#fcfcfd;
+}
+button{
+  margin-top:12px;
+  border:0;
+  border-radius:10px;
+  padding:10px 16px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  font-weight:800;
+}
+button:hover{background:#1d4ed8}
+.comment{
+  background:#fff7ed;
+  border-left:5px solid #fb923c;
+  border-radius:10px;
+  padding:12px 16px;
+  margin:0;
+}
+.footer{
+  margin-top:28px;
+  padding:18px;
+  border-radius:14px;
+  background:#f1f5f9;
+  color:#334155;
+}
+@media (max-width:700px){
+  body{padding:14px}
+  .container{padding:18px}
+  summary{font-size:16px;align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>IC 設計興趣緣由：10 個版本下拉式比較</h1>
+  <p class="subtitle">每個版本皆附標題、內容、評分與評語，可直接複製貼到 Google 表單。</p>
+  <div class="rank">
+    <strong>推薦順序：</strong>版本 7（97）＞ 版本 10（96）＞ 版本 5（95）＞ 版本 6（94）＞ 版本 3（92）。
+    <br>若是申請數位 IC／VLSI CAD 專題，最推薦使用 <strong>版本 7</strong>。
+  </div>
+  
+    <details class="card">
+      <summary>
+        <span>版本 1｜完整歷程型</span>
+        <span class="score">88 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">完整背景</span><span class="tag">AIoT</span><span class="tag">VLSI/CAD</span></div>
+        <h3>內容</h3>
+        <textarea id="v1" readonly>我對 IC 設計的興趣，源自於長期累積的研究與實作歷程。國中時，我以 AIoT 智慧機器人為專題，整合 Raspberry Pi、Arduino、電腦視覺、人工智慧及感測控制，建立系統整合的能力；高中則進一步開發 AI 英語口說評量系統，累積大型軟體設計與跨領域研究經驗。進入成功大學電機工程學系後，我開始系統性學習電子學、電路學、邏輯系統、VLSI CAD 等核心課程，並完成 Karnaugh Map、Quine–McCluskey 自動化化簡工具及 Verilog RTL 設計等專題，使我體會到數位電路能將抽象理論轉化為實際晶片設計的魅力，也更加確立投入數位 IC 設計、RTL 與 VLSI/CAD 領域的志向，希望未來能持續精進晶片設計能力並投入相關研究。</textarea>
+        <button onclick="copyText('v1')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">內容完整，能說明 AIoT、高中 AI 與大學 IC 課程連結；但文字較長，重點稍分散。</p>
+      </div>
+    </details>
+    
+    <details class="card">
+      <summary>
+        <span>版本 2｜課程地圖銜接型</span>
+        <span class="score">90 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">課程地圖</span><span class="tag">ASIC</span><span class="tag">實務開發</span></div>
+        <h3>內容</h3>
+        <textarea id="v2" readonly>我對 IC 設計的興趣，源自於長期累積的研究與實作經驗。國中時，我以 AIoT 智慧機器人為專題，開始接觸嵌入式系統與軟硬體整合；高中則開發 AI 英語口說評量系統，累積大型軟體設計與跨領域研究能力。進入成功大學電機工程學系後，我開始依據系上的數位 IC 課程地圖，有系統地修習電子學、電路學、邏輯系統及 VLSI CAD 等核心課程，並完成 Karnaugh Map、Quine–McCluskey 自動化化簡工具及 Verilog RTL 設計等專題。透過理論學習與實作驗證，我逐漸了解數位 IC 從 RTL 設計、邏輯最佳化到晶片實現的完整流程，也更加確立投入數位 IC、ASIC 與 VLSI/CAD 領域研究的目標，希望未來持續精進晶片設計能力，參與相關研究與實務開發。</textarea>
+        <button onclick="copyText('v2')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">加入課程地圖與 ASIC/VLSI/CAD 目標，結構比版本 1 更清楚，適合一般申請表。</p>
+      </div>
+    </details>
+    
+    <details class="card">
+      <summary>
+        <span>版本 3｜興趣形成與硬體實現型</span>
+        <span class="score">92 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">動機清楚</span><span class="tag">硬體實現</span><span class="tag">架構結合</span></div>
+        <h3>內容</h3>
+        <textarea id="v3" readonly>我對 IC 設計的興趣，並非一開始就鎖定晶片設計，而是在 AI、嵌入式系統與系統整合的實作歷程中逐步形成。國中、高中累積了人工智慧、程式設計及硬體控制等專題經驗，進入成功大學電機工程學系後，我開始系統性修習電子學、邏輯系統、計算機組織及 VLSI CAD 等核心課程，並完成 Verilog RTL、數位邏輯設計及 VLSI CAD 實作。透過課程與實驗，我深入了解數位 IC 從 RTL 設計、邏輯最佳化、功能驗證到硬體實現的完整流程，更體會到晶片設計是軟體演算法與硬體架構結合的核心技術，因此希望持續投入數位 IC 與 VLSI/CAD 領域的研究。</textarea>
+        <button onclick="copyText('v3')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">強調興趣是逐步形成，並點出晶片設計是軟體演算法與硬體架構的結合，說服力佳。</p>
+      </div>
+    </details>
+    
+    <details class="card">
+      <summary>
+        <span>版本 4｜成長歷程型｜★★★★★ 推薦，成長歷程型</span>
+        <span class="score">91 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">成長歷程</span><span class="tag">專題實作</span><span class="tag">穩健</span></div>
+        <h3>內容</h3>
+        <textarea id="v4" readonly>我對 IC 設計的興趣，是在長期學習與專題實作中逐漸形成的。國中、高中時，我投入 AIoT、人工智慧、程式設計及資訊專題研究，累積了嵌入式系統與軟硬體整合的實作經驗。進入成功大學電機工程學系後，我開始有系統地修習電子學、邏輯系統、計算機組織及 VLSI CAD 等核心課程，並完成 Verilog RTL 設計與數位系統相關專題。透過課程與實驗，我逐步了解數位 IC 從 RTL 設計、邏輯最佳化、功能驗證到晶片實現的完整流程，也更加確立投入數位 IC 與 VLSI/CAD 領域研究的目標，希望未來持續精進晶片設計能力，並投入相關研究與實務開發。</textarea>
+        <button onclick="copyText('v4')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">成長歷程清楚，從國高中到大學銜接自然；但專業成果細節略少。</p>
+      </div>
+    </details>
+    
+    <details class="card best">
+      <summary>
+        <span>版本 5｜能力導向型｜★★★★★ 推薦，教授最喜歡，能力導向</span>
+        <span class="score">95 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">能力導向</span><span class="tag">Verilog RTL</span><span class="tag">Synthesis</span></div>
+        <h3>內容</h3>
+        <textarea id="v5" readonly>我對 IC 設計的興趣，源自於希望將演算法與系統設計真正落實到硬體實現。過去我曾參與 AI、嵌入式系統及軟硬體整合等專題，培養程式設計與系統開發能力；進入成功大學電機工程學系後，透過電子學、邏輯系統及 VLSI CAD 等課程，以及 Verilog RTL 與數位電路實作，我逐漸理解數位 IC 從架構設計、RTL 開發、邏輯最佳化、功能驗證到晶片實現的完整流程。在 VLSI CAD 實驗中，我以 Verilog 完成影像處理硬體設計並通過 RTL 與 Synthesis 驗證，更讓我體會晶片設計結合理論與實作的挑戰與成就感，因此希望持續投入數位 IC 設計與 VLSI/CAD 相關研究。</textarea>
+        <button onclick="copyText('v5')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">能力導向強，具體寫到 Verilog RTL、VLSI CAD、RTL 與 Synthesis 驗證，很適合 IC 教授閱讀。</p>
+      </div>
+    </details>
+    
+    <details class="card">
+      <summary>
+        <span>版本 6｜學習歷程推薦型｜★★★★★ 最推薦：學習歷程型</span>
+        <span class="score">94 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">最推薦</span><span class="tag">學習歷程</span><span class="tag">Google Form</span></div>
+        <h3>內容</h3>
+        <textarea id="v6" readonly>我對 IC 設計的興趣並非一開始就鎖定晶片設計，而是在長期專題研究與工程實作中逐漸形成。國中投入 AIoT 智慧機器人研究，高中完成 AI 英語口說評量系統，累積人工智慧、嵌入式系統與軟硬體整合能力。進入成功大學電機系後，我依循數位 IC 課程地圖，有系統修習電子學、邏輯系統、計算機組織及 VLSI CAD 等核心課程，並完成 Verilog RTL、Karnaugh Map、Quine–McCluskey 及 VLSI CAD 等專題。我發現自己最有興趣的是將演算法與系統架構透過硬體設計實現，因此希望投入數位 IC 與 VLSI/CAD 領域，持續精進晶片設計能力。</textarea>
+        <button onclick="copyText('v6')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">故事性與專業性兼具，能呈現 AI→嵌入式→數位 IC 的完整路徑，適合 Google Form。</p>
+      </div>
+    </details>
+    
+    <details class="card best" open>
+      <summary>
+        <span>版本 7｜教授最喜歡能力型｜★★★★★ 教授最喜歡：能力導向</span>
+        <span class="score">97 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">最高分</span><span class="tag">RTL/Gate-level</span><span class="tag">IC 味道</span></div>
+        <h3>內容</h3>
+        <textarea id="v7" readonly>我對 IC 設計的興趣，源自於希望將軟體演算法真正落實到硬體實現。過去透過 AI、嵌入式系統及系統整合專題，建立了程式設計與系統開發能力；進入成功大學後，我依照數位 IC 課程地圖，逐步修習電子學、邏輯系統、計算機組織及 VLSI CAD 等課程，並完成 Verilog RTL 硬體設計實作。在 VLSI CAD 實驗中，我以 Verilog 完成 Draw Bounding Box Engine，並完成 RTL 與 Gate-level 驗證，使我深入理解數位 IC 的設計流程，更確立未來投入 RTL、ASIC 與 VLSI/CAD 研究的目標。</textarea>
+        <button onclick="copyText('v7')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">最精準、最有 IC 味道，直接呈現 Draw Bounding Box Engine、RTL/Gate-level 驗證與 RTL/ASIC/VLSI CAD 目標。</p>
+      </div>
+    </details>
+    
+    <details class="card">
+      <summary>
+        <span>版本 8｜課程規劃型｜★★★★★ 課程規劃型</span>
+        <span class="score">89 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">課程規劃</span><span class="tag">理論基礎</span><span class="tag">穩健型</span></div>
+        <h3>內容</h3>
+        <textarea id="v8" readonly>進入成功大學電機工程學系後，我參考數位 IC 課程地圖規劃自己的修課方向，循序修習電子學、邏輯系統、計算機組織、資料結構及 VLSI CAD 等課程，逐步建立數位 IC 所需的理論基礎。配合課堂專題，我完成 Verilog RTL、數位邏輯最佳化、Karnaugh Map 自動化化簡及 VLSI CAD 等實作，讓我從課本知識延伸到實際硬體設計，也更加了解 RTL、功能驗證與晶片設計流程。我希望未來能持續投入數位 IC 設計與 VLSI/CAD 領域，培養完整的晶片設計能力。</textarea>
+        <button onclick="copyText('v8')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">課程規劃清楚，適合說明修課方向；但個人特色與研究故事較弱。</p>
+      </div>
+    </details>
+    
+    <details class="card">
+      <summary>
+        <span>版本 9｜研究動機型｜★★★★★ 研究動機型</span>
+        <span class="score">90 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">研究動機</span><span class="tag">工程解題</span><span class="tag">半導體</span></div>
+        <h3>內容</h3>
+        <textarea id="v9" readonly>從國中 AIoT、到高中 AI 系統開發，再到大學電機專業課程，我的學習歷程始終圍繞著「如何利用工程技術解決問題」。進入大學後，隨著電子學、邏輯系統、VLSI CAD 等課程的學習，以及 Verilog RTL 與數位系統專題實作，我逐漸發現數位 IC 設計能將演算法、電路與硬體架構整合於單一晶片中，深深吸引我投入相關領域。因此，希望透過專題研究深入學習 RTL 設計、EDA 工具及 ASIC 設計流程，為未來投入半導體產業奠定扎實基礎。</textarea>
+        <button onclick="copyText('v9')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">研究動機自然，強調工程解題與半導體產業；但具體成果較少。</p>
+      </div>
+    </details>
+    
+    <details class="card best">
+      <summary>
+        <span>版本 10｜邱瀝毅老師方向型｜★★★★★ 最符合邱瀝毅老師方向</span>
+        <span class="score">96 / 100</span>
+      </summary>
+      <div class="content">
+        <div class="tags"><span class="tag">邱瀝毅老師方向</span><span class="tag">EDA</span><span class="tag">VLSI/CAD</span></div>
+        <h3>內容</h3>
+        <textarea id="v10" readonly>我對 IC 設計的興趣，是在專題研究與大學專業課程中逐步建立的。國中、高中累積 AI、嵌入式系統及跨領域整合經驗後，進入成功大學電機系，我依循數位 IC 課程地圖修習電子學、邏輯系統、計算機組織及 VLSI CAD 等課程，並完成 Verilog RTL、數位邏輯最佳化及 Draw Bounding Box Engine 等專題實作。透過這些經驗，我更加理解數位 IC 從 RTL 設計、邏輯最佳化、功能驗證到晶片實現的完整流程，也希望未來能加入實驗室，深入學習 EDA 工具、數位 IC 設計及 VLSI/CAD 相關研究，持續提升自己的研究與實作能力。</textarea>
+        <button onclick="copyText('v10')">複製此版本</button>
+        <h3>評分說明</h3>
+        <p class="comment">最符合 VLSI/CAD 實驗室方向，包含 EDA 工具、Draw Bounding Box Engine 與加入實驗室目標。</p>
+      </div>
+    </details>
+    
+  <div class="footer">
+    <strong>總評：</strong>版本 7 最精準，能直接呈現 AI／嵌入式背景、大學 IC 課程、Verilog RTL、Draw Bounding Box Engine、RTL 與 Gate-level 驗證，最適合 IC 設計教授閱讀。
+  </div>
+</div>
+<script>
+function copyText(id){
+  const el=document.getElementById(id);
+  el.removeAttribute('readonly');
+  el.select();
+  el.setSelectionRange(0,99999);
+  document.execCommand('copy');
+  el.setAttribute('readonly','readonly');
+  alert('已複製此版本內容');
+}
+</script>
+</body>
+</html>
