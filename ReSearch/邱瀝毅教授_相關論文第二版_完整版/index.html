@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>邱瀝毅教授近年研究與學生論文研究地圖</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#172033;--muted:#5f6b7d;--line:#dce3ee;--blue:#1d4ed8;--cyan:#0891b2;--violet:#7c3aed;--green:#15803d;--orange:#c2410c;}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.75}
+header{background:linear-gradient(135deg,#0f172a,#1d4ed8 55%,#0891b2);color:#fff;padding:64px 24px 54px}
+.wrap{max-width:1200px;margin:auto} h1{font-size:clamp(30px,5vw,56px);line-height:1.15;margin:0 0 18px} h2{font-size:30px;margin:0 0 16px}
+.subtitle{font-size:18px;max-width:900px;opacity:.92} .pill{display:inline-block;border:1px solid #ffffff55;border-radius:999px;padding:6px 13px;margin:5px;background:#ffffff18}
+nav{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:16px;overflow:auto;padding:11px 20px} nav a{white-space:nowrap;color:#243047;text-decoration:none;font-weight:700}
+section{padding:56px 22px} .panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 12px 35px #14213d0d}
+.summary-grid,.prof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px} .stat strong{font-size:34px;color:var(--blue)}
+.prof-card{border-left:5px solid var(--blue);background:#f8fbff;border-radius:12px;padding:16px 18px}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch}
+.time{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;position:relative}
+.time b{color:var(--blue)} .time:after{content:"→";position:absolute;right:-14px;top:42%;font-size:24px;color:#7b8798} .time:last-child:after{display:none}
+.flow{overflow:auto;background:#0b1220;border-radius:20px;padding:18px} svg text{font-family:"Microsoft JhengHei",sans-serif}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0} button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;cursor:pointer;font-weight:700} button.active{background:var(--blue);color:white}
+.thesis-list{display:grid;gap:18px} .thesis-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 9px 24px #13203a0b}
+.thesis-card h3{margin:10px 0 4px;font-size:21px;line-height:1.45} .card-head{display:flex;gap:8px;flex-wrap:wrap} .badge{border-radius:999px;padding:4px 10px;font-size:13px;font-weight:800} .year{background:#dbeafe;color:#1e40af} .cat{background:#ede9fe;color:#5b21b6}
+.meta,.note{color:var(--muted);font-size:14px} .detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:15px} .detail-grid>div{background:#f8fafc;border-radius:12px;padding:12px} .detail-grid p{margin:3px 0}
+.paper{border-left:5px solid var(--cyan);padding:18px;background:#f0fbfd;border-radius:14px;margin:12px 0} .paper h3{margin:0 0 4px}
+.warning{background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;padding:15px}
+.docs li{margin:8px 0} .docs a{color:var(--blue);font-weight:700}
+footer{padding:35px 22px;background:#0f172a;color:#dbeafe}
+@media(max-width:850px){.timeline{grid-template-columns:1fr}.time:after{display:none}.detail-grid{grid-template-columns:1fr}}
+@media print{nav,.filters{display:none} body{background:#fff} section{padding:24px} .panel,.thesis-card{box-shadow:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="pill">Digital IC</div><div class="pill">Low-Power VLSI</div><div class="pill">SRAM-CIM</div><div class="pill">AI Accelerator</div><div class="pill">Hardware Security</div>
+  <h1>邱瀝毅教授<br>近年研究與學生論文研究地圖</h1>
+  <p class="subtitle">整合教授學經歷、長期研究計畫、2022–2025（111–113學年度）近年學生論文、2024代表性發表，以及可下載的早期完整論文 PDF。適合專題申請、面談準備、研究方向選擇與文獻閱讀。</p>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#overview">總覽</a><a href="#professor">教授研究</a><a href="#evolution">研究演進</a><a href="#map">研究流程圖</a><a href="#recent">近年學生論文</a><a href="#papers">代表論文</a><a href="#docs">附件</a><a href="#strategy">申請切入策略</a>
+</div></nav>
+
+<section id="overview"><div class="wrap">
+<h2>一頁總覽</h2>
+<div class="summary-grid">
+<div class="stat"><strong>22</strong><br>111–113學年度近年論文</div>
+<div class="stat"><strong>10</strong><br>CIM／記憶體內運算主題</div>
+<div class="stat"><strong>5</strong><br>AI 加速器／多核心架構</div>
+<div class="stat"><strong>5</strong><br>硬體安全與可信運算</div>
+</div>
+<div class="panel" style="margin-top:18px">
+<p><b>核心結論：</b>邱老師的研究已由早期「低功率 VLSI、可重組系統、GPU 功率與熱管理」逐步收斂至「SRAM Compute-in-Memory、AI 加速器、多核心／NoC、Transformer 映射、VLSI CAD 快速分析，以及 AI／記憶體／微架構安全」。其中，<b>高能源效率</b>與<b>減少資料搬移</b>是貫穿二十多年研究的共同主軸。</p>
+</div>
+</div></section>
+
+<section id="professor"><div class="wrap">
+<h2>教授本身的研究方向與研究重點</h2>
+<div class="prof-grid"><div class='prof-card'><h3>低功率 VLSI 與能源效率</h3><p>長期核心。從低功率多媒體 SoC、DVFS、Clock/Power Gating、3D IC 熱管理，到 GPU 與邊緣 AI 的能耗最佳化。</p></div>
+<div class='prof-card'><h3>SRAM／非揮發記憶體／Compute-in-Memory</h3><p>從近臨界 SRAM、NVSRAM、RRAM，到多位元 SRAM-CIM 與多瓦片 CIM；近年主軸最集中於記憶體中心 AI 運算。</p></div>
+<div class='prof-card'><h3>AI 加速器與多核心架構</h3><p>涵蓋 NVDLA、多核心加速器、Transformer 映射、向量—張量融合核心、NoC 與片外記憶體流量最佳化。</p></div>
+<div class='prof-card'><h3>硬體安全與可信系統</h3><p>PUF、RISC-V Root of Trust、Secure Boot、AES、模型竊取防護、快取／TLB／DRAM／分支預測側信道防禦。</p></div>
+<div class='prof-card'><h3>VLSI CAD 與快速設計探索</h3><p>電子系統層級模型、功率與熱分析引擎、CIM Profiler、可參數化模擬器與設計空間探索。</p></div>
+<div class='prof-card'><h3>可重組系統與 FPGA</h3><p>從早期低功率可重組處理器，到嵌入式 FPGA 終端系統，強調應用彈性與軟硬體協同設計。</p></div></div>
+<div class="panel" style="margin-top:18px">
+<h3>學術與行政定位</h3>
+<p>成大電機學士、美國路易斯安那大學計算機工程碩士、普渡大學電機與計算機工程博士；2003年起任教成大，2020年升任教授，並擔任電機工廠主任與晶片設計學位學程主任。長期課程涵蓋 VLSI 系統設計、前瞻 VLSI、VLSI CAD、低功率 VLSI、數位設計硬體描述語言與低功率系統設計。</p>
+<h3>研究方法特徵</h3>
+<p>研究通常跨越「電路—微架構—系統—CAD」四個層次：先建立工作負載與瓶頸模型，再提出可實作的硬體架構，最後以模擬器、RTL、電路模擬、PPA 或晶片下線驗證。這也是 LPHP Lab 與純演算法型 AI 實驗室最大的差異。</p>
+</div>
+</div></section>
+
+<section id="evolution"><div class="wrap">
+<h2>研究演進時間軸</h2>
+<div class="timeline">
+<div class="time"><b>2004–2009</b><br>低功率可重組系統、多媒體 SoC、ESL 功率評估</div>
+<div class="time"><b>2010–2015</b><br>多核心、3D IC、DVFS、功率與熱管理</div>
+<div class="time"><b>2016–2018</b><br>GPU、HSA/OpenCL、非揮發處理器、IoT</div>
+<div class="time"><b>2018–2021</b><br>終端 AI 處理器、PUF、RISC-V、安全微系統</div>
+<div class="time"><b>2022–2025</b><br>SRAM-CIM、Transformer、NVDLA、NoC、AI 模型保護</div>
+</div>
+</div></section>
+
+<section id="map"><div class="wrap">
+<h2>整體研究流程圖</h2>
+<div class="flow">
+<svg width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-label="邱瀝毅教授研究架構圖">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker></defs>
+<rect x="390" y="20" width="340" height="70" rx="18" fill="#1d4ed8"/><text x="560" y="51" text-anchor="middle" fill="white" font-size="25" font-weight="700">高能源效率智慧晶片</text><text x="560" y="77" text-anchor="middle" fill="#dbeafe" font-size="15">Performance / Power / Area / Security</text>
+<g fill="#13203a" stroke="#60a5fa" stroke-width="2">
+<rect x="40" y="150" width="220" height="90" rx="16"/><rect x="310" y="150" width="220" height="90" rx="16"/><rect x="580" y="150" width="220" height="90" rx="16"/><rect x="850" y="150" width="220" height="90" rx="16"/>
+</g>
+<g fill="white" font-size="18" font-weight="700" text-anchor="middle">
+<text x="150" y="185">記憶體與 CIM</text><text x="150" y="214" font-size="14" font-weight="400">SRAM / RRAM / NVSRAM</text>
+<text x="420" y="185">AI 加速器</text><text x="420" y="214" font-size="14" font-weight="400">NVDLA / Transformer / Tensor</text>
+<text x="690" y="185">硬體安全</text><text x="690" y="214" font-size="14" font-weight="400">PUF / RoT / Side-channel</text>
+<text x="960" y="185">VLSI CAD</text><text x="960" y="214" font-size="14" font-weight="400">Profiler / ESL / DSE</text>
+</g>
+<g stroke="#93c5fd" stroke-width="3" marker-end="url(#arr)">
+<line x1="520" y1="90" x2="180" y2="150"/><line x1="540" y1="90" x2="430" y2="150"/><line x1="580" y1="90" x2="680" y2="150"/><line x1="610" y1="90" x2="930" y2="150"/>
+</g>
+<rect x="150" y="315" width="820" height="76" rx="20" fill="#0e7490"/><text x="560" y="347" text-anchor="middle" fill="white" font-size="23" font-weight="700">系統級整合：多核心 / NoC / 記憶體階層 / 排程 / DVFS</text><text x="560" y="375" text-anchor="middle" fill="#cffafe" font-size="15">把電路巨集擴展成可執行真實 AI 工作負載的完整平台</text>
+<g stroke="#67e8f9" stroke-width="3" marker-end="url(#arr)"><line x1="150" y1="240" x2="290" y2="315"/><line x1="420" y1="240" x2="470" y2="315"/><line x1="690" y1="240" x2="650" y2="315"/><line x1="960" y1="240" x2="830" y2="315"/></g>
+<rect x="340" y="440" width="440" height="58" rx="18" fill="#15803d"/><text x="560" y="477" text-anchor="middle" fill="white" font-size="21" font-weight="700">邊緣 AI / IoT / 安全智慧終端</text>
+<line x1="560" y1="391" x2="560" y2="440" stroke="#86efac" stroke-width="3" marker-end="url(#arr)"/>
+</svg>
+</div>
+</div></section>
+
+<section id="recent"><div class="wrap">
+<h2>2022–2025 近年學生論文</h2>
+<div class="warning">「111、112、113學年度」分別約對應 2022–2023、2023–2024、2024–2025。多數最新論文標示校內延後公開，因此下列重點是依正式題名、研究脈絡與已公開代表論文所做的技術性整理，不虛構未公開的實驗數字。</div>
+<div class="filters">
+<button class="active" data-filter="all">全部</button>
+<button data-filter="AI 加速器與多核心架構">AI 加速器與多核心架構（5）</button><button data-filter="記憶體內運算與 AI 加速器">記憶體內運算與 AI 加速器（10）</button><button data-filter="硬體安全與可信運算">硬體安全與可信運算（5）</button><button data-filter="可重組系統與 FPGA">可重組系統與 FPGA（1）</button><button data-filter="VLSI CAD／設計空間探索">VLSI CAD／設計空間探索（1）</button>
+</div>
+<div class="thesis-list">
+    <article class="thesis-card" data-category="AI 加速器與多核心架構" data-year="113">
+      <div class="card-head">
+        <span class="badge year">113學年度</span>
+        <span class="badge cat">AI 加速器與多核心架構</span>
+      </div>
+      <h3>1. 結合切割與排程以降低大型Transformer映射於多區塊加速器上的外部記憶體存取</h3>
+      <p class="meta">研究生：陳奕廷｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>大型 Transformer 在多區塊加速器上的映射與資料搬移最佳化</p></div>
+        <div><b>研究重點</b><p>以模型／張量切割配合排程，降低中間特徵與權重往返晶片外記憶體的次數。</p></div>
+        <div><b>主要技術</b><p>Transformer、模型切割、排程、片外記憶體流量、多區塊加速器</p></div>
+        <div><b>預期貢獻</b><p>核心價值是降低記憶體牆造成的能耗與延遲，提升大型模型在專用硬體上的可擴充性。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="113">
+      <div class="card-head">
+        <span class="badge year">113學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>2. 適用於客製化可程式化 CIM 加速器裝置端訓練之具序列排程優化的資料感知執行時區塊浮點數量化設計</h3>
+      <p class="meta">研究生：陳志瑜｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>CIM 裝置端訓練的動態量化與排程</p></div>
+        <div><b>研究重點</b><p>針對訓練過程中不同資料分布，以執行時區塊浮點數量化降低位元數，並用序列排程降低額外成本。</p></div>
+        <div><b>主要技術</b><p>CIM、On-device Training、Block Floating Point、資料感知量化、排程</p></div>
+        <div><b>預期貢獻</b><p>在維持訓練精度的同時降低運算與記憶體成本，讓客製化 CIM 不只做推論，也能支援端側訓練。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="AI 加速器與多核心架構" data-year="113">
+      <div class="card-head">
+        <span class="badge year">113學年度</span>
+        <span class="badge cat">AI 加速器與多核心架構</span>
+      </div>
+      <h3>3. 適用於高吞吐量AI工作負載之具NoC的可擴展加速運算區塊的預防鎖死的流控機制</h3>
+      <p class="meta">研究生：葉孟韋｜晶片設計學位學程</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>可擴展 AI 加速器 NoC 的流量控制</p></div>
+        <div><b>研究重點</b><p>處理多運算區塊互連時可能出現的壅塞與鎖死，設計可預防 deadlock 的流控機制。</p></div>
+        <div><b>主要技術</b><p>NoC、Flow Control、Deadlock Avoidance、Scalable Accelerator、AI Workload</p></div>
+        <div><b>預期貢獻</b><p>提升多核心／多瓦片 AI 加速器的通訊可靠性與吞吐量，使架構能安全擴充。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="AI 加速器與多核心架構" data-year="113">
+      <div class="card-head">
+        <span class="badge year">113學年度</span>
+        <span class="badge cat">AI 加速器與多核心架構</span>
+      </div>
+      <h3>4. 適用於人工智慧應用的向量-張量融合處理核心之設計與實作</h3>
+      <p class="meta">研究生：彭文彥｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>向量與張量運算融合核心</p></div>
+        <div><b>研究重點</b><p>在同一處理核心中整合向量與張量資料路徑，減少不同運算單元間的資料轉換與搬移。</p></div>
+        <div><b>主要技術</b><p>Vector Processing、Tensor Processing、Fusion Core、RTL／ASIC</p></div>
+        <div><b>預期貢獻</b><p>建立較通用的 AI 計算核心，同時支援控制密集與矩陣密集工作。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="硬體安全與可信運算" data-year="113">
+      <div class="card-head">
+        <span class="badge year">113學年度</span>
+        <span class="badge cat">硬體安全與可信運算</span>
+      </div>
+      <h3>5. 適用於人工智慧應用之針對已加密轉換器或卷積神經網路模型透過硬體機制實現的低延遲晶片外記憶體資料傳輸</h3>
+      <p class="meta">研究生：蘇柏銜｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>加密 AI 模型的低延遲片外記憶體傳輸</p></div>
+        <div><b>研究重點</b><p>以硬體機制整合模型資料加解密與片外記憶體傳輸，避免安全保護造成過高延遲。</p></div>
+        <div><b>主要技術</b><p>模型保護、加密傳輸、片外記憶體、CNN／Transformer、硬體安全</p></div>
+        <div><b>預期貢獻</b><p>兼顧模型機密性與記憶體頻寬效率，對邊緣 AI 與商用模型部署特別重要。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="AI 加速器與多核心架構" data-year="112">
+      <div class="card-head">
+        <span class="badge year">112學年度</span>
+        <span class="badge cat">AI 加速器與多核心架構</span>
+      </div>
+      <h3>6. 在多核心NVDLA系統上以模型平行度優化共享緩衝記憶體區資料之使用</h3>
+      <p class="meta">研究生：潘姵羽｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>多核心 NVDLA 的模型平行與共享緩衝最佳化</p></div>
+        <div><b>研究重點</b><p>將大型神經網路拆分到多個 NVDLA 核心，改善共享緩衝區配置與資料重用。</p></div>
+        <div><b>主要技術</b><p>NVDLA、多核心、模型平行、Shared Buffer、資料重用</p></div>
+        <div><b>預期貢獻</b><p>提高多核心 AI 推論平台的吞吐量與片上記憶體利用率。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="硬體安全與可信運算" data-year="112">
+      <div class="card-head">
+        <span class="badge year">112學年度</span>
+        <span class="badge cat">硬體安全與可信運算</span>
+      </div>
+      <h3>7. 針對基於功耗相關性之進階加密標準旁路攻擊的低成本基於物理不可複製函數之安全模組</h3>
+      <p class="meta">研究生：楊竣文｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>低成本 PUF 安全模組對抗 AES 功耗旁路攻擊</p></div>
+        <div><b>研究重點</b><p>利用 PUF 建立裝置唯一金鑰或遮罩機制，降低 AES 運算功耗與機密資料間的可利用相關性。</p></div>
+        <div><b>主要技術</b><p>PUF、AES、Power Side-channel、Correlation Attack、低成本安全模組</p></div>
+        <div><b>預期貢獻</b><p>以較低硬體代價提升晶片對實體攻擊的抵抗力。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="112">
+      <div class="card-head">
+        <span class="badge year">112學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>8. 適用於轉換器網路的具能量效益之多瓦片記憶體內運算架構</h3>
+      <p class="meta">研究生：張辰維｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>Transformer 的多瓦片 CIM 架構</p></div>
+        <div><b>研究重點</b><p>把 Transformer 的矩陣運算映射到多個 CIM tile，處理跨瓦片資料交換、利用率與能耗問題。</p></div>
+        <div><b>主要技術</b><p>Transformer、Multi-tile CIM、Mapping、Interconnect、Energy Efficiency</p></div>
+        <div><b>預期貢獻</b><p>將 CIM 從單一巨集提升到系統級 AI 加速器，支援更大型模型。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="硬體安全與可信運算" data-year="112">
+      <div class="card-head">
+        <span class="badge year">112學年度</span>
+        <span class="badge cat">硬體安全與可信運算</span>
+      </div>
+      <h3>9. 基於記憶體存取訊息攻擊之低額外時間動態隨機存取記憶體保護</h3>
+      <p class="meta">研究生：陳柏瑄｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>DRAM 記憶體存取資訊洩漏防護</p></div>
+        <div><b>研究重點</b><p>針對攻擊者由存取位址、順序或時序推測機密資料的威脅，設計低延遲保護機制。</p></div>
+        <div><b>主要技術</b><p>DRAM Security、Memory Access Pattern、Traffic Obfuscation、Low Overhead</p></div>
+        <div><b>預期貢獻</b><p>在不顯著犧牲效能下，降低記憶體存取側信道的資訊洩漏。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="112">
+      <div class="card-head">
+        <span class="badge year">112學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>10. 基於三級管線化架構之高能量效益深度神經網路記憶體內運算加速器設計</h3>
+      <p class="meta">研究生：許舜修｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>三級管線化 DNN CIM 加速器</p></div>
+        <div><b>研究重點</b><p>透過三級 pipeline 將資料準備、記憶體內 MAC 與輸出處理重疊執行。</p></div>
+        <div><b>主要技術</b><p>DNN、CIM、Pipeline、Throughput、Energy Efficiency</p></div>
+        <div><b>預期貢獻</b><p>提高 CIM 加速器吞吐率，降低各階段等待時間。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="112">
+      <div class="card-head">
+        <span class="badge year">112學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>11. 基於稀疏感知且具面積效益之位元線時序交錯靜態隨機記憶體之記憶體內運算巨集</h3>
+      <p class="meta">研究生：洪毅玄｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>稀疏感知與位元線時序交錯 SRAM-CIM</p></div>
+        <div><b>研究重點</b><p>利用神經網路稀疏性略過無效運算，並以位元線時序交錯降低周邊電路面積。</p></div>
+        <div><b>主要技術</b><p>SRAM-CIM、Sparsity、Bitline Interleaving、Area Efficiency</p></div>
+        <div><b>預期貢獻</b><p>同時改善能耗與面積，適合資源受限的邊緣 AI 晶片。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="硬體安全與可信運算" data-year="112">
+      <div class="card-head">
+        <span class="badge year">112學年度</span>
+        <span class="badge cat">硬體安全與可信運算</span>
+      </div>
+      <h3>12. 具有高度安全硬體保護用於對抗以優化衝突側信道攻擊變換後備緩衝區的方式</h3>
+      <p class="meta">研究生：潘鴻福｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>TLB／位址轉換結構的衝突側信道防護</p></div>
+        <div><b>研究重點</b><p>針對攻擊者利用轉換後備緩衝區衝突推測受害程式行為，加入安全硬體機制。</p></div>
+        <div><b>主要技術</b><p>TLB、Conflict Side-channel、Microarchitecture Security、Hardware Protection</p></div>
+        <div><b>預期貢獻</b><p>提升處理器記憶體管理單元的安全性，限制微架構狀態外洩。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>13. 基於記憶體內運算設計與快速分析具能量效益之可配置加速器</h3>
+      <p class="meta">研究生：施泓名｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>可配置 CIM 加速器與快速分析工具</p></div>
+        <div><b>研究重點</b><p>建立可調參數的 CIM 加速器架構，以及快速估算效能、功耗與面積的方法。</p></div>
+        <div><b>主要技術</b><p>Configurable CIM、Profiler、Design Space Exploration、PPA</p></div>
+        <div><b>預期貢獻</b><p>縮短設計探索時間，讓研究者能在大量架構組合中找到合適設計點。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>14. 可應用於推論與學習之具有高能量效益的多位元SRAM記憶體內運算巨集</h3>
+      <p class="meta">研究生：李宗翰｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>支援推論與學習的多位元 SRAM-CIM</p></div>
+        <div><b>研究重點</b><p>設計支援多位元乘加、權重更新或訓練需求的 SRAM 記憶體內運算巨集。</p></div>
+        <div><b>主要技術</b><p>Multi-bit SRAM-CIM、Inference、Training、MAC、Memory Macro</p></div>
+        <div><b>預期貢獻</b><p>把 CIM 使用範圍由推論擴展到學習，提升端側智慧的自主性。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>15. 針對神經網路推論之具記憶體計算單元的片上網路模擬器</h3>
+      <p class="meta">研究生：楊子毅｜電機工程學系碩士在職專班</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>具 CIM 節點的 NoC 模擬器</p></div>
+        <div><b>研究重點</b><p>模擬多個記憶體計算單元在片上網路中的封包、延遲與頻寬需求。</p></div>
+        <div><b>主要技術</b><p>NoC Simulator、CIM Node、Neural Inference、Traffic Modeling</p></div>
+        <div><b>預期貢獻</b><p>提供系統層級評估平台，支援 CIM 多核心架構的互連設計。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>16. 設計並開發用於內存計算可參數化的電子系統層級快閃記憶體模擬器</h3>
+      <p class="meta">研究生：鄭俊升｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>可參數化快閃記憶體內運算 ESL 模擬器</p></div>
+        <div><b>研究重點</b><p>以電子系統層級模型描述快閃記憶體運算特性，支援參數化與快速系統評估。</p></div>
+        <div><b>主要技術</b><p>Flash CIM、ESL、Parametric Simulator、SystemC／Modeling</p></div>
+        <div><b>預期貢獻</b><p>在電路實作前快速估算系統效能與限制，降低開發成本。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="硬體安全與可信運算" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">硬體安全與可信運算</span>
+      </div>
+      <h3>17. 防範分支預測旁路攻擊之以程序為確認條件的安全延遲隱藏式分支預測設計</h3>
+      <p class="meta">研究生：鄧士瑩｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>分支預測側信道防護</p></div>
+        <div><b>研究重點</b><p>利用程序身分或安全條件管理分支預測狀態，並隱藏額外延遲。</p></div>
+        <div><b>主要技術</b><p>Branch Predictor、Side-channel、Process-aware Security、Latency Hiding</p></div>
+        <div><b>預期貢獻</b><p>降低 Spectre 類攻擊風險，同時控制防護機制的效能負擔。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="AI 加速器與多核心架構" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">AI 加速器與多核心架構</span>
+      </div>
+      <h3>18. 適用於大型神經網路之高傳輸量多核心NVDLA平台</h3>
+      <p class="meta">研究生：呂芝儀｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>高吞吐量多核心 NVDLA 平台</p></div>
+        <div><b>研究重點</b><p>擴充多個 NVDLA 核心並處理工作分配、資料搬移與同步。</p></div>
+        <div><b>主要技術</b><p>NVDLA、Multi-core Accelerator、High Throughput、Large DNN</p></div>
+        <div><b>預期貢獻</b><p>提升大型神經網路推論速度，建立可擴充的開放式 AI 加速平台。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>19. 具有高能量效益的轉置記憶體內運算巨集</h3>
+      <p class="meta">研究生：蔡鎮中｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>轉置型 CIM 巨集</p></div>
+        <div><b>研究重點</b><p>以不同資料排布或轉置運算方式改善矩陣乘法映射與資料重用。</p></div>
+        <div><b>主要技術</b><p>Transpose CIM、Matrix Multiplication、Memory Macro、Data Reuse</p></div>
+        <div><b>預期貢獻</b><p>提升特定矩陣運算的能量效率與硬體利用率。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="記憶體內運算與 AI 加速器" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">記憶體內運算與 AI 加速器</span>
+      </div>
+      <h3>20. 具有推論和晶片內學習之高能效記憶體內運算神經網絡加速器的設計和實現</h3>
+      <p class="meta">研究生：陳宗琪｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>推論＋晶片內學習 CIM 神經網路加速器</p></div>
+        <div><b>研究重點</b><p>整合推論與權重更新路徑，使晶片可在本地執行學習。</p></div>
+        <div><b>主要技術</b><p>CIM、On-chip Learning、Neural Accelerator、Energy Efficiency</p></div>
+        <div><b>預期貢獻</b><p>支援終端裝置個人化與持續學習，降低資料上雲需求。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="可重組系統與 FPGA" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">可重組系統與 FPGA</span>
+      </div>
+      <h3>21. 基於嵌入式現場可程式化邏輯閘陣列之可配置應用端子系統設計與實現</h3>
+      <p class="meta">研究生：賴昶融｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>嵌入式 FPGA 可配置終端系統</p></div>
+        <div><b>研究重點</b><p>使用嵌入式 FPGA 建立可依應用重新配置的終端運算平台。</p></div>
+        <div><b>主要技術</b><p>Embedded FPGA、Reconfigurable System、Application Terminal、Hardware/Software Co-design</p></div>
+        <div><b>預期貢獻</b><p>延續教授早期可重組系統研究，提升終端裝置彈性。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article>
+    <article class="thesis-card" data-category="VLSI CAD／設計空間探索" data-year="111">
+      <div class="card-head">
+        <span class="badge year">111學年度</span>
+        <span class="badge cat">VLSI CAD／設計空間探索</span>
+      </div>
+      <h3>22. 具有近記憶體運算之通用型圖形處理器平台的設計與分析</h3>
+      <p class="meta">研究生：鄭中凱｜電機工程學系</p>
+      <div class="detail-grid">
+        <div><b>研究方向</b><p>GPU 近記憶體運算平台</p></div>
+        <div><b>研究重點</b><p>在 GPU 與記憶體附近加入運算能力，降低資料傳輸成本並評估系統效益。</p></div>
+        <div><b>主要技術</b><p>GPGPU、Near-Memory Computing、Memory Wall、Platform Analysis</p></div>
+        <div><b>預期貢獻</b><p>把記憶體中心運算導入通用 GPU 架構，改善資料密集型工作負載。</p></div>
+      </div>
+      <p class="note">註：近年多數論文目前為校內延後公開，本頁的技術分析以正式論文題名與實驗室研究脈絡判讀；有全文的早期代表論文則另附 PDF。</p>
+    </article></div>
+</div></section>
+
+<section id="papers"><div class="wrap">
+<h2>代表性論文與可確認成果</h2>
+<div class="paper"><h3>2024｜Energy-efficient Duo-Core SRAM-based Compute-in-Memory Accelerator</h3><p>主軸是雙核心 SRAM-CIM 加速器的架構設計與能效分析，代表研究已由單一 CIM 巨集往多核心、系統級整合發展。</p></div>
+<div class="paper"><h3>2024｜Fast Performance and Power Profiler for SRAM CIM-based Accelerators</h3><p>建立快速效能與功耗分析工具，顯示實驗室同時重視「做出加速器」與「快速探索架構設計空間」。</p></div>
+<div class="paper"><h3>2024｜Neural Network Model Protection Against Model Stealing</h3><p>研究 AI 模型竊取攻擊與保護方法，延續實驗室 PUF、RISC-V、側信道與安全微架構研究，並轉向 AI 智慧財產保護。</p></div>
+<div class="paper"><h3>2020｜8T SRAM-based Compute-In-Memory</h3><p>採 40nm、8T SRAM、權重位元切割累加（WBPA）與時間調變，支援多位元 CNN MAC；公開摘要顯示能效約 23.5–26.3 TOPS/W，並將 DAC 數量由 n×n 降為 1。</p></div>
+<div class="paper"><h3>2020｜Secure RISC-V System using PUF</h3><p>以雙核心 RISC-V、PUF、AES-GCM、Root/Chain of Trust、MPU 與安全開機建立可信系統；公開結果顯示旁路攻擊模型準確率降低 28.85%，功耗相關係數降低 85.7%。</p></div>
+<div class="paper"><h3>2021｜Reinforcement-Learning GPGPU Power Management</h3><p>利用 DDQN 控制 DVFS，並結合快取競爭感知工作分派；公開摘要報告平均節能 59%、效能提升 18%。</p></div>
+</div></section>
+
+<section id="docs"><div class="wrap">
+<h2>附件全文與資料來源</h2>
+<div class="panel docs">
+<p>ZIP 已內含下列可公開閱讀的完整 PDF，點選即可開啟：</p>
+<ul><li><a href="assets/docs/針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理.pdf" target="_blank">針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理.pdf</a></li>
+<li><a href="assets/docs/利用互補碼方式之多層展頻浮水印演算法.pdf" target="_blank">利用互補碼方式之多層展頻浮水印演算法.pdf</a></li>
+<li><a href="assets/docs/基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討.pdf" target="_blank">基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討.pdf</a></li>
+<li><a href="assets/docs/針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的RISC-V系統.pdf" target="_blank">針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的RISC-V系統.pdf</a></li>
+<li><a href="assets/docs/可應用於高能量效益多位元卷積神經網路的邊緣裝置之8T SRAM記憶體內運算.pdf" target="_blank">可應用於高能量效益多位元卷積神經網路的邊緣裝置之8T SRAM記憶體內運算.pdf</a></li>
+<li><a href="assets/docs/可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體.pdf" target="_blank">可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體.pdf</a></li>
+<li><a href="assets/docs/針對通用圖形處理器的智能熱管理方法.pdf" target="_blank">針對通用圖形處理器的智能熱管理方法.pdf</a></li>
+<li><a href="assets/docs/使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器.pdf" target="_blank">使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器.pdf</a></li></ul>
+<p>另附 <code>data/recent_theses.json</code>，方便後續製作 Excel、圖表、簡報或資料庫。</p>
+</div>
+</div></section>
+
+<section id="strategy"><div class="wrap">
+<h2>給專題申請者的切入策略</h2>
+<div class="summary-grid">
+<div class="prof-card"><h3>最容易切入：RTL／AI 加速器</h3><p>先做 MAC array、systolic array、簡化版 NVDLA、向量／張量運算核心，建立 Verilog/SystemVerilog、驗證與合成能力。</p></div>
+<div class="prof-card"><h3>第二路線：CIM 系統層級</h3><p>若類比電路基礎尚未完整，可先從 Python/SystemC 模型、mapping、dataflow、NoC、Profiler 與設計空間探索切入。</p></div>
+<div class="prof-card"><h3>第三路線：RISC-V 硬體安全</h3><p>從安全開機、MPU、AES、PUF 介面、快取／分支預測側信道或模型保護做小型 RTL 專題。</p></div>
+<div class="prof-card"><h3>應準備的共同能力</h3><p>數位邏輯、計算機組織、Verilog/SystemVerilog、C/C++、Python、Linux、Git、波形除錯、論文閱讀與 PPA 分析。</p></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<p>本研究地圖依使用者提供的教授資料、成大博碩士論文檢索結果與附件全文整理。最新未公開論文之細節以題名與研究脈絡分析，未宣稱不存在於公開資料中的量化結果。</p>
+</div></footer>
+
+<script>
+const buttons=[...document.querySelectorAll('.filters button')];
+const cards=[...document.querySelectorAll('.thesis-card')];
+buttons.forEach(b=>b.addEventListener('click',()=>{
+ buttons.forEach(x=>x.classList.remove('active')); b.classList.add('active');
+ const f=b.dataset.filter;
+ cards.forEach(c=>c.style.display=(f==='all'||c.dataset.category===f)?'block':'none');
+}));
+</script>
+
+<section style="padding:48px;font-family:'Microsoft JhengHei',sans-serif">
+<h2>國科會計畫演進（最新版補充）</h2>
+<h3>一、研究主軸演進</h3>
+<pre>
+2019–2022
+IoT安全微處理器／PUF／NVSRAM
+        │
+        ▼
+2023–2026
+硬體安全 + Compute-in-Memory + 神經網路系統晶片
+        │
+        ▼
+2024–2026
+可推論＋可學習＋多模態 AI 融合引擎
+</pre>
+
+<h3>二、近年大型國科會計畫</h3>
+<table border="1" cellspacing="0" cellpadding="6">
+<tr><th>年度</th><th>計畫名稱</th><th>重點</th><th>核定金額</th></tr>
+<tr><td>114</td><td>具有高延展性、永續性，可進行推論及學習之多模態人工智慧融合引擎(2/2)</td><td>多模態AI、推論、學習、邊緣部署</td><td>14,400,000</td></tr>
+<tr><td>113</td><td>具有高延展性、永續性，可進行推論及學習之多模態人工智慧融合引擎(1/2)</td><td>AI融合引擎、硬體實現</td><td>17,000,000</td></tr>
+<tr><td>112</td><td>具有硬體安全的記憶體內運算之神經網路系統晶片</td><td>SRAM-CIM、AI SoC、安全醫療電子</td><td>2,946,000</td></tr>
+<tr><td>110-109</td><td>具硬體安全性及能量效益的物聯網微處理器及記憶體設計</td><td>PUF、RISC-V、NVSRAM、神經網路保護</td><td>約2.15M/2.2M</td></tr>
+<tr><td>108</td><td>具硬體安全性及能量效益的物聯網微處理器及記憶體設計</td><td>IoT Edge、低功耗、非揮發處理器</td><td>2,230,000</td></tr>
+</table>
+
+<h3>三、研究重點總結</h3>
+<ul>
+<li>低功率 VLSI 與能源效率</li>
+<li>SRAM Compute-in-Memory (CIM)</li>
+<li>AI Accelerator（CNN、Transformer、NVDLA）</li>
+<li>多核心、NoC 與記憶體流量最佳化</li>
+<li>PUF、RISC-V、安全微架構與模型保護</li>
+<li>多模態 AI、晶片內學習、邊緣 AI</li>
+</ul>
+
+<h3>四、建議閱讀順序</h3>
+<ol>
+<li>8T SRAM Compute-in-Memory</li>
+<li>Secure RISC-V using PUF</li>
+<li>GPU + Reinforcement Learning</li>
+<li>Transformer 多核心加速器</li>
+<li>多模態 AI 融合引擎相關論文</li>
+</ol>
+</section>
+</body></html>

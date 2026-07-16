@@ -1,0 +1,2185 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>邱瀝毅教授相關論文｜分頁式完整圖文解說</title><style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#657089;--brand:#3157d5;--accent:#00a6a6;--line:#dbe3f1}
+*{box-sizing:border-box} body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75}
+.topbar{position:sticky;top:0;z-index:20;background:#10172a;color:#fff;padding:12px 18px;box-shadow:0 6px 20px #0003}
+.brand{font-weight:800;font-size:18px}.pager{display:flex;gap:8px;overflow-x:auto;padding-top:10px}
+.pager button{white-space:nowrap;border:0;border-radius:999px;padding:9px 14px;background:#26314d;color:#fff;cursor:pointer}
+.pager button.active{background:#fff;color:#172033}
+main{max-width:1280px;margin:auto;padding:24px}.paper-page{display:none}.paper-page.active{display:block}
+.hero{background:linear-gradient(135deg,#16213e,#3157d5);color:#fff;padding:38px;border-radius:22px;margin-bottom:18px}
+.hero h1{font-size:clamp(28px,4vw,48px);line-height:1.3;margin:.3em 0}.tag{display:inline-block;background:#ffffff20;border:1px solid #ffffff55;padding:5px 10px;border-radius:999px}
+.meta{opacity:.88}.lead{font-size:18px;max-width:980px}.pdfbtn{display:inline-block;color:#172033;background:white;text-decoration:none;padding:10px 16px;border-radius:10px;font-weight:700}
+.subtabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.subtabs button{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 14px;cursor:pointer}
+.subtabs button.active{background:var(--brand);color:white}.tabpane{display:none}.tabpane.active{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:14px 0;box-shadow:0 8px 28px #25365a12}
+.grid.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.highlight{border-left:6px solid var(--accent)}.good{border-top:5px solid #1f9d65}.warn{border-top:5px solid #e6922e}
+h2{margin-top:0;color:#203a88}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.gallery figure{margin:0;background:#fff;padding:12px;border-radius:16px;border:1px solid var(--line)}.gallery img{width:100%;height:auto;display:block;border-radius:10px}.gallery figcaption{color:var(--muted);font-size:14px;padding-top:8px}
+pre{white-space:pre-wrap;word-break:break-word;background:#f7f9fd;border:1px solid var(--line);padding:16px;border-radius:12px;max-height:620px;overflow:auto;font-family:ui-monospace,Consolas,monospace;font-size:13px}
+.note{color:var(--muted)} footer{text-align:center;color:var(--muted);padding:28px}
+@media(max-width:800px){main{padding:12px}.hero{padding:24px}.grid.two,.gallery{grid-template-columns:1fr}.hero h1{font-size:30px}}
+</style></head><body>
+<header class="topbar"><div class="brand">邱瀝毅教授相關碩士論文｜分頁式完整圖文解說</div><nav class="pager"><button>1. 張哲彬｜GPGPU</button><button>2. 游凱名｜音訊浮水印</button><button>3. 黃俊修｜語音情緒辨識</button><button>4. 謝憲譁｜RISC-V</button><button>5. 林育緯｜8T SRAM CIM</button><button>6. 杜唯宏｜RRAM-based NVSRAM</button><button>7. 張峻豪｜GPGPU</button><button>8. 蔡宗蕙｜GPGPU</button></nav></header>
+<main>
+<section class="paper-page" id="paper-0">
+  <div class="hero">
+    <div>
+      <span class="tag">GPGPU／邊緣運算／DVFS／功率管理</span>
+      <h1>針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理</h1>
+      <p class="meta">作者：張哲彬　年份：2019　DOI：10.6844/NCKU201902359</p>
+      <p class="lead">面向電池供電的邊緣運算裝置，提出以硬體執行期使用率辨識核心密集與記憶體密集狀態，再分別調整 SM Core 與 DRAM 時脈／電壓的功率管理方法。結合 clock gating 與有限狀態機，避免因短暫異常利用率造成頻繁切換。</p>
+      <a class="pdfbtn" href="papers/針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理(2).pdf" target="_blank">開啟原始論文 PDF</a>
+    </div>
+  </div>
+  <div class="subtabs">
+    <button data-tab="overview" class="active">研究總覽</button>
+    <button data-tab="method">研究方法</button>
+    <button data-tab="results">實驗結果</button>
+    <button data-tab="figures">原論文圖片</button>
+    <button data-tab="critique">貢獻與限制</button>
+    <button data-tab="refs">文獻參考</button>
+  </div>
+  <div class="tabpane active" data-pane="overview">
+    <div class="grid two">
+      <article class="card"><h2>摘要重點</h2><p>面向電池供電的邊緣運算裝置，提出以硬體執行期使用率辨識核心密集與記憶體密集狀態，再分別調整 SM Core 與 DRAM 時脈／電壓的功率管理方法。結合 clock gating 與有限狀態機，避免因短暫異常利用率造成頻繁切換。</p></article>
+      <article class="card"><h2>研究定位</h2><p>本論文屬於邱瀝毅教授實驗室在「低功耗計算、智慧系統、安全硬體、記憶體與訊號處理」方向的研究成果。它從明確的系統瓶頸出發，提出可實作的演算法、架構或電路，並以模擬或實驗結果驗證。</p></article>
+    </div>
+    <article class="card"><h2>問題意識與研究流程</h2>
+      <ol>
+        <li>辨識現有方法的核心瓶頸與評估指標。</li>
+        <li>建立基準架構、資料集或模擬平台。</li>
+        <li>提出新的控制機制、演算法或電路架構。</li>
+        <li>設計多組參數與對照實驗。</li>
+        <li>以效能、能量、溫度、正確率、BER、INL 或安全性等指標分析。</li>
+      </ol>
+    </article>
+    <article class="card"><h2>論文章節結構</h2><pre>doi:10.6844/NCKU201902359
+ 
+- vii - 
+ 
+目錄 
+摘   要 .......................................................................................................................... i 
+致 謝 ............................................................................................................................ vi 
+目錄 ............................................................................................................................. vii 
+表目錄 .......................................................................................................................... ix 
+圖目錄 ........................................................................................................................... x 
+第 1 章 
+緒論 ........................................................................................................... 1 
+1.1 研究背景 ......................................................................................................... 1 
+1.1.1 
+邊緣運算 ......................................................................................... 1 
+1.1.2 
+通用計算圖形處理器 ..................................................................... 2 
+1.1.3 
+高功率消耗之影響與功率管理 ..................................................... 3 
+1.2 研究動機 ......................................................................................................... 4 
+1.3 研究貢獻 ......................................................................................................... 5 
+1.4 論文架構 ......................................................................................................... 5 
+第 2 章 
+相關研究背景 ........................................................................................... 6 
+2.1 通用計算圖形處理器整體架構 ..................................................................... 6 
+2.2 功率消耗之來源和低功耗技術簡介 ............................................................. 8 
+第 3 章 
+相關文獻探討 ......................................................................................... 11 
+3.1 低功耗技術在系統設計中的實現 ............................................................... 11 
+3.2 通用計算圖形處理器之功率管理 ............................................................... 14 
+3.2.1 
+Fine-Grain DVFS with Execution-Unit Turbo .............................. 14 
+3.2.2 
+Data-Traffic Aware DVFS ............................................................. 16 
+3.3 相關文獻總結 ............................................................................................... 18 
+第 4 章 
+硬體動態使用率電壓及頻率的動態功率管理 ..................................... 20 
+
+doi:10.6844/NCKU201902359
+ 
+- ix - 
+ 
+表目錄 
+表 3-1 相關文獻總結 ........................................................................................................ 18 
+表 5-1 CASLAB-GPUSIM 實驗環境 ................................................................................ 35 
+表 5-2 功率管理相關實驗環境設定 ................................................................................. 36 
+ 
+ 
+ 
+
+doi:10.6844/NCKU201902359
+ 
+- x - 
+ 
+圖目錄 
+圖 1-1 邊緣運算市場大小及預測 [1] ............................................................................... 1 
+圖 2-1 通用計算圖形處理器架構示意圖 .......................................................................... 6 
+圖 2-2 功率消耗的組成 [3] ............................................................................................... 8 
+圖 3-1 Zacate 系統架構圖 [4] .......................................................................................... 11 
+圖 3-2 CPU 與GPU 整合示意圖 [4] ............................................................................... 12 
+圖 3-3 (a)在不同電壓點對於操作頻率的優化  (b)不同閾值電壓元件的使用率 [4] . 12 
+圖 3-4 Zacate 的多電源區塊 [4] ...................................................................................... 13 
+圖 3-5 GPU 系統方塊圖 [6] ............................................................................................. 14 
+圖 3-6 Modified-EU 架構圖 [6] ........................................................................................ 15 
+圖 3-7 DTA 系統架構圖 [7] ............................................................................................. 16 
+圖 3-8 佇列壅塞情況下的頻率調整方式 [7] ................................................................. 17 
+圖 4-1 CASLAB-GPUSIM 平台架構圖 [13] ................................................................... 21 
+圖 4-2 HSAIL 示意圖 ........................................................................................................ 22 
+圖 4-3 多重串流處理器架構 ............................................................................................ 23 
+圖 4-4 非記憶體元件功率資訊取得流程圖 .................................................................... 26 
+圖 4-5 非記憶體元件功率模型誤差 ................................................................................ 26 
+圖 4-6 一般數位電路架構圖 ............................................................................................ 28 
+圖 4-7 加入時脈閘控設計之電路架構圖 ........................................................................ 28 
+圖 4-8 使用時脈閘控設計之模組 .................................................................................... 29 
+圖 4-9 功率消耗分布圖 .................................................................................................... 29 
+圖 4-10 使用率定義之說明圖 .......................................................................................... 30 
+圖 4-11 CASLAB-GPUSIM 時脈區塊 .............................................................................. 31 
+圖 4-12 硬體動態使用率功率管理演算法流程 .............................................................. 32 
+
+</pre></article>
+  </div>
+  <div class="tabpane" data-pane="method">
+    <article class="card"><h2>研究方法詳解</h2><ul><li>以 CASLAB-GPUSIM 為基礎的 GPGPU 平台進行系統層模擬。</li><li>由 clock-gating 開關比例估算執行期 SM 核心使用率。</li><li>把工作負載判定為 core-intensive 或 memory-intensive，對 SM 與 DRAM 兩個 clock domain 施行不同 DVFS。</li><li>利用 FSM、可調閾值與狀態遷移抑制震盪，並整合 PLL、DC-DC converter 與 PMU。</li></ul></article>
+    <article class="card"><h2>方法論解讀</h2>
+      <p>此研究不是只提出單一公式，而是將問題拆成感測／特徵取得、決策或運算核心、硬體控制、系統整合與驗證五個層次。閱讀時應特別注意：輸入訊號如何取得、控制狀態如何定義、參數如何選擇、以及基準方法是否公平。</p>
+      <p>若從 IC 與系統設計角度評估，可再檢查 critical path、記憶體存取、控制週期、額外面積、功率模型與製程／溫度／電壓變異。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="results">
+    <article class="card highlight"><h2>主要實驗結果</h2><ul><li>平均功率降低 22.3%。</li><li>平均效能代價 3.2%。</li><li>整體能量消耗約降低 20%。</li><li>相較 DTA：DTA 雖可降功率 44.7%，但效能損失 42.1%，其平均節能僅約 4.4%。</li></ul></article>
+    <article class="card"><h2>結果詮釋</h2>
+      <p>結果應同時觀察「主要目標改善」與「為此付出的代價」。例如節能方法不能只看功率下降，也要把執行時間納入能量；熱管理不能只看溫度，也要檢查效能與額外能量；安全機制需同時看攻擊成功率與硬體成本；辨識系統則應避免只呈現單一最佳案例。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="figures">
+    <div class="gallery"><figure><img src="assets/gpu_runtime_p2.jpg" alt="針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理 第 2 頁"><figcaption>原論文第 2 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/gpu_runtime_p4.jpg" alt="針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理 第 4 頁"><figcaption>原論文第 4 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/gpu_runtime_p26.jpg" alt="針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理 第 26 頁"><figcaption>原論文第 26 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/gpu_runtime_p43.jpg" alt="針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理 第 43 頁"><figcaption>原論文第 43 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/gpu_runtime_p55.jpg" alt="針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理 第 55 頁"><figcaption>原論文第 55 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/gpu_runtime_p61.jpg" alt="針對邊緣運算裝置之高能量效率通用計算圖形處理器之硬體動態使用率功率管理 第 61 頁"><figcaption>原論文第 61 頁：重要內容／圖表頁面</figcaption></figure></div>
+  </div>
+  <div class="tabpane" data-pane="critique">
+    <div class="grid two">
+      <article class="card good"><h2>研究貢獻</h2><ul><li>把硬體時脈閘控資訊轉化為無需高成本軟體 profiling 的 runtime utilization 指標。</li><li>針對核心域與記憶體域做異質化 DVFS，而非整顆 GPU 同步調頻。</li><li>以 FSM 提升跨應用與跨架構可擴充性。</li></ul></article>
+      <article class="card warn"><h2>限制與可延伸方向</h2><ul><li>效能與功耗來自模擬平台，實體晶片上的轉換延遲、DC-DC 效率與溫度耦合仍需驗證。</li><li>利用率閾值仍需要針對平台調整；面對多 kernel 或突發型工作負載可能需更細緻預測。</li></ul></article>
+    </div>
+    <article class="card"><h2>後續研究建議</h2>
+      <p>可將本研究放到更新的製程、實體 FPGA／ASIC／GPU 平台或更大資料集驗證，並加入跨工作負載、跨電壓溫度、長期可靠度及實際控制延遲。若是機器學習方法，也可加入可解釋性、泛化與線上學習；若是電路研究，可加入 Monte Carlo、post-layout、晶片量測與系統層應用準確率。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="refs">
+    <article class="card"><h2>原論文參考文獻摘錄</h2>
+      <p class="note">以下內容由原 PDF 末段參考文獻頁擷取，保留原始編號與格式，方便回查。</p>
+      <pre>doi:10.6844/NCKU201902359
+ 
+- 46 - 
+ 
+參考文獻 
+[1] VARIANT Market Research, “Edge Computing Market,” [Online]. Avalible: 
+https://www.variantmarketresearch.com/report-categories/information-
+communication-technology/edge-computing-market. [Accessed: 14-Jun-2019]. 
+[2] Y. Su, J. Jheng, D. Chen and C. Chen, &quot;Development of an Open ISA GPGPU for Edge 
+Device Machine Learning Applications,&quot; in Proc. 2019 Eleventh International 
+Conference on Ubiquitous and Future Networks (ICUFN), Zagreb, Croatia, 2019, pp. 
+214-217. 
+[3] Synopsys Inc., “Expanding the Synopsys PrimeTime Solution with Power Analysis”, 
+[Online] 
+Available: 
+https://www.eit.lth.se/fileadmin/eit/courses/etin35/PrimeTime/PrimeTime_Slides.pdf 
+[Access: 19-Jun-2019] 
+[4] D. Foley et al., &quot;A Low-Power Integrated x86–64 and Graphics Processor for Mobile 
+Computing Devices,&quot; IEEE Journal of Solid-State Circuits, vol. 47, no. 1, pp. 220-231, 
+Jan. 2012. 
+[5] S. R. Gutta, D. Foley, A. Naini, R. Wasmuth and D. Cherepacha, &quot;A low-power 
+integrated x86–64 and graphics processor for mobile computing devices,&quot; in Proc. 2011 
+IEEE International Solid-State Circuits Conference, San Francisco, CA, 2011, pp. 270-
+272. 
+[6] P. Meinerzhagen et al., &quot;An energy-efficient graphics processor featuring fine-grain 
+DVFS with integrated voltage regulators, execution-unit turbo, and retentive sleep in 
+14nm tri-gate CMOS,&quot; in Proc. 2018 IEEE International Solid - State Circuits 
+Conference - (ISSCC), San Francisco, CA, 2018, pp. 38-40. 
+
+doi:10.6844/NCKU201902359
+ 
+- 47 - 
+ 
+[7] L. Chiou, C. Yang and C. Chang, &quot;A Data-Traffic Aware Dynamic Power Management 
+for General-Purpose Graphics Processing Units,&quot; in Proc. 2019 IEEE International 
+Symposium on Circuits and Systems (ISCAS), Sapporo, Japan, 2019, pp. 1-5. 
+[8] C-K. Yang, “A Data-Traffic Aware Dynamic Power Management for General-Purpose 
+Computing on Graphics Processing Units with Dynamic Voltage and Frequency 
+Scaling,” M.S. thesis, EE, National Cheng Kung University, Tainan, Taiwan, 2017. 
+[9] A. Bakhoda, G. Yuan, Wilson W-L. Fung, H. Wong, Tor M. Aamodt,” Analyzing CUDA 
+Workloads Using a Detailed GPU Simulator,” in Proc. 2009 IEEE International 
+Symposium on Performance Analysis of Systems and Software, Boston, MA, 2009, pp. 
+163-174. 
+[10] H-Y. Chen, “An HSAIL ISA Conformed GPU Platform,” M.S. thesis, CCE, National 
+Cheng Kung University, Tainan, Taiwan, 2015.  
+[11] K-C. Hsu, “Performance Prediction Model on HSA-Compatible General-Purpose 
+GPU System,” M.S. thesis, CCE, National Cheng Kung University, Tainan, Taiwan, 
+2016.  
+[12] W-S. Hsieh, “Design of Cycle-accurate SIMT Core and Implementation,” M.S. thesis, 
+CCE, National Cheng Kung University, Tainan, Taiwan, 2016.  
+[13] J-H. Jheng, “Micro-Architecture Optimization of HSA-Compatible GPU,” M.S. 
+thesis, CCE, National Cheng Kung University, Tainan, Taiwan, 2018. 
+[14] HSA Foundation, “HSA Programmer&#x27;s Reference Manual: HSAIL Virtual ISA and 
+Programming Model, Compiler Writer, and Object Format (BRIG),” [Online] 
+Available: http://www.cs.nthu.edu.tw/~ychung/slides/HSA/HSA-PRM-1.02.pdf. 
+[Accessed: 14-Jun-2019]. 
+[15] Micron 
+Technology, 
+Inc., 
+“Power 
+Calcs”, 
+[Online] 
+Available: 
+https://www.micron.com/-/media/client/global/documents/products/power-
+calculator/ddr3_ddr3l_power_calc.xlsm?la=en. [Access: 24-Jun-2019] 
+[16] Y. Hengzhou, G. Yang and M. Zhuo, &quot;A 40nm/65nm process adaptive low jitter phase-
+locked loop,&quot; in Proc. 2014 International Symposium on Integrated Circuits (ISIC), 
+Singapore, 2014, pp. 500-503. 
+
+doi:10.6844/NCKU201902359
+ 
+- 48 - 
+ 
+[17] J. Shi, Y. Hsu, E. Soenen, A. Roth and J. Gaither, &quot;A wide-range DC/DC converter with 
+2ndorder digital compensation and direct battery connection in 40nm CMOS,&quot; in Proc. 
+2011 IEEE Custom Integrated Circuits Conference (CICC), San Jose, CA, 2011, pp. 1-
+4. 
+[18] J. Lee, V. Sathisha, M. Schulte, K. Compton and N. S. Kim, &quot;Improving Throughput of 
+Power-Constrained GPUs Using Dynamic Voltage/Frequency and Core Scaling,&quot; in 
+Proc. 2011 International Conference on Parallel Architectures and Compilation 
+Techniques, Galveston, TX, 2011, pp. 111-120. 
+[19] J. Guerreiro, A. Ilic, N. Roma and P. Tomas, &quot;GPGPU Power Modeling for Multi-
+domain Voltage-Frequency Scaling,&quot; in Proc. 2018 IEEE International Symposium on 
+High Performance Computer Architecture (HPCA), Vienna, 2018, pp. 789-800. 
+[20] K. Kasichayanula, D. Terpstra, P. Luszczek, S. Tomov, S. Moore and G. D. Peterson, 
+&quot;Power Aware Computing on GPUs,&quot; in Proc. 2012 Symposium on Application 
+Accelerators in High Performance Computing, Chicago IL, 2012, pp. 64-73. 
+[21] Z. Lu and Y. Yao, &quot;Thread Voting DVFS for Manycore NoCs,&quot; in IEEE Transactions 
+on Computers, vol. 67, no. 10, pp. 1506-1524, 1 Oct. 2018. 
+[22] A. Majumdar, L. Piga, I. Paul, J. L. Greathouse, W. Huang and D. H. Albonesi, 
+&quot;Dynamic GPGPU Power Management Using Adaptive Model Predictive Control,&quot; in 
+Proc. 2017 IEEE International Symposium on High Performance Computer 
+Architecture (HPCA), Austin, TX, 2017, pp. 613-624. 
+[23] A. Pathania, Q. Jiao, A. Prakash and T. Mitra, &quot;Integrated CPU-GPU power 
+management for 3D mobile games,&quot; in Proc. 2014 51st ACM/EDAC/IEEE Design 
+Automation Conference (DAC), San Francisco, CA, 2014, pp. 1-6. 
+ 
+</pre>
+    </article>
+  </div>
+</section>
+
+<section class="paper-page" id="paper-1">
+  <div class="hero">
+    <div>
+      <span class="tag">音訊浮水印／展頻／互補碼／多層嵌入</span>
+      <h1>利用互補碼方式之多層展頻浮水印演算法</h1>
+      <p class="meta">作者：游凱名　年份：2019　DOI：10.6844/NCKU201901041</p>
+      <p class="lead">提出以完整互補碼產生互相正交的偽隨機序列，並分層嵌入多組浮水印資訊的展頻音訊浮水印演算法。研究希望同時處理傳統展頻浮水印的宿主訊號干擾、低容量、安全性及運算複雜度問題。</p>
+      <a class="pdfbtn" href="papers/利用互補碼方式之多層展頻浮水印演算法(2).pdf" target="_blank">開啟原始論文 PDF</a>
+    </div>
+  </div>
+  <div class="subtabs">
+    <button data-tab="overview" class="active">研究總覽</button>
+    <button data-tab="method">研究方法</button>
+    <button data-tab="results">實驗結果</button>
+    <button data-tab="figures">原論文圖片</button>
+    <button data-tab="critique">貢獻與限制</button>
+    <button data-tab="refs">文獻參考</button>
+  </div>
+  <div class="tabpane active" data-pane="overview">
+    <div class="grid two">
+      <article class="card"><h2>摘要重點</h2><p>提出以完整互補碼產生互相正交的偽隨機序列，並分層嵌入多組浮水印資訊的展頻音訊浮水印演算法。研究希望同時處理傳統展頻浮水印的宿主訊號干擾、低容量、安全性及運算複雜度問題。</p></article>
+      <article class="card"><h2>研究定位</h2><p>本論文屬於邱瀝毅教授實驗室在「低功耗計算、智慧系統、安全硬體、記憶體與訊號處理」方向的研究成果。它從明確的系統瓶頸出發，提出可實作的演算法、架構或電路，並以模擬或實驗結果驗證。</p></article>
+    </div>
+    <article class="card"><h2>問題意識與研究流程</h2>
+      <ol>
+        <li>辨識現有方法的核心瓶頸與評估指標。</li>
+        <li>建立基準架構、資料集或模擬平台。</li>
+        <li>提出新的控制機制、演算法或電路架構。</li>
+        <li>設計多組參數與對照實驗。</li>
+        <li>以效能、能量、溫度、正確率、BER、INL 或安全性等指標分析。</li>
+      </ol>
+    </article>
+    <article class="card"><h2>論文章節結構</h2><pre>doi:10.6844/NCKU201901041
+ 
+XIV 
+ 
+目錄 
+內容 
+中文摘要 ................................................................................................................................ I 
+EXTENDED ABSTRACT ..................................................................................................II 
+誌謝 .................................................................................................................................. XIII 
+目錄 ...................................................................................................................................XIV 
+表目錄 ...............................................................................................................................XVI 
+圖目錄 ............................................................................................................................. XVII 
+第一章 
+緒論 ....................................................................................................................1 
+1.1. 
+研究背景 ................................................................................................................1 
+1.2. 
+浮水印簡介 ............................................................................................................1 
+1.2.1. 
+最低有效位元調整 ........................................................................................2 
+1.2.2. 
+相位編碼 ........................................................................................................3 
+1.2.3. 
+展頻法 ............................................................................................................4 
+1.2.4. 
+回聲編碼 ........................................................................................................4 
+1.3. 
+研究動機 ................................................................................................................5 
+1.4. 
+論文章節組織 ........................................................................................................6 
+第二章 
+相關文獻回顧與分析 ........................................................................................7 
+2.1. 
+浮水印文獻回顧與相關介紹 ................................................................................7 
+2.2. 
+訊號干擾問題 ......................................................................................................10 
+2.2.1. 
+傳統型浮水印嵌入法 ..................................................................................10 
+2.2.2. 
+加成型展頻浮水印嵌入法 ..........................................................................12 
+2.2.3. 
+交互型展頻浮水印法 ..................................................................................13 
+2.2.4. 
+加成交互型浮水印嵌入法 ..........................................................................15 
+2.3. 
+容量問題 ..............................................................................................................17 
+
+doi:10.6844/NCKU201901041
+ 
+XVI 
+ 
+表目錄 
+表.3.3.3-1 比例因數設定演算法...................................................................................................................................54 
+表.4.1-1 客觀數據評估分數(ODG)對照表 .................................................................................................................61 
+表.4.2.1-1 音訊處理攻擊方式一覽表 .........................................................................................................................66 
+表.4.2-2 強健性測試環境數據表 .................................................................................................................................69 
+表.4.2-3 強健性測試演算法差異表 ............................................................................................................................70 
+表.4.2.2-1 樣本一測試實驗數據 ..................................................................................................................................71 
+表.4.2.2-2 樣本一測試結果 ...........................................................................................................................................72 
+表.4.2.2-3 樣本二測試實驗數據 ..................................................................................................................................73 
+表.4.2.2-4 樣本二測試結果 ...........................................................................................................................................74 
+表.4.2.2-5 樣本三測試實驗數據 ..................................................................................................................................75 
+表.4.2.2-6 樣本三測試結果 ...........................................................................................................................................76 
+表.4.2.2-7 樣本四測試實驗數據 ..................................................................................................................................77 
+表.4.2.2-8 樣本四測試結果 ...........................................................................................................................................78 
+表.4.2.2-9 樣本五測試實驗數據 ..................................................................................................................................79 
+表.4.2.2-10 樣本五測試結果.........................................................................................................................................80 
+表.4.2.2-11 樣本六測試實驗數據................................................................................................................................81 
+表.4.2.2-12 樣本六測試結果.........................................................................................................................................82 
+表.4.2.2-13 樣本七測試實驗數據................................................................................................................................83 
+表.4.2.2-14 樣本七測試結果.........................................................................................................................................84 
+表.4.2.2-15 樣本八測試實驗數據................................................................................................................................85 
+表.4.2.2-16 樣本八測試結果.........................................................................................................................................86 
+表.4.2.2-17 樣本九測試實驗數據................................................................................................................................87 
+表.4.2.2-18 樣本九測試結果.........................................................................................................................................88 
+表.4.2.2-19 樣本十測試實驗數據................................................................................................................................89 
+表.4.2.2-20 樣本十測試結果.........................................................................................................................................90 
+表.4.3-1 三種偽隨機碼序列產生演算法之時間複雜度比較表............................................................................98 
+表.4.3-4 偽隨機碼序列實際運算時機比較表........................................................................................................ 100 
+表.4.3-5 比例因數選擇實際運算時機比較表........................................................................................................ 100 
+ 
+ 
+ 
+
+</pre></article>
+  </div>
+  <div class="tabpane" data-pane="method">
+    <article class="card"><h2>研究方法詳解</h2><ul><li>先對宿主音訊做 DCT，選擇約 1–2 kHz 起始頻帶，以 ODG=-0.7 控制感知品質。</li><li>由 Hadamard 正交矩陣及互補碼生成 PN sequences，再透過排列、互補與分層方式增加序列數與可嵌入層數。</li><li>各層浮水印以 scaling factor 調整後相加，嵌入 DCT 係數，最後 IDCT 回到時域。</li><li>萃取時重新 DCT，利用各層對應序列的相關性與符號函數判定浮水印位元。</li></ul></article>
+    <article class="card"><h2>方法論解讀</h2>
+      <p>此研究不是只提出單一公式，而是將問題拆成感測／特徵取得、決策或運算核心、硬體控制、系統整合與驗證五個層次。閱讀時應特別注意：輸入訊號如何取得、控制狀態如何定義、參數如何選擇、以及基準方法是否公平。</p>
+      <p>若從 IC 與系統設計角度評估，可再檢查 critical path、記憶體存取、控制週期、額外面積、功率模型與製程／溫度／電壓變異。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="results">
+    <article class="card highlight"><h2>主要實驗結果</h2><ul><li>以 10 個隨機音檔測試，並施加閉迴路、加性雜訊、濾波、重取樣、壓縮等常見 DSP 攻擊。</li><li>在相同 ODG 感知品質條件下，提出方法整體 BER 優於比較方法。</li><li>互補碼降低 PN sequence 產生組數與運算複雜度，並維持多層與高容量特性。</li><li>比例因數計算時間與序列產生速度具競爭力。</li></ul></article>
+    <article class="card"><h2>結果詮釋</h2>
+      <p>結果應同時觀察「主要目標改善」與「為此付出的代價」。例如節能方法不能只看功率下降，也要把執行時間納入能量；熱管理不能只看溫度，也要檢查效能與額外能量；安全機制需同時看攻擊成功率與硬體成本；辨識系統則應避免只呈現單一最佳案例。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="figures">
+    <div class="gallery"><figure><img src="assets/watermark_p2.jpg" alt="利用互補碼方式之多層展頻浮水印演算法 第 2 頁"><figcaption>原論文第 2 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/watermark_p3.jpg" alt="利用互補碼方式之多層展頻浮水印演算法 第 3 頁"><figcaption>原論文第 3 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/watermark_p10.jpg" alt="利用互補碼方式之多層展頻浮水印演算法 第 10 頁"><figcaption>原論文第 10 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/watermark_p68.jpg" alt="利用互補碼方式之多層展頻浮水印演算法 第 68 頁"><figcaption>原論文第 68 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/watermark_p98.jpg" alt="利用互補碼方式之多層展頻浮水印演算法 第 98 頁"><figcaption>原論文第 98 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/watermark_p122.jpg" alt="利用互補碼方式之多層展頻浮水印演算法 第 122 頁"><figcaption>原論文第 122 頁：重要內容／圖表頁面</figcaption></figure></div>
+  </div>
+  <div class="tabpane" data-pane="critique">
+    <div class="grid two">
+      <article class="card good"><h2>研究貢獻</h2><ul><li>以多層化方式支援多使用者共享同一音訊智慧財產權。</li><li>兼顧安全性、容量、解碼正確率與計算成本。</li><li>以互補碼的正交／互補特性降低宿主訊號干擾。</li></ul></article>
+      <article class="card warn"><h2>限制與可延伸方向</h2><ul><li>ODG 固定為 -0.7，未完整呈現不同音質目標下的容量–魯棒性曲線。</li><li>測試資料為 10 個音檔，對不同音樂類型與現代編碼器的泛化仍可擴充。</li></ul></article>
+    </div>
+    <article class="card"><h2>後續研究建議</h2>
+      <p>可將本研究放到更新的製程、實體 FPGA／ASIC／GPU 平台或更大資料集驗證，並加入跨工作負載、跨電壓溫度、長期可靠度及實際控制延遲。若是機器學習方法，也可加入可解釋性、泛化與線上學習；若是電路研究，可加入 Monte Carlo、post-layout、晶片量測與系統層應用準確率。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="refs">
+    <article class="card"><h2>原論文參考文獻摘錄</h2>
+      <p class="note">以下內容由原 PDF 末段參考文獻頁擷取，保留原始編號與格式，方便回查。</p>
+      <pre>doi:10.6844/NCKU201901041
+ 
+102 
+ 
+參考文獻 
+[1] S.P. Mohanty, Digital watermarking: a tutorial review. Technical Report, University of 
+South Florida (1999) [Online], http://www.cs.unt .edu/smoh-
+anty/research/Reports/Mohanty/WatermarkingSurvey1999.pdf 
+[2] L. Boney, A. H. Tewfik and K. N. Hamdy, &quot;Digital watermarks for audio 
+signals,&quot;Proceedings of the Third IEEE International Conference on Multimedia 
+Computing and Systems, Hiroshima, Japan, pp. 473-480, 1996.  
+[3] D. Lam,” Audio watermarking”. COMPSYS401A Project, The University of 
+Auckland,2003  
+[4] P. Bassia, I. Pitas and N. Nikolaidis, &quot;Robust audio watermarking in the time domain,&quot; in 
+IEEE Transactions on Multimedia, vol. 3, no. 2, pp. 232-241, Jun 2001.  
+[5] W. Bender, D. Gruhl, N. Morimoto, A. Lu, Techniques for data hiding. IBM Systems 
+Journal. vol. 35, nos 3&amp;4, pp. 313-336, 1996.  
+[6] Ye Wang, &quot;A new watermarking method of digital audio content for copyright 
+protection,&quot;Signal Processing Proceedings, 1998. ICSP &#x27;98. 1998 Fourth International 
+Conference on, Beijing, China, vol. 2, pp. 1420-1423, 1998.  
+[7] P. Bassia, I. Pitas and N. Nikolaidis, &quot;Robust audio watermarking in the time domain,&quot; in 
+IEEE Transactions on Multimedia, vol. 3, no. 2, pp. 232-241, Jun 2001.  
+[8] Ye Wang, &quot;A new watermarking method of digital audio content for copyright 
+protection,&quot;Signal Processing Proceedings, 1998. ICSP &#x27;98. 1998 Fourth International 
+Conference on, Beijing, China, vol. 2, pp. 1420-1423, 1998.  
+[9] Hyen O Oh, Jong Won Seok, Jin Woo Hong and Dae Hee Youn, &quot;New echo embedding 
+technique for robust and imperceptible audio watermarking,&quot; 2001 IEEE International 
+Conference on Acoustics, Speech, and Signal Processing. Proceedings (Cat. 
+No.01CH37221), Salt Lake City, UT, vol.3, pp. 1341-1344, 2001.  
+[10] P. Zhang, S. Xu and H. Yang, &quot;Robust and transparent audio watermarking based on 
+improved spread spectrum and psychoacoustic masking,&quot; 2012 IEEE International 
+Conference on Information Science and Technology, Hubei, pp. 640-643, 2012.  
+[11] H. S. Malvar and D. A. F. Florencio, &quot;Improved spread spectrum: a new modulation 
+technique for robust watermarking,&quot; in IEEE Transactions on Signal Processing, vol. 51, 
+no. 4, pp. 898-905, Apr 2003.  
+[12] Y. Chen, G. Gao, Y. Liu and B. Lv, &quot;A cross spread spectrum audio watermarking robust 
+to acoustic transmission,&quot; 2017 36th Chinese Control Conference (CCC), Dalian, pp. 
+5025-5030, 2017.  
+[13] Y. Xiang, I. Natgunanathan, Y. Rong and S. Guo, &quot;Spread Spectrum-Based High 
+Embedding Capacity Watermarking Method for Audio Signals,&quot; in IEEE/ACM 
+Transactions on Audio, Speech, and Language Processing, vol. 23, no. 12, pp. 2228-
+2237, Dec. 2015.  
+[14] Y. Xiang, I. Natgunanathan, D. Peng, G. Hua and B. Liu, &quot;Spread Spectrum Audio 
+Watermarking Using Multiple Orthogonal PN Sequences and Variable Embedding 
+Strengths and Polarities,&quot; in IEEE/ACM Transactions on Audio, Speech, and Language 
+Processing, vol. 26, no. 3, pp. 529-539, March 2018.  
+[15] 徐詠翔, “利用互補碼方式之展頻音訊浮水印演算法,” 台灣, 國立成功大學電機
+工程學系研究所, 2018.  
+[16] G. Strang, &quot;Introduction to linear algebra,&quot; fifth Edition, Wellesley-Cambridge Press, 
+2016.  
+
+doi:10.6844/NCKU201901041
+ 
+103 
+ 
+[17] M. Golay, &quot;Complementary series,&quot; in IRE Transactions on Information Theory, vol. 7, 
+no. 2, pp. 82-87, April 1961.  
+[18] R. Turyn, &quot;Ambiguity functions of complementary sequences (Corresp.),&quot; in IEEE 
+Transactions on Information Theory, vol. 9, no. 1, pp. 46-47, Jan 1963.  
+[19] N. Suehiro and M. Hatori, &quot;N-shift cross-orthogonal sequences,&quot; in IEEE Transactions on 
+Information Theory, vol. 34, no. 1, pp. 143-146, Jan 1988.  
+[20] 林金賢, “互補碼分碼多工系統之研究,” 台灣, 國立中山大學電機工程學系研究
+所, 2003.  
+[21] J. Hadamard, &quot;Résolution d&#x27;une question relative aux déterminants,&quot; Bulletin des 
+Sciences Mathématiques, vol. 17, pp. 240–246, 1893.  
+[22] J.J. Sylvester. Thoughts on inverse orthogonal matrices, simultaneous sign successions, 
+and tessellated pavements in two or more colours, with applications to Newton&#x27;s rule, 
+ornamental tile-work, and the theory of numbers. Philosophical Magazine, 34. pp.461–475, 
+1867  
+[23] Kojima T, Oizumi A, Okayasu K, Parampalli U. An audio data hiding based on 
+complete complementary codes and its application to an evacuation guiding system. 
+Signal Design and Its Applications in Communications, The Sixth International 
+Workshop. pp.118-121. 2013.  
+[24] Rec.B. S. 1387: Method for objective measurements of perceived audio quality, Rec.B. S. 
+1387, International Telecommunications Union, Geneva, Switzerland, 2001.  
+</pre>
+    </article>
+  </div>
+</section>
+
+<section class="paper-page" id="paper-2">
+  <div class="hero">
+    <div>
+      <span class="tag">語音情緒辨識／MFCC／GMM／離散與連續 HMM</span>
+      <h1>基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討</h1>
+      <p class="meta">作者：黃俊修　年份：2019　DOI：10.6844/NCKU201900776</p>
+      <p class="lead">把情緒語音視為隨時間變化的語氣狀態流，使用 MFCC 作為局部特徵，系統化比較 GMM、離散 HMM 與連續 HMM，並深入分析 HMM 初始狀態假設、下溢位與奇異性問題。</p>
+      <a class="pdfbtn" href="papers/基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討(3).pdf" target="_blank">開啟原始論文 PDF</a>
+    </div>
+  </div>
+  <div class="subtabs">
+    <button data-tab="overview" class="active">研究總覽</button>
+    <button data-tab="method">研究方法</button>
+    <button data-tab="results">實驗結果</button>
+    <button data-tab="figures">原論文圖片</button>
+    <button data-tab="critique">貢獻與限制</button>
+    <button data-tab="refs">文獻參考</button>
+  </div>
+  <div class="tabpane active" data-pane="overview">
+    <div class="grid two">
+      <article class="card"><h2>摘要重點</h2><p>把情緒語音視為隨時間變化的語氣狀態流，使用 MFCC 作為局部特徵，系統化比較 GMM、離散 HMM 與連續 HMM，並深入分析 HMM 初始狀態假設、下溢位與奇異性問題。</p></article>
+      <article class="card"><h2>研究定位</h2><p>本論文屬於邱瀝毅教授實驗室在「低功耗計算、智慧系統、安全硬體、記憶體與訊號處理」方向的研究成果。它從明確的系統瓶頸出發，提出可實作的演算法、架構或電路，並以模擬或實驗結果驗證。</p></article>
+    </div>
+    <article class="card"><h2>問題意識與研究流程</h2>
+      <ol>
+        <li>辨識現有方法的核心瓶頸與評估指標。</li>
+        <li>建立基準架構、資料集或模擬平台。</li>
+        <li>提出新的控制機制、演算法或電路架構。</li>
+        <li>設計多組參數與對照實驗。</li>
+        <li>以效能、能量、溫度、正確率、BER、INL 或安全性等指標分析。</li>
+      </ol>
+    </article>
+    <article class="card"><h2>論文章節結構</h2><pre>doi:10.6844/NCKU201900776
+ 
+VI 
+ 
+Contents 
+摘要 ........................................................................................................ I 
+Abstract ................................................................................................ III 
+致謝 ...................................................................................................... V 
+List of Figures .................................................................................... VIII 
+List of Tables ...................................................................................... XIII 
+ INTRODUCTION ................................................................. 1 
+1.1 BACKGROUND.......................................................................................... 1 
+1.1.1 Human-Machine Interaction (HMI) ................................................... 1 
+1.1.2 Human Speech Emotions ................................................................... 2 
+1.1.3 Recognition Systems.......................................................................... 3 
+1.2 Related Works .............................................................................................. 5 
+1.3 Motivation .................................................................................................... 5 
+1.4 Thesis Organization ...................................................................................... 6 
+ REVIEW ................................................................................ 8 
+2.1 Feature Extraction ........................................................................................ 8 
+2.1.1 Cochlea Model................................................................................... 8 
+2.1.2 Mel-frequency Cepstral Coefficient ................................................. 10 
+2.2 Classifiers .................................................................................................. 14 
+2.2.1 Gaussian Mixture Model [23] .......................................................... 14 
+2.2.2 Discrete Hidden Markov Model ....................................................... 18 
+2.2.3 Continuous Hidden Markov Model .................................................. 29 
+2.2.4 Classifier Comparison ...................................................................... 30 
+2.3 Hidden Markov Model Topology ................................................................ 32 
+2.4 Hidden Markov Model Issues ..................................................................... 33 
+2.4.1 Underflow ....................................................................................... 33 
+2.4.2 Singularity ....................................................................................... 33 
+ PROPOSED METHODOLOGY .......................................... 35 
+3.1 Database ..................................................................................................... 35 
+3.2 Feature Extraction ...................................................................................... 36 
+
+</pre></article>
+  </div>
+  <div class="tabpane" data-pane="method">
+    <article class="card"><h2>研究方法詳解</h2><ul><li>資料庫為 SAVEE 類型情緒語音，提取 frame-level MFCC，並比較 local／global 特徵。</li><li>GMM 以混合高斯描述整段特徵統計；離散 HMM 先做向量量化；連續 HMM 直接以多變量高斯混合描述 emission probability。</li><li>比較 2／4／8 狀態、不同 GMM components、VQ levels、constraint range η。</li><li>初始狀態以均勻時間切段與 clustering 兩種假設建立；以 scaling／log-like 技巧處理 underflow，以 covariance constraint 處理 singularity。</li></ul></article>
+    <article class="card"><h2>方法論解讀</h2>
+      <p>此研究不是只提出單一公式，而是將問題拆成感測／特徵取得、決策或運算核心、硬體控制、系統整合與驗證五個層次。閱讀時應特別注意：輸入訊號如何取得、控制狀態如何定義、參數如何選擇、以及基準方法是否公平。</p>
+      <p>若從 IC 與系統設計角度評估，可再檢查 critical path、記憶體存取、控制週期、額外面積、功率模型與製程／溫度／電壓變異。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="results">
+    <article class="card highlight"><h2>主要實驗結果</h2><ul><li>單一最佳辨識率：GMM 58.07%、離散 HMM 65.67%、連續 HMM 89.20%。</li><li>最佳平均辨識率：GMM 51.12%、離散 HMM 53.20%、連續 HMM 70.15%。</li><li>結果支持時序狀態轉移比純統計模型更適合描述情緒語音。</li><li>連續 HMM 避免量化失真，整體優於離散 HMM。</li></ul></article>
+    <article class="card"><h2>結果詮釋</h2>
+      <p>結果應同時觀察「主要目標改善」與「為此付出的代價」。例如節能方法不能只看功率下降，也要把執行時間納入能量；熱管理不能只看溫度，也要檢查效能與額外能量；安全機制需同時看攻擊成功率與硬體成本；辨識系統則應避免只呈現單一最佳案例。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="figures">
+    <div class="gallery"><figure><img src="assets/hmm_emotion_p2.jpg" alt="基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討 第 2 頁"><figcaption>原論文第 2 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/hmm_emotion_p3.jpg" alt="基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討 第 3 頁"><figcaption>原論文第 3 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/hmm_emotion_p30.jpg" alt="基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討 第 30 頁"><figcaption>原論文第 30 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/hmm_emotion_p68.jpg" alt="基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討 第 68 頁"><figcaption>原論文第 68 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/hmm_emotion_p103.jpg" alt="基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討 第 103 頁"><figcaption>原論文第 103 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/hmm_emotion_p110.jpg" alt="基於隱藏式馬可夫模型之語音情緒辨識的初始模型探討 第 110 頁"><figcaption>原論文第 110 頁：重要內容／圖表頁面</figcaption></figure></div>
+  </div>
+  <div class="tabpane" data-pane="critique">
+    <div class="grid two">
+      <article class="card good"><h2>研究貢獻</h2><ul><li>對三類傳統生成式分類器進行一致特徵與參數條件下的完整比較。</li><li>凸顯 initial model hypothesis 對 HMM 收斂與辨識率的重要性。</li><li>提供下溢位與奇異性問題的工程解法。</li></ul></article>
+      <article class="card warn"><h2>限制與可延伸方向</h2><ul><li>資料規模與說話者數有限，且未與深度神經網路／Transformer 比較。</li><li>MFCC 雖穩定，但對語意、上下文與跨語者差異的表徵有限。</li></ul></article>
+    </div>
+    <article class="card"><h2>後續研究建議</h2>
+      <p>可將本研究放到更新的製程、實體 FPGA／ASIC／GPU 平台或更大資料集驗證，並加入跨工作負載、跨電壓溫度、長期可靠度及實際控制延遲。若是機器學習方法，也可加入可解釋性、泛化與線上學習；若是電路研究，可加入 Monte Carlo、post-layout、晶片量測與系統層應用準確率。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="refs">
+    <article class="card"><h2>原論文參考文獻摘錄</h2>
+      <p class="note">以下內容由原 PDF 末段參考文獻頁擷取，保留原始編號與格式，方便回查。</p>
+      <pre>doi:10.6844/NCKU201900776
+ 
+93 
+ 
+REFERENCES 
+[1]  
+Burkert, Peter, et al., “Dexpression: Deep convolutional neural network for 
+expression recognition,” arXiv preprint arXiv:1509.05371, 2015.  
+[2]  
+Yu, Zhiding, and Cha Zhang, “ Image based static facial expression 
+recognition with multiple deep network learning.,” Proceedings of the 2015 
+ACM on International Conference on Multimodal Interaction. ACM, pp. 435-442, 
+2015.  
+[3]  
+Chatzikyriakidis, Stergios, et al., “An overview of Natural Language 
+Inference Data Collection: The way forward?.,” Proceedings of the Computing 
+Natural Language Inference Workshop, 2017.  
+[4]  
+Koolagudi, Shashidhar G., YV Srinivasa Murthy, and Siva P. Bhaskar, 
+“Choice of a classifier, based on properties of a dataset: case study-speech 
+emotion recognition.,” International Journal of Speech Technology 21.1, vol. 21, 
+no. 1, pp. 167-183, 2018.  
+[5]  
+Darwin, Charles, and Phillip Prodger., The expression of the emotions in 
+man and animals., USA: Oxford University Press, 1998.  
+[6]  
+Russell, James A., “A circumplex model of affect.,” Journal of personality 
+and social psychology 39.6, vol. 39, no. 6, p. 1161, 1980.  
+[7]  
+Vayrynen, Eero., Emotion recognition from speech using prosodic features., 
+Oulu: University of Oulu, 2014.  
+[8]  
+Dellaert, Frank, Thomas Polzin, and Alex Waibel., “Recognizing emotion in 
+speech.,” Proceeding of Fourth International Conference on Spoken Language 
+Processing. ICSLP&#x27;96., vol. 3, pp. 1970-1973, 1996.  
+
+doi:10.6844/NCKU201900776
+ 
+94 
+ 
+[9]  
+El Ayadi, Moataz, Mohamed S. Kamel, and Fakhri Karray., “Survey on 
+speech emotion recognition: Features, classification schemes, and databases.,” 
+Pattern Recognition, vol. 44, no. 3, pp. 572-587, 2011.  
+[10] 
+Nwe, Tin Lay, Say Wei Foo, and Liyanage C. De Silva., “Speech emotion 
+recognition using hidden Markov models.,” Speech communication, vol. 41, no. 
+4, pp. 603-623, 2003.  
+[11] 
+Kishore, KV Krishna, and P. Krishna Satish., “Emotion recognition in speech 
+using MFCC and wavelet features.,” in 2013 3rd IEEE International Advance 
+Computing Conference (IACC), Ghaziabad, India, 2013.  
+[12] 
+Nogueiras, Albino, et al., “Speech emotion recognition using hidden Markov 
+models.,” in Seventh European Conference on Speech Communication and 
+Technology., Aalborg, Denmark, 2001.  
+[13] 
+Sato, Nobuo, and Yasunari Obuchi., “Emotion recognition using mel-
+frequency cepstral coefficients.,” Information and Media Technologies, vol. 2, no. 
+3, pp. 835-848, 2007.  
+[14] 
+Bitouk, Dmitri, Ragini Verma, and Ani Nenkova., “Class-level spectral 
+features for emotion recognition.,” Speech communication 52.7-8, vol. 52, no. 7-
+8, pp. 613-625, 2010.  
+[15] 
+Bjorn Schuller, Gerhard Rigoll, and Manfred Lang, “Hidden Markov Model-
+based Speech Emotion Recognition,” in 2003 IEEE International Conference on 
+Acoustics, Speech, and Signal Processing, 2003. Proceedings. (ICASSP &#x27;03)., 
+Hong Kong, China, 2003.  
+[16] 
+Wagner, Johannes, Thurid Vogt, and Elisabeth Andre., “A systematic 
+
+doi:10.6844/NCKU201900776
+ 
+95 
+ 
+comparison of different HMM designs for emotion recognition from acted and 
+spontaneous speech.,” in International Conference on Affective Computing and 
+Intelligent Interaction. Springer., Berlin, Heidelberg, 2007.  
+[17] 
+Rabiner, Lawrence R. ,Biing-Hwang Juang, and Janet C. Rutledge., 
+Fundamentals of speech recognition., Upper Saddle River, United States: Pearson 
+Education (US), 1993.  
+[18] 
+Yu, Dong, and Li Deng., AUTOMATIC SPEECH RECOGNITION., 
+London: Springer, 2016.  
+[19] 
+Kwon, Oh-Wook, et al., “Emotion recognition by speech signals.,” in Eighth 
+European Conference on Speech Communication and Technology., Geneva, 
+Switzerland, 2003.  
+[20] 
+“Auris Medical Cochlear therapies - The Inner Ear.,” [Online]. Available: 
+http://www.aurismedical.com/seiten_e/01_about.htm. 
+[21] 
+“Cochlear Implant HELP - Electrodes and Channels.,” [Online]. Available: 
+https://cochlearimplanthelp.com/journey/choosing-a-cochlear-
+implant/electrodes-and-channels/. 
+[22] 
+Singh, Satyanand, and E. G. Rajan., “Vector quantization approach for 
+speaker recognition using MFCC and inverted MFCC.,” International journal of 
+computer applications, vol. 17, no. 1, pp. 0975-8887, 2011.  
+[23] 
+Gupta, Maya R., and Yihua Chen., “Theory and use of the EM algorithm.,” 
+Foundations and TrendsR in Signal Processing, vol. 4, no. 3, pp. 223-296, 2011. 
+[24] 
+Rabiner, Lawrence R., and Biing-Hwang Juang., “An introduction to hidden 
+Markov models.,” ieee assp magazine, vol. 3, no. 1, pp. 4-16, 1986.  
+
+doi:10.6844/NCKU201900776
+ 
+96 
+ 
+[25] 
+Rabiner, Lawrence R., “A tutorial on hidden Markov models and selected 
+applications in speech recognition.,” Proceedings of the IEEE, vol. 77, no. 2, pp. 
+257-286, 1989.  
+[26] 
+Juang, Bing-Hwang, Stephene Levinson, and M. Sondhi., “Maximum 
+likelihood estimation for multivariate mixture observations of markov chains 
+(corresp.).,” IEEE Transactions on Information Theory, vol. 32, no. 2, pp. 307-
+309, 1986.  
+[27] 
+Liporace, L., “Maximum likelihood estimation for multivariate observations 
+of Markov sources.,” IEEE Transactions on Information Theory, vol. 28, no. 5, 
+pp. 729-734, 1982.  
+[28] 
+“Surrey Audio-Visual Expressed Emotion (SAVEE) Database.,” [Online]. 
+Available: http://kahlan.eps.surrey.ac.uk/savee/. 
+[29] 
+Rabiner, Lawrence R., et al., “Some properties of continuous hidden Markov 
+model representations.,” AT&amp;T technical journal, vol. 64, no. 6, pp. 1251-1270, 
+1985.  
+ 
+ 
+</pre>
+    </article>
+  </div>
+</section>
+
+<section class="paper-page" id="paper-3">
+  <div class="hero">
+    <div>
+      <span class="tag">RISC-V／PUF／安全開機／旁路與模型攻擊</span>
+      <h1>針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的 RISC-V 系統</h1>
+      <p class="meta">作者：謝憲譁　年份：2020　DOI：10.6844/NCKU202002306</p>
+      <p class="lead">設計具 user core 與 privilege core 的雙核心 RISC-V 安全系統，以 PUF 產生 AES-GCM 金鑰，建立 Root of Trust 與 Chain of Trust，並同時防範韌體竄改、未授權存取與功耗旁路結合模型攻擊。</p>
+      <a class="pdfbtn" href="papers/針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的RISC-V系統(2).pdf" target="_blank">開啟原始論文 PDF</a>
+    </div>
+  </div>
+  <div class="subtabs">
+    <button data-tab="overview" class="active">研究總覽</button>
+    <button data-tab="method">研究方法</button>
+    <button data-tab="results">實驗結果</button>
+    <button data-tab="figures">原論文圖片</button>
+    <button data-tab="critique">貢獻與限制</button>
+    <button data-tab="refs">文獻參考</button>
+  </div>
+  <div class="tabpane active" data-pane="overview">
+    <div class="grid two">
+      <article class="card"><h2>摘要重點</h2><p>設計具 user core 與 privilege core 的雙核心 RISC-V 安全系統，以 PUF 產生 AES-GCM 金鑰，建立 Root of Trust 與 Chain of Trust，並同時防範韌體竄改、未授權存取與功耗旁路結合模型攻擊。</p></article>
+      <article class="card"><h2>研究定位</h2><p>本論文屬於邱瀝毅教授實驗室在「低功耗計算、智慧系統、安全硬體、記憶體與訊號處理」方向的研究成果。它從明確的系統瓶頸出發，提出可實作的演算法、架構或電路，並以模擬或實驗結果驗證。</p></article>
+    </div>
+    <article class="card"><h2>問題意識與研究流程</h2>
+      <ol>
+        <li>辨識現有方法的核心瓶頸與評估指標。</li>
+        <li>建立基準架構、資料集或模擬平台。</li>
+        <li>提出新的控制機制、演算法或電路架構。</li>
+        <li>設計多組參數與對照實驗。</li>
+        <li>以效能、能量、溫度、正確率、BER、INL 或安全性等指標分析。</li>
+      </ol>
+    </article>
+    <article class="card"><h2>論文章節結構</h2><pre>doi:10.6844/NCKU202002306
+ 
+- ix - 
+ 
+目錄 
+摘要 ........................................................................................................................................ i 
+誌謝 .................................................................................................................................... viii 
+目錄 ...................................................................................................................................... ix 
+表目錄 .................................................................................................................................. xi 
+圖目錄 ................................................................................................................................. xii 
+第 1 章 緒論 ..................................................................................................................... 1 
+1.1 
+研究背景 ............................................................................................................. 1 
+1.2 
+研究動機 ............................................................................................................. 3 
+1.3 
+研究貢獻 ............................................................................................................. 4 
+1.4 
+論文架構 ............................................................................................................. 5 
+第 2 章 相關研究背景 ..................................................................................................... 7 
+2.1 
+信任根與信任鏈 ................................................................................................. 7 
+2.2 
+物理不可複製函數 ............................................................................................. 9 
+2.2.1 物理不可複製函數種類及特性 ............................................................... 9 
+2.2.2 模型攻擊 ................................................................................................. 17 
+2.2.3 旁路攻擊 ................................................................................................. 18 
+2.3 
+進階加密標準 ................................................................................................... 21 
+第 3 章 相關文獻探討 ................................................................................................... 25 
+3.1 
+攻擊物理不可複製函數 ................................................................................... 25 
+3.1.1 延遲加法模型 ......................................................................................... 25 
+3.1.2 功耗分析旁路攻擊 ................................................................................. 26 
+3.2 
+安全開機流程 ................................................................................................... 29 
+3.2.1 自我認證之安全開機 ............................................................................. 29 
+
+doi:10.6844/NCKU202002306
+ 
+- xi - 
+ 
+表目錄 
+表 3-1. 
+不同功率模型在不同雜訊下需要的挑戰數量及其準確率[27] .................... 28 
+表 3-2. 
+相關文獻比較 ................................................................................................... 35 
+表 5-1. 
+實驗工具 ........................................................................................................... 50 
+表 5-2. 
+自適應共變異數矩陣演化策略的參數設定
+矩陣演化策略的參數設定 ................................................... 51 
+表 6-1. 
+本論文與相關文獻比較 ................................................................................... 55 
+ 
+ 
+
+doi:10.6844/NCKU202002306
+ 
+- xii - 
+ 
+圖目錄 
+圖 1-1. 
+物聯網裝置數量預測值[2] ................................................................................ 1 
+圖 1-2. 
+近10 年惡意軟體感染的數量[3] ...................................................................... 2 
+圖 2-1. 
+信任根的運作方式[9] ........................................................................................ 7 
+圖 2-2. 
+ARM 的TrustZone 架構[10] .............................................................................. 8 
+圖 2-3. 
+仲裁器物理不可複製函數架構[16] ................................................................ 10 
+圖 2-4. 
+互斥或仲裁器物理不可複製函數[15] ............................................................ 11 
+圖 2-5. 
+輕量級安全物理不可複製函數[18] ................................................................ 12 
+圖 2-6. 
+前饋式仲裁器物理不可複製函數[20] ............................................................ 13 
+圖 2-7. 
+逐漸逼近式類比數位轉換器物理不可複製函數[21] .................................... 14 
+圖 2-8. 
+靜態隨機存取記憶體單元[14] ........................................................................ 15 
+圖 2-9. 
+環形振盪器物理不可複製函數[15] ................................................................ 16 
+圖 2-10. 控制物理不可複製函數[26] ............................................................................ 19 
+圖 2-11. 伽羅瓦/計數器模式加密與認證訊息產生流程[37] ....................................... 22 
+圖 2-12. 伽羅瓦/計數器模式解密與認證訊息驗證流程[37] ....................................... 22 
+圖 3-1. 
+仲裁器物理不可複製函數(a)簡化前和(b)簡化後的交換器模型，以及(c)整
+體電路模型[20] ................................................................................................ 25 
+圖 3-2. 
+仲裁器物理不可複製函數的響應值儲存到暫存器的功率消耗[27] ............ 27 
+圖 3-3. 
+仲裁器物理不可複製函數模型響應值與實際功耗的相關係數[27] ............ 27 
+圖 3-4. 
+Xilinx 安全開機流程[39] ................................................................................. 29 
+圖 3-5. 
+自我認證之安全開機流程[39] ........................................................................ 30 
+圖 3-6. 
+自我認證之安全開機架構的攻擊模型[39] .................................................... 31 
+圖 3-7. 
+輕量級安全開機架構[41]................................................................................. 33 
+圖 3-8. 
+程式碼認證元件認證每一階段程式碼的流程[41]......................................... 33 
+
+</pre></article>
+  </div>
+  <div class="tabpane" data-pane="method">
+    <article class="card"><h2>研究方法詳解</h2><ul><li>兩個 3-stage RV32IMC 核心分別處理一般工作與安全開機／可信任應用。</li><li>安全模組含 128-bit AES-GCM、128-bit arbiter PUF 與 complete LFSR；PUF 連續評估 128 次形成金鑰。</li><li>以 MPU、周邊鎖與 AHB-Lite bus matrix 隔離 user core 與安全模組。</li><li>FSBL 從 Boot ROM 啟動，解密與驗證 SSBL，再由 SSBL 驗證作業系統，形成 CoT。</li><li>差動 arbiter PUF 搭配互補 shift registers，使功耗近似平衡，降低功耗資訊與 response 的相關性。</li></ul></article>
+    <article class="card"><h2>方法論解讀</h2>
+      <p>此研究不是只提出單一公式，而是將問題拆成感測／特徵取得、決策或運算核心、硬體控制、系統整合與驗證五個層次。閱讀時應特別注意：輸入訊號如何取得、控制狀態如何定義、參數如何選擇、以及基準方法是否公平。</p>
+      <p>若從 IC 與系統設計角度評估，可再檢查 critical path、記憶體存取、控制週期、額外面積、功率模型與製程／溫度／電壓變異。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="results">
+    <article class="card highlight"><h2>主要實驗結果</h2><ul><li>CRP 模型測試準確率：標準 arbiter PUF 98.95%，差動 PUF 97.325%。</li><li>以 challenge–power pairs 進行旁路模型攻擊時：標準 PUF 99.175%，差動 PUF 降至 69.25%。</li><li>模型攻擊準確率下降 28.85%。</li><li>response 與功耗相關係數降低 85.7%。</li></ul></article>
+    <article class="card"><h2>結果詮釋</h2>
+      <p>結果應同時觀察「主要目標改善」與「為此付出的代價」。例如節能方法不能只看功率下降，也要把執行時間納入能量；熱管理不能只看溫度，也要檢查效能與額外能量；安全機制需同時看攻擊成功率與硬體成本；辨識系統則應避免只呈現單一最佳案例。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="figures">
+    <div class="gallery"><figure><img src="assets/riscv_puf_p2.jpg" alt="針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的 RISC-V 系統 第 2 頁"><figcaption>原論文第 2 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/riscv_puf_p4.jpg" alt="針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的 RISC-V 系統 第 4 頁"><figcaption>原論文第 4 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/riscv_puf_p49.jpg" alt="針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的 RISC-V 系統 第 49 頁"><figcaption>原論文第 49 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/riscv_puf_p55.jpg" alt="針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的 RISC-V 系統 第 55 頁"><figcaption>原論文第 55 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/riscv_puf_p68.jpg" alt="針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的 RISC-V 系統 第 68 頁"><figcaption>原論文第 68 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/riscv_puf_p74.jpg" alt="針對物聯網使用物理不可複製函數之具有硬體和韌體安全性的 RISC-V 系統 第 74 頁"><figcaption>原論文第 74 頁：重要內容／圖表頁面</figcaption></figure></div>
+  </div>
+  <div class="tabpane" data-pane="critique">
+    <div class="grid two">
+      <article class="card good"><h2>研究貢獻</h2><ul><li>完整整合硬體安全、韌體安全、可信開機與 PUF 保護，而非僅評估單一 PUF。</li><li>明確建立三條金鑰洩漏通道及其對策。</li><li>以差動計算和互補暫存器抵抗功耗旁路攻擊。</li></ul></article>
+      <article class="card warn"><h2>限制與可延伸方向</h2><ul><li>PUF 穩定性、溫度／電壓漂移與 error correction 的系統成本可再完整量測。</li><li>攻擊模型主要集中於 CMA-ES 與功耗相關攻擊，尚可納入更先進深度學習或電磁旁路攻擊。</li></ul></article>
+    </div>
+    <article class="card"><h2>後續研究建議</h2>
+      <p>可將本研究放到更新的製程、實體 FPGA／ASIC／GPU 平台或更大資料集驗證，並加入跨工作負載、跨電壓溫度、長期可靠度及實際控制延遲。若是機器學習方法，也可加入可解釋性、泛化與線上學習；若是電路研究，可加入 Monte Carlo、post-layout、晶片量測與系統層應用準確率。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="refs">
+    <article class="card"><h2>原論文參考文獻摘錄</h2>
+      <p class="note">以下內容由原 PDF 末段參考文獻頁擷取，保留原始編號與格式，方便回查。</p>
+      <pre>doi:10.6844/NCKU202002306
+ 
+- 57 - 
+ 
+參考文獻 
+[1] 
+J. Gubbi, R. Buyya, S. Marusic, and M. Palaniswami, “Internet of Things (IoT): A 
+Vision, Architectural Elements, and Future Directions,” Future Generation Computer 
+Systems, vol. 29, no. 7, pp. 1645–1660, Sep. 2013. 
+[2] 
+P. Newman, “The Internet of Things 2020: Here’s What Over 400 IoT Decision-
+Makers Say About the Future of Enterprise Connectivity and How IoT Companies 
+Can 
+Use 
+It 
+to 
+Grow 
+Revenue,” 
+Business 
+Insider. 
+https://www.businessinsider.com/internet-of-things-report (accessed Jun. 10, 2020). 
+[3] 
+“The Ultimate List of Cyber Security Statistics for 2019,” Purplesec. 
+https://purplesec.us/resources/cyber-security-statistics (accessed Jun. 09, 2020). 
+[4] 
+A. Waqas, “Mirai Botnet Linked to Massive DDoS Attacks on Dyn DNS,” HackRead. 
+https://www.hackread.com/mirai-botnet-linked-to-dyn-dns-ddos-attacks 
+(accessed 
+Jun. 10, 2020). 
+[5] 
+M. Fagan, K. N. Megas, K. Scarfone, and M. Smith, “IoT Device Cybersecurity 
+Capability Core Baseline,” National Institute of Standards and Technology, NIST 
+Internal 
+Report 
+8259A, 
+2020. 
+[Online]. 
+Available: 
+https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8259.pdf. 
+[6] 
+S. P. Skorobogatov, “Semi-Invasive Attacks - a New Approach to Hardware Security 
+Analysis,” Computer Laboratory, University of Cambridge, Technical Report 
+UCAM-CL-TR-630, 2005. 
+[7] 
+U. Rührmair, F. Sehnke, J. Sölter, G. Dror, S. Devadas, and J. Schmidhuber, 
+“Modeling Attacks on Physical Unclonable Functions,” in Proc. 17th ACM 
+Conference on Computer and Communications Security, 2010, pp. 237–249. 
+
+doi:10.6844/NCKU202002306
+ 
+- 58 - 
+ 
+[8] 
+X. Xu and W. Burleson, “Hybrid Side-Channel/Machine-Learning Attacks on PUFs: 
+A New Threat?,” in Proc. 2014 Design, Automation &amp; Test in Europe Conference &amp; 
+Exhibition, Apr. 2014, pp. 1–6. 
+[9] 
+A. Regenscheid, “Platform Firmware Resiliency Guidelines,” National Institute of 
+Standards and Technology, NIST Special Publication 800–193, 2018. [Online]. 
+Available: http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-193.pdf. 
+[10] “TrustZone for Cortex-A,” ARM. https://developer.arm.com/ip-products/security-
+ip/trustzone/trustzone-for-cortex-a (accessed Jun. 11, 2020). 
+[11] “Secure 
+Technology,” 
+AMD. 
+https://www.amd.com/en/technologies/security 
+(accessed Jun. 11, 2020). 
+[12] “New Microarchitecture for 4th Gen Intel® CoreTM Processor Platforms,” Intel, 2013. 
+[Online]. 
+Available: 
+https://www.intel.com/content/dam/www/public/us/en/documents/product-
+briefs/4th-gen-core-family-mobile-brief.pdf. 
+[13] J. Delvaux, R. Peeters, D. Gu, and I. Verbauwhede, “A Survey on Lightweight Entity 
+Authentication with Strong PUFs,” ACM Computing Surveys, vol. 48, no. 2, pp. 26:1-
+26:42, 2015. 
+[14] D. E. Holcomb, W. P. Burleson, and K. Fu, “Power-Up SRAM State as an Identifying 
+Fingerprint and Source of True Random Numbers,” IEEE Transactions on Computers, 
+vol. 58, no. 9, pp. 1198–1210, 2009. 
+[15] G. E. Suh and S. Devadas, “Physical Unclonable Functions for Device Authentication 
+and Secret Key Generation,” in Proc. 2007 44th ACM/IEEE Design Automation 
+Conference, 2007, pp. 9–14. 
+
+doi:10.6844/NCKU202002306
+ 
+- 59 - 
+ 
+[16] J. W. Lee, D. Lim, B. Gassend, G. E. Suh, M. van Dijk, and S. Devadas, “A Technique 
+to Build a Secret Key in Integrated Circuits for Identification and Authentication 
+Applications,” in Proc. 2004 Symposium on VLSI Circuits, 2004, pp. 176–179. 
+[17] G. T. Becker, “The Gap Between Promise and Reality: On the Insecurity of XOR 
+Arbiter PUFs,” in Proc. International Workshop on Cryptographic Hardware and 
+Embedded Systems, 2015, vol. 9293, pp. 535–555. 
+[18] M. Majzoobi, F. Koushanfar, and M. Potkonjak, “Lightweight Secure PUFs,” in Proc. 
+IEEE/ACM International Conference on Computer-Aided Design, 2008, pp. 1–4. 
+[19] U. Rührmair et al., “Power and Timing Side Channels for PUFs and Their Efficient 
+Exploitation,” IACR Cryptology ePrint Archive, 2013. [Online]. Available: 
+https://eprint.iacr.org/2013/851.pdf. 
+[20] B. Gassend, D. Lim, D. Clarke, M. van Dijk, and S. Devadas, “Identification and 
+Authentication of Integrated Circuits,” Concurrency and Computation: Practice and 
+Experience, vol. 16, no. 11, pp. 1077–1098, Sep. 2004. 
+[21] Q. Tang, W. H. Choi, L. Everson, K. K. Parhi, and C. H. Kim, “A Physical Unclonable 
+Function Based on Capacitor Mismatch in a Charge-Redistribution SAR-ADC,” in 
+Proc. 2018 IEEE International Symposium on Circuits and Systems, 2018, pp. 1–5. 
+[22] F. Rosenblatt, “The Perceptron, a Perceiving and Recognizing Automaton (Project 
+Para),” Cornell Aeronautical Laboratory, Report 85-460–1, 1957. 
+[23] J. Sölter, “Cryptanalysis of Electrical PUFs via Machine Learning Algorithms,” M.S. 
+thesis, Department of Informatics, Technical University of Munich, Munich , Bavaria, 
+Germany, 2009. 
+[24] “History 
+of 
+Support 
+Vector 
+Machines,” 
+SVM 
+Learning. 
+https://www.svms.org/history.html (accessed Jun. 22, 2020). 
+
+doi:10.6844/NCKU202002306
+ 
+- 60 - 
+ 
+[25] C. Cortes and V. Vapnik, “Support-Vector Networks,” Machine Learning, vol. 20, no. 
+3, pp. 273–297, 1995. 
+[26] B. Gassend, D. Clarke, M. van Dijk, and S. Devadas, “Controlled Physical Random 
+Functions,” in Proc. 18th Annual Computer Security Applications Conference, 2002, 
+pp. 149–160. 
+[27] G. T. Becker and R. Kumar, “Active and Passive Side-Channel Attacks on Delay 
+Based PUF Designs,” IACR Cryptology ePrint Archive, 2014. [Online]. Available: 
+http://eprint.iacr.org/2014/287.pdf. 
+[28] C. Bösch, J. Guajardo, A. R. Sadeghi, J. Shokrollahi, and P. Tuyls, “Efficient Helper 
+Data Key Extractor on FPGAs,” in Proc. 10th International Workshop on 
+Cryptographic Hardware and Embedded Systems, 2008, pp. 181–197. 
+[29] J. Delvaux and I. Verbauwhede, “Attacking PUF-Based Pattern Matching Key 
+Generators via Helper Data Manipulation,” in Proc. Cryptographer’s Track at the RSA 
+Conference 2014, 2014, pp. 106–131. 
+[30] G. T. Becker, “On the Pitfalls of Using Arbiter-PUFs as Building Blocks,” IEEE 
+Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 34, 
+no. 8, pp. 1295–1307, Aug. 2015. 
+[31] D. Nedospasov, J.-P. Seifert, C. Helfmeier, and C. Boit, “Invasive PUF Analysis,” in 
+Proc. 10th Workshop on Fault Diagnosis and Tolerance in Cryptography, 2013, pp. 
+30–38. 
+[32] S. Tajik et al., “Photonic Side-Channel Analysis of Arbiter PUFs,” Journal of 
+Cryptology, vol. 30, no. 2, pp. 550–571, Apr. 2017. 
+[33] D. Merli, D. Schuster, F. Stumpf, and G. Sigl, “Semi-Invasive EM Attack on FPGA 
+RO PUFs and Countermeasures,” in Proc. Workshop on Embedded Systems Security, 
+2011, pp. 1–9. 
+
+doi:10.6844/NCKU202002306
+ 
+- 61 - 
+ 
+[34] “Advanced Encryption Standard (AES),” National Institute of Standards and 
+Technology, Federal Information Processing Standards Publication 197, 2001. 
+[Online]. Available: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf. 
+[35] “Brute-Force Attack,” Wikipedia. https://en.wikipedia.org/wiki/Brute-force_attack 
+(accessed Jun. 25, 2020). 
+[36] M. Dworkin, “Recommendation for Block Cipher Modes of Operation: Methods and 
+Techniques,” National Institute of Standards and Technology, NIST Special 
+Publication 
+800–38A, 
+2001. 
+[Online]. 
+Available: 
+https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf. 
+[37] M. Dworkin, “Recommendation for Block Cipher Modes of Operation: 
+Galois/Counter Mode (GCM) and GMAC,” National Institute of Standards and 
+Technology, NIST Special Publication 800–38D, 2007. [Online]. Available: 
+https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf. 
+[38] D. A. McGrew and J. Viega, “The Security and Performance of the Galois/Counter 
+Mode (GCM) of Operation,” in Proc. 5th International Conference on Cryptology in 
+India, 2004, pp. 343–355. 
+[39] G. Pocklassery, W. Che, F. Saqib, M. Areno, and J. Plusquellic, “Self-Authenticating 
+Secure Boot for FPGAs,” in Proc. 2018 IEEE International Symposium on Hardware 
+Oriented Security and Trust, 2018, pp. 221–226. 
+[40] J. Aarestad, P. Ortiz, J. Plusquellic, and D. Acharyya, “HELP: A Hardware-Embedded 
+Delay PUF,” IEEE Design and Test, vol. 30, no. 2, pp. 17–25, 2013. 
+[41] J. Haj-Yahya, M. M. Wong, V. Pudi, S. Bhasin, and A. Chattopadhyay, “Lightweight 
+Secure-Boot Architecture for RISC-V System-on-Chip,” in Proc. 20th International 
+Symposium on Quality Electronic Design, 2019, pp. 216–223. 
+</pre>
+    </article>
+  </div>
+</section>
+
+<section class="paper-page" id="paper-4">
+  <div class="hero">
+    <div>
+      <span class="tag">8T SRAM CIM／多位元 CNN／WBPA／時間調變</span>
+      <h1>可應用於高能量效益多位元卷積神經網路的邊緣裝置之 8T SRAM 記憶體內運算</h1>
+      <p class="meta">作者：林育緯　年份：2020　DOI：10.6844/NCKU202002445</p>
+      <p class="lead">提出 40 nm 8T SRAM-based Compute-In-Memory 巨集，支援多位元權重與輸入特徵圖。透過權重位元切割累加與時間調變，兼顧多位元精度、資料轉換器成本、能量效率與推論速度。</p>
+      <a class="pdfbtn" href="papers/可應用於高能量效益多位元卷積神經網路的邊緣裝置之8T SRAM記憶體內運算(2).pdf" target="_blank">開啟原始論文 PDF</a>
+    </div>
+  </div>
+  <div class="subtabs">
+    <button data-tab="overview" class="active">研究總覽</button>
+    <button data-tab="method">研究方法</button>
+    <button data-tab="results">實驗結果</button>
+    <button data-tab="figures">原論文圖片</button>
+    <button data-tab="critique">貢獻與限制</button>
+    <button data-tab="refs">文獻參考</button>
+  </div>
+  <div class="tabpane active" data-pane="overview">
+    <div class="grid two">
+      <article class="card"><h2>摘要重點</h2><p>提出 40 nm 8T SRAM-based Compute-In-Memory 巨集，支援多位元權重與輸入特徵圖。透過權重位元切割累加與時間調變，兼顧多位元精度、資料轉換器成本、能量效率與推論速度。</p></article>
+      <article class="card"><h2>研究定位</h2><p>本論文屬於邱瀝毅教授實驗室在「低功耗計算、智慧系統、安全硬體、記憶體與訊號處理」方向的研究成果。它從明確的系統瓶頸出發，提出可實作的演算法、架構或電路，並以模擬或實驗結果驗證。</p></article>
+    </div>
+    <article class="card"><h2>問題意識與研究流程</h2>
+      <ol>
+        <li>辨識現有方法的核心瓶頸與評估指標。</li>
+        <li>建立基準架構、資料集或模擬平台。</li>
+        <li>提出新的控制機制、演算法或電路架構。</li>
+        <li>設計多組參數與對照實驗。</li>
+        <li>以效能、能量、溫度、正確率、BER、INL 或安全性等指標分析。</li>
+      </ol>
+    </article>
+    <article class="card"><h2>論文章節結構</h2><pre> 
+vii 
+ 
+目錄 
+摘要................................................................................................................................. i 
+致謝............................................................................................................................... vi 
+目錄.............................................................................................................................. vii 
+圖目錄........................................................................................................................... ix 
+表目錄........................................................................................................................ xiii 
+第1 章 緒論................................................................................................................ 1 
+1.1 研究概觀........................................................................................................ 1 
+1.1.1 發展背景............................................................................................ 1 
+1.1.2 記憶體內運算.................................................................................... 5 
+1.1.2 相關名詞介紹.................................................................................... 8 
+1.1.2.1 
+記憶體內運算名詞................................................................ 8 
+1.1.2.2 
+資料轉換器名詞.................................................................... 9 
+1.1.3 記憶體內運算之分類...................................................................... 11 
+1.1.3.1 
+非揮發性記憶體內運算...................................................... 12 
+1.1.3.2 
+揮發性記憶體內運算.......................................................... 15 
+1.2 研究動機...................................................................................................... 16 
+1.3 論文貢獻...................................................................................................... 19 
+1.4 論文架構...................................................................................................... 20 
+第2 章 相關研究文獻 ............................................................................................. 21 
+2.1 10T SRAM-based 記憶體內運算 ............................................................... 21 
+2.2 Twin-8T SRAM-based 記憶體內運算........................................................ 25 
+2.3 8T SRAM-based 記憶體內運算 ................................................................. 30 
+2.4 相關文獻總結.............................................................................................. 32 
+第3 章 具權重位元切割累加機制之8T SRAM 記憶體內運算 .......................... 35 
+doi:10.6844/NCKU202002445
+
+ 
+ix 
+ 
+圖目錄 
+圖 1-1  DNN 演算法之演進[6] .................................................................................. 2 
+圖 1-2  不同處理器之運算特性差異 ........................................................................ 3 
+圖 1-3  不同記憶體階層與運算單位，資料所需能量消耗[13].............................. 4 
+圖 1-4  數位加速器與CIM 之運算流程比較[17] .................................................... 5 
+圖 1-5  數位加速器與CIM 之能量比較[18] ............................................................ 6 
+圖 1-6  CIM 與NN 演算法之比較圖 ........................................................................ 7 
+圖 1-7  資料轉換器之DNL 示意圖 ........................................................................ 10 
+圖 1-8  資料轉換器之INL 示意圖.......................................................................... 10 
+圖 1-9  CIM 概略分類 .............................................................................................. 12 
+圖 1-10 記憶體單元之操作速度與電壓比較[35] .................................................... 13 
+圖 1-11  nvCIM 與NN 演算法之對應圖 ................................................................ 14 
+圖 1-12 新興記憶體之阻值比較[36]........................................................................ 15 
+圖 1-13 傳統6T SRAM 單元電路 ........................................................................... 15 
+圖 1-14  AIoT 市場預測趨勢[6] .............................................................................. 17 
+圖 1-15  CIM 精準度發展趨勢[17] ......................................................................... 18 
+圖 1-16  SRAM-based CIM 電流式累加曲線[34] .................................................. 19 
+圖 1-17 電流式累加時，有無校正機制比較曲線[33]............................................ 19 
+圖 2-1  BNNs 對應於CIM 電路之計算概念[23] ................................................... 22 
+圖 2-2  10T SRAM-based 記憶體內運算[23] ......................................................... 22 
+圖 2-3  GBL DAC 電路架構與操作波型[23] ......................................................... 23 
+圖 2-4  10T SRAM array 電路架構與操作波型[23] ............................................... 24 
+圖 2-5  Charge Sharing ADC 電路架構與波型[23] ................................................ 24 
+圖 2-6  T8T SRAM-based CIM 整體架構[20] ........................................................ 25 
+圖 2-7  Twin-8T SRAM cell [20].............................................................................. 27 
+doi:10.6844/NCKU202002445
+
+ 
+xiii 
+ 
+表目錄 
+表 1-1  DNN 演算法之權重與MAC 總數比較 ....................................................... 4 
+表 2-1  2b×2b 累加增值表[20] ................................................................................ 26 
+表 2-2  EODC 機制下的輸入映射對照[20] ............................................................ 27 
+表 2-3  相關文獻之比較 .......................................................................................... 34 
+表 4-1  操作電壓與RSNM 趨勢關係（pre-sim.） ................................................ 60 
+表 5-1  相關文獻比較 .............................................................................................. 73 
+doi:10.6844/NCKU202002445
+
+</pre></article>
+  </div>
+  <div class="tabpane" data-pane="method">
+    <article class="card"><h2>研究方法詳解</h2><ul><li>以 54-bit weight block、4-bit pulse-width generator、VTC array、4-bit TDC array、8-bit output combiner 構成。</li><li>以 8T SRAM 的獨立 read port 執行類比乘加，降低 write disturb。</li><li>以輸入值控制 RWL pulse width，讓輸入資訊以時間編碼；多列同時啟動形成 column-wise charge accumulation。</li><li>WBPA 將多位元權重拆為多個低解析度部分，再以數位方式組合，避免單一高解析度 ADC。</li><li>以 HSPICE 40 nm 與 MATLAB 模擬，並完成 test chip 佈局／製作。</li></ul></article>
+    <article class="card"><h2>方法論解讀</h2>
+      <p>此研究不是只提出單一公式，而是將問題拆成感測／特徵取得、決策或運算核心、硬體控制、系統整合與驗證五個層次。閱讀時應特別注意：輸入訊號如何取得、控制狀態如何定義、參數如何選擇、以及基準方法是否公平。</p>
+      <p>若從 IC 與系統設計角度評估，可再檢查 critical path、記憶體存取、控制週期、額外面積、功率模型與製程／溫度／電壓變異。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="results">
+    <article class="card highlight"><h2>主要實驗結果</h2><ul><li>3×3 filter、5-bit weights、4-bit IFMP、8-bit MAC。</li><li>INL 約 -0.58 LSB 至 0.91 LSB。</li><li>100–400 MHz 操作下能量效率約 23.5–26.3 TOPS/W。</li><li>corner variation 下約 19.4–25.4 TOPS/W。</li><li>時間調變將 DAC 數量由 n×n 降至 1。</li></ul></article>
+    <article class="card"><h2>結果詮釋</h2>
+      <p>結果應同時觀察「主要目標改善」與「為此付出的代價」。例如節能方法不能只看功率下降，也要把執行時間納入能量；熱管理不能只看溫度，也要檢查效能與額外能量；安全機制需同時看攻擊成功率與硬體成本；辨識系統則應避免只呈現單一最佳案例。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="figures">
+    <div class="gallery"><figure><img src="assets/cim8t_p2.jpg" alt="可應用於高能量效益多位元卷積神經網路的邊緣裝置之 8T SRAM 記憶體內運算 第 2 頁"><figcaption>原論文第 2 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/cim8t_p4.jpg" alt="可應用於高能量效益多位元卷積神經網路的邊緣裝置之 8T SRAM 記憶體內運算 第 4 頁"><figcaption>原論文第 4 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/cim8t_p39.jpg" alt="可應用於高能量效益多位元卷積神經網路的邊緣裝置之 8T SRAM 記憶體內運算 第 39 頁"><figcaption>原論文第 39 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/cim8t_p55.jpg" alt="可應用於高能量效益多位元卷積神經網路的邊緣裝置之 8T SRAM 記憶體內運算 第 55 頁"><figcaption>原論文第 55 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/cim8t_p76.jpg" alt="可應用於高能量效益多位元卷積神經網路的邊緣裝置之 8T SRAM 記憶體內運算 第 76 頁"><figcaption>原論文第 76 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/cim8t_p93.jpg" alt="可應用於高能量效益多位元卷積神經網路的邊緣裝置之 8T SRAM 記憶體內運算 第 93 頁"><figcaption>原論文第 93 頁：重要內容／圖表頁面</figcaption></figure></div>
+  </div>
+  <div class="tabpane" data-pane="critique">
+    <div class="grid two">
+      <article class="card good"><h2>研究貢獻</h2><ul><li>以 WBPA 改善多位元類比累加非理想效應與量化誤差。</li><li>降低高解析度 data converter 的功耗與面積負擔。</li><li>適合低功耗 CNN edge devices 的多位元精準推論。</li></ul></article>
+      <article class="card warn"><h2>限制與可延伸方向</h2><ul><li>結果以電路模擬為主，晶片量測結果、製程 mismatch 與長期可靠度可再補強。</li><li>完整神經網路 accuracy 與電路非理想共同評估仍可深化。</li></ul></article>
+    </div>
+    <article class="card"><h2>後續研究建議</h2>
+      <p>可將本研究放到更新的製程、實體 FPGA／ASIC／GPU 平台或更大資料集驗證，並加入跨工作負載、跨電壓溫度、長期可靠度及實際控制延遲。若是機器學習方法，也可加入可解釋性、泛化與線上學習；若是電路研究，可加入 Monte Carlo、post-layout、晶片量測與系統層應用準確率。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="refs">
+    <article class="card"><h2>原論文參考文獻摘錄</h2>
+      <p class="note">以下內容由原 PDF 末段參考文獻頁擷取，保留原始編號與格式，方便回查。</p>
+      <pre> 
+76 
+ 
+參考文獻 
+[1] 
+Y. LeCun, L. Jackel, B. Boser, J. Denker, H. Graf, I. Guyon, et al., “Handwritten 
+Digit Recognition: Applications of Neural Network Chips and Automatic 
+Learning,” IEEE Communications Magazine, vol. 27, no. November, pp. 41–46, 
+1989. 
+[2] 
+O. Russakovsky, J. Deng, H. Su, J. Krause, S. Satheesh, S. Ma, et al., “ImageNet 
+Large Scale Visual Recognition Challenge,” International Journal of Computer 
+Vision, pp. 248–255, 2015. 
+[3] 
+A. Krizhevsky, et al., “ImageNet Classification with Deep Convolutional Neural 
+Networks,” Proceedings of the 25th International Conference on Neural 
+Information Processing Systems, 2012, pp. 1097–1105. 
+[4] 
+K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image 
+recognition,” in Proc. IEEE Computer Society Conference on Computer Vision 
+and Pattern Recognition, 2016, pp. 770–778. 
+[5] 
+A. G. Howard, M. Zhu, B. Chen, D. Kalenichenko, W. Wang, T. Weyand, et al., 
+“MobileNets: Efficient Convolutional Neural Networks for Mobile Vision 
+Applications,” 2017. [Online]. Available: http://arxiv.org/abs/1704.04861. 
+[6] 
+K. L. Loh, “Fertilizing AIoT from Roots to Leaves,” in Proc. IEEE International 
+Solid- State Circuits Conference - (ISSCC), 2020, pp. 15–21. 
+[7] 
+FRAMINGHAM, and Mass, “The Growth in Connected IoT Devices Is 
+Expected to Generate 79.4ZB of Data in 2025, According to a New IDC 
+ForecastTitle,” IDC, 2019. . 
+[8] 
+J. C. Talwana, and H. J. Hua, “Smart World of Internet of Things (IoT) and Its 
+Security Concerns,” in Proc. IEEE International Conference on Internet of 
+doi:10.6844/NCKU202002445
+
+ 
+77 
+ 
+Things (iThings) and IEEE Green Computing and Communications (GreenCom) 
+and IEEE Cyber, Physical and Social Computing (CPSCom) and IEEE Smart 
+Data (SmartData), 2016, pp. 240–245. 
+[9] 
+M. Gusev, and S. Dustdar, “Going back to the roots - The evolution of edge 
+computing, an IoT perspective,” IEEE Internet Computing, vol. 22, no. 2, pp. 5–
+15, 2018. 
+[10] H. J. Yoo, “Intelligence on Silicon: From Deep-Neural-Network Accelerators to 
+Brain Mimicking AI-SoCs,” in Proc. IEEE International Solid-State Circuits 
+Conference, 2019, pp. 20–26. 
+[11] Y. H. Chen, T. Krishna, J. S. Emer, and V. Sze, “Eyeriss: An Energy-Efficient 
+Reconfigurable Accelerator for Deep Convolutional Neural Networks,” IEEE 
+Journal of Solid-State Circuits, vol. 52, no. 1, pp. 127–138, 2017. 
+[12] B. Moons, R. Uytterhoeven, W. Dehaene, and M. Verhelst, “Envision: A 0.26-
+to-10TOPS/W subword-parallel dynamic-voltage-accuracy-frequency-scalable 
+Convolutional Neural Network processor in 28nm FDSOI,” in Proc. IEEE 
+International Solid-State Circuits Conference, 2017, vol. 60, pp. 246–247. 
+[13] Y. H. Chen, J. Emer, and V. Sze, “Eyeriss: A Spatial Architecture for Energy-
+Efficient Dataflow for Convolutional Neural Networks,” in Proc. 2016 
+ACM/IEEE 43rd Annual International Symposium on Computer Architecture 
+(ISCA), 2016, pp. 367–379. 
+[14] S. Park, K. Bong, D. Shin, J. Lee, S. Choi, and H. Yoo, “A 1.93TOPS/W Scalable 
+Deep Learning /Inference Processor with Tetra-Parallel MIMD Architecture for 
+Big-Data Applications,” in Proc. 2015 IEEE International Solid-State Circuits 
+Conference - (ISSCC) Digest of Technical Papers, 2015, pp. 80–82. 
+[15] Z. Du, R. Fasthuber, T. Chen, P. Ienne, L. Li, T. Luo, et al., “ShiDianNao: 
+doi:10.6844/NCKU202002445
+
+ 
+78 
+ 
+Shifting vision processing closer to the sensor,” Proceedings - International 
+Symposium on Computer Architecture, vol. 13-17-June, pp. 92–104, 2015. 
+[16] K. Simonyan, and A. Zisserman, “Very deep convolutional networks for large-
+scale image recognition,” in Proc. 3rd International Conference on Learning 
+Representations, ICLR 2015, 2015, pp. 1–14. 
+[17] K. T. Tang, W. C. Wei, Z. W. Yeh, T. H. Hsu, Y. C. Chiu, C. X. Xue, et al., 
+“Considerations of Integrating Computing-In-Memory and Processing-In-
+Sensor into Convolutional Neural Network Accelerators for Low-Power Edge 
+Devices,” in Proc. IEEE Symposium on VLSI Circuits, Digest of Technical 
+Papers, 2019, vol. 2019-June, pp. T166–T167. 
+[18] W. H. Chen, K. X. Li, W. Y. Lin, K. H. Hsu, P. Y. Li, C. H. Yang, et al., “A 
+65nm 1Mb nonvolatile computing-in-memory ReRAM macro with sub-16ns 
+multiply-and-accumulate for binary DNN AI edge processors,” in Proc. IEEE 
+International Solid-State Circuits Conference, 2018, vol. 61, pp. 494–496. 
+[19] W. S. Khwa, J. J. Chen, J. F. Li, X. Si, E. Y. Yang, X. Sun, et al., “A 65nm 4Kb 
+algorithm-dependent computing-in-memory SRAM unit-macro with 2.3ns and 
+55.8TOPS/W fully parallel product-sum operation for binary DNN edge 
+processors,” in Proc. IEEE International Solid-State Circuits Conference, 2018, 
+vol. 61, pp. 496–498. 
+[20] X.Si, J. J. Chen, Y. N. Tu, W. H. Huang, J. H. Wang, Y. C. Chiu, et al., “A Twin-
+8T SRAM Computation-In-Memory Macro for Multiple-Bit CNN-Based 
+Machine Learning,” in Proc. IEEE International Solid-State Circuits Conference, 
+2019, pp. 396–398. 
+[21] M. Kang, S. K. Gonugondla, S. Lim, and N. R. Shanbhag, “A 19.4-nJ/Decision, 
+364-K Decisions/s, In-Memory Random Forest Multi-Class Inference 
+doi:10.6844/NCKU202002445
+
+ 
+79 
+ 
+Accelerator,” in Proc. IEEE Journal of Solid-State Circuits, 2018, vol. 53, no. 7, 
+pp. 2126–2135. 
+[22] Q. Dong, M. E. Sinangil, B. Erbagci, D. Sun, W. Khwa, H. Liao, et al., “A 
+351TOPS/W and 372.4GOPS Compute-in-Memory SRAM Macro in 7nm 
+FinFET CMOS for Machine-Learning Applications,” in Proc. IEEE 
+International Solid- State Circuits Conference - (ISSCC), 2020, pp. 488–489. 
+[23] A. Biswas, and A. P. Chandrakasan, “Conv-RAM: An Energy-Efficient SRAM 
+with Embedded Convolution Computation for Low-Power CNN-Based Machine 
+Learning Applications,” in Proc. IEEE International Solid-State Circuits 
+Conference, 2018, vol. 61, pp. 488–490. 
+[24] C. X. Xue, W. H. Chen, J. S. Liu, J. F. Li, W. Y. Lin, W. E. Lin, et al., “A 1Mb 
+Multibit ReRAM Computing-In-Memory Macro with 14.6ns Parallel MAC 
+Computing Time for CNN Based AI Edge Processors,” in Proc. IEEE 
+International Solid-State Circuits Conference, 2019, pp. 388–390. 
+[25] R. Guo, Y. Liu, S. Zheng, S.-Y. Wu, P. Ouyang, W. S. Khwa, et al., “A 
+5.1pJ/Neuron 127.3us/Inference RNN-based Speech Recognition Processor 
+using 16 Computing-in-Memory SRAM Macros in 65nm CMOS,” in Proc. 2019 
+Symposium on VLSI Circuits Digest of Technical Papers, 2019, pp. 6351–6355. 
+[26] J. Yue, Z. Yuan, X. Feng, Y. He, Z. Zhang, X. Si, et al., “A 65nm Computing-
+in-Memory-Based CNN Processor with 2.9-to-35.8TOPS/W System Energy 
+Efficiency Using Dynamic-Sparsity Performance-Scaling Architecture and 
+Energy-Efficient Inter/Intra-Macro Data Reuse,” in Proc. IEEE International 
+Solid-State Circuits Conference, 2020, pp. 234–236. 
+[27] S. K. Gonugondla, M. Kang, and N. Shanbhag, “A 42pJ/Decision 3.12TOPS/W 
+Robust In-Memory Machine Learning Classifier with On-Chip Training,” IEEE 
+doi:10.6844/NCKU202002445
+
+ 
+80 
+ 
+International Solid-State Circuits Conference, vol. 61, pp. 490–492, 2018. 
+[28] J. W. Su, X. Si, Y. C. Chou, T. W. Chang, W. H. Huang, Y. N. Tu, et al., “A 
+28nm 64Kb Inference-Training Two-Way Transpose Multibit 6T SRAM 
+Compute-in-Memory Macro for AI Edge Chips,” in Proc. IEEE International 
+Solid-State Circuits Conference, 2020, pp. 240–242. 
+[29] W. Chen, W. Lin, L. Lai, S. Li, C. Hsu, H. Lin, et al., “A 16Mb Dual-Mode 
+ReRAM Macro with Sub-14ns Computing-In-Memory and Memory Functions 
+Enabled by Self-Write Termination Scheme,” in Proc. IEEE International 
+Electron Devices Meeting (IEDM), 2017, pp. 657–660. 
+[30] I. Giannopoulos, A. Sebastian, M. LeGallo, V. P. Jonnalagadda, M. Sousa, M. 
+N. Boon, et al., “8-bit Precision In-Memory Multiplication with Projected Phase-
+Change Memory,” in Proc. IEEE International Electron Devices Meeting 
+(IEDM), 2018, pp. 27.7.1-27.7.4. 
+[31] H. Farkhani, M. Tohidi, S. Farkhani, J. K. Madsen, and F. Moradi, “A Low-
+Power High-Speed Spintronics-Based Neuromorphic Computing System Using 
+Real-Time Tracking Method,” IEEE Journal on Emerging and Selected Topics 
+in Circuits and Systems, vol. 8, no. 3, pp. 627–638, 2018. 
+[32] Y. Shi, S. Oh, Z. Huang, S. Member, X. Lu, S. H. Kang, et al., “Performance 
+Prospects of Deeply Scaled Spin-transfer Torque Magnetic Random-access 
+Memory for In-memory Computing,” in Proc. IEEE Electron Device Letters, 
+2020, vol. 3106, no. c, pp. 1–4. 
+[33] J. Zhang, Z. Wang, and N. Verma, “In-Memory Computation of a Machine-
+Learning Classifier in a Standard 6T SRAM Array,” IEEE Journal of Solid-State 
+Circuits, vol. 52, no. 4, pp. 915–924, 2017. 
+[34] A. Jaiswal, I. Chakraborty, A. Agrawal, and K. Roy, “8T SRAM Cell as a 
+doi:10.6844/NCKU202002445
+</pre>
+    </article>
+  </div>
+</section>
+
+<section class="paper-page" id="paper-5">
+  <div class="hero">
+    <div>
+      <span class="tag">RRAM-based NVSRAM／低電壓備份／Normally-off IoT</span>
+      <h1>可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體</h1>
+      <p class="meta">作者：杜唯宏　年份：2020　DOI：10.6844/NCKU202002443</p>
+      <p class="lead">提出 180 nm 10T2R RRAM-based NVSRAM，能在低電壓模式完成資料備份。透過寫入加強控制器與充電路徑自動切斷，降低 RRAM 寫入不足與重複資料備份造成的無效能量。</p>
+      <a class="pdfbtn" href="papers/可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體(2).pdf" target="_blank">開啟原始論文 PDF</a>
+    </div>
+  </div>
+  <div class="subtabs">
+    <button data-tab="overview" class="active">研究總覽</button>
+    <button data-tab="method">研究方法</button>
+    <button data-tab="results">實驗結果</button>
+    <button data-tab="figures">原論文圖片</button>
+    <button data-tab="critique">貢獻與限制</button>
+    <button data-tab="refs">文獻參考</button>
+  </div>
+  <div class="tabpane active" data-pane="overview">
+    <div class="grid two">
+      <article class="card"><h2>摘要重點</h2><p>提出 180 nm 10T2R RRAM-based NVSRAM，能在低電壓模式完成資料備份。透過寫入加強控制器與充電路徑自動切斷，降低 RRAM 寫入不足與重複資料備份造成的無效能量。</p></article>
+      <article class="card"><h2>研究定位</h2><p>本論文屬於邱瀝毅教授實驗室在「低功耗計算、智慧系統、安全硬體、記憶體與訊號處理」方向的研究成果。它從明確的系統瓶頸出發，提出可實作的演算法、架構或電路，並以模擬或實驗結果驗證。</p></article>
+    </div>
+    <article class="card"><h2>問題意識與研究流程</h2>
+      <ol>
+        <li>辨識現有方法的核心瓶頸與評估指標。</li>
+        <li>建立基準架構、資料集或模擬平台。</li>
+        <li>提出新的控制機制、演算法或電路架構。</li>
+        <li>設計多組參數與對照實驗。</li>
+        <li>以效能、能量、溫度、正確率、BER、INL 或安全性等指標分析。</li>
+      </ol>
+    </article>
+    <article class="card"><h2>論文章節結構</h2><pre> 
+viii 
+ 
+目錄 
+摘 要 .............................................................................................................................. i 
+致謝 ............................................................................................................................. vii 
+目錄 ............................................................................................................................ viii 
+表目錄 ........................................................................................................................... x 
+圖目錄 .......................................................................................................................... xi 
+第 1 章 
+緒論 ........................................................................................................... 1 
+1.1 研究概觀 ......................................................................................................... 1 
+1.1.1 
+發展背景 ......................................................................................... 1 
+1.1.2 
+非揮發性靜態隨機存取記憶體 ..................................................... 4 
+1.1.3 
+非揮發性靜態隨機存取記憶體發展 ........................................... 10 
+1.2 研究動機 ....................................................................................................... 13 
+1.3 論文貢獻 ....................................................................................................... 17 
+1.4 論文架構 ....................................................................................................... 18 
+第 2 章 
+相關研究文獻 ......................................................................................... 19 
+2.1 8T2R 非揮發性靜態隨機存取記憶體 ......................................................... 19 
+2.2 10T2R 非揮發性靜態隨機存取記憶體 ....................................................... 21 
+2.3 7T1R 非揮發性靜態隨機存取記憶體 ......................................................... 25 
+2.4 相關文獻總結 ............................................................................................... 28 
+第 3 章 
+可在低電壓模式下備份的儲存能量效益電阻式非揮發性靜態隨機存取記
+憶體 
+30 
+3.1 設計簡述 ....................................................................................................... 30 
+3.2 非揮發性靜態隨機存取記憶體架構 ........................................................... 31 
+3.3 非揮發性靜態隨機存取記憶體單元 ........................................................... 33 
+doi:10.6844/NCKU202002443
+
+ 
+x 
+ 
+表目錄 
+表 1-1 新興記憶體與快閃記憶體的規格比較[11] ............................................................ 7 
+表 1-2 RRAM 與MRAM 特性比較表 ............................................................................... 9 
+表 1-3 RRAM-based NVSRAM 與 MRAM-based NVSRAM 特性比較表 .................. 10 
+表 2-1 相關文獻比較表 .................................................................................................... 29 
+表 4-1 SNM 實驗結果比較表 ........................................................................................... 46 
+表 4-2 不同架構的實驗模擬環境比較表 ........................................................................ 53 
+表 5-1 相關文獻比較 ......................................................................................................... 57 
+ 
+ 
+doi:10.6844/NCKU202002443
+
+ 
+xi 
+ 
+圖目錄 
+圖 1-1 每年連結於物聯網的裝置數量統計和預測[1] ..................................................... 1 
+圖 1-2 物聯網示意圖[2] ..................................................................................................... 2 
+圖 1-3 不同消耗功率與製程的關係[5] ............................................................................. 2 
+圖 1-4 非揮發電源閘控架構[8] ......................................................................................... 3 
+圖 1-5 常關式記憶體架構[8] .............................................................................................. 3 
+圖 1-6 2-Macro 記憶體架構及備份圖 ............................................................................... 4 
+圖 1-7 置入NVM 的SRAM Cell 備份圖 .......................................................................... 5 
+圖 1-8 Nonvolatile SRAM Cell ............................................................................................ 5 
+圖 1-9 快閃記憶體圖[10] .................................................................................................... 6 
+圖 1-10 RRAM 與MRAM 的寫入方式圖[13] ................................................................... 9 
+圖 1-11 NVSRAM 與SRAM 的消耗電流比較[19] ........................................................ 11 
+圖 1-12 資料維持機制示意圖以及操作流程[7] .............................................................. 12 
+圖 1-13 加入資料維持機制後NVSRAM 在待機狀態下的操作圖[9] ........................... 13 
+圖 1-14 在8T2R NVSRAM Cell 中RRAM 寫入路徑[24] ............................................. 14 
+圖 1-15 防止冗位儲存行為圖[9] ..................................................................................... 15 
+圖 1-16 8T2R NVSRAMCell 中儲存漏電流圖[24] ......................................................... 16 
+圖 1-17 RRAM 在HRS 阻抗值與儲存能量的關係圖[17] .............................................. 16 
+圖 1-18 NVSRAM 在低電壓模式下儲存資料的限制 ..................................................... 17 
+圖 2-1 Rnv8T NVSRAM 與其Cell 架構[16] ................................................................... 19 
+圖 2-2 不同種記憶體的能量比較[16] ............................................................................. 21 
+圖 2-3 10T2R NVSRAM 與其Cell 架構 .......................................................................... 21 
+圖 2-4 10T2R NVSRAMCell 架構[17] ............................................................................. 22 
+圖 2-5 儲存路徑等效路徑示意圖[17] .............................................................................. 23 
+doi:10.6844/NCKU202002443
+
+</pre></article>
+  </div>
+  <div class="tabpane" data-pane="method">
+    <article class="card"><h2>研究方法詳解</h2><ul><li>10T2R NVSRAM cell 將 SRAM 與 RRAM 結合，支援 store／restore。</li><li>提出 Nonvolatile Write Enhancement Controller（NWEC），在低壓 store 時提供額外電流。</li><li>比較 SRAM 與 NV cell 資料，偵測 redundant bit；相同時取消不必要的寫入。</li><li>以內建 charging-path auto-cutoff 切斷 store leakage。</li><li>設計 8K-bit、8-bit I/O、68-pin test chip；採 180 nm CMOS 與研究機構 RRAM 製程。</li></ul></article>
+    <article class="card"><h2>方法論解讀</h2>
+      <p>此研究不是只提出單一公式，而是將問題拆成感測／特徵取得、決策或運算核心、硬體控制、系統整合與驗證五個層次。閱讀時應特別注意：輸入訊號如何取得、控制狀態如何定義、參數如何選擇、以及基準方法是否公平。</p>
+      <p>若從 IC 與系統設計角度評估，可再檢查 critical path、記憶體存取、控制週期、額外面積、功率模型與製程／溫度／電壓變異。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="results">
+    <article class="card highlight"><h2>主要實驗結果</h2><ul><li>PVT 變異下 store energy reduction 維持 87.5% 以上，最高約 91%。</li><li>非冗餘位元在低壓模式相較正常模式儲存能量下降約 3.17%。</li><li>冗餘位元低壓模式儲存能量下降約 46.8%。</li><li>相較相關 10T2R NVSRAM，冗餘位元 store energy 降低 47.1%，非冗餘條件降低 17.6%。</li></ul></article>
+    <article class="card"><h2>結果詮釋</h2>
+      <p>結果應同時觀察「主要目標改善」與「為此付出的代價」。例如節能方法不能只看功率下降，也要把執行時間納入能量；熱管理不能只看溫度，也要檢查效能與額外能量；安全機制需同時看攻擊成功率與硬體成本；辨識系統則應避免只呈現單一最佳案例。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="figures">
+    <div class="gallery"><figure><img src="assets/nvsram_p2.jpg" alt="可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體 第 2 頁"><figcaption>原論文第 2 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/nvsram_p4.jpg" alt="可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體 第 4 頁"><figcaption>原論文第 4 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/nvsram_p42.jpg" alt="可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體 第 42 頁"><figcaption>原論文第 42 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/nvsram_p52.jpg" alt="可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體 第 52 頁"><figcaption>原論文第 52 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/nvsram_p65.jpg" alt="可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體 第 65 頁"><figcaption>原論文第 65 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/nvsram_p75.jpg" alt="可在低電壓模式下備份的儲存能量效益非揮發性靜態隨機存取記憶體 第 75 頁"><figcaption>原論文第 75 頁：重要內容／圖表頁面</figcaption></figure></div>
+  </div>
+  <div class="tabpane" data-pane="critique">
+    <div class="grid two">
+      <article class="card good"><h2>研究貢獻</h2><ul><li>把低電壓備份、寫入加強、冗餘位元偵測與自動斷流整合。</li><li>對 normally-off IoT 降低 standby leakage 與 backup energy。</li><li>兼顧 store time 與 store energy efficiency。</li></ul></article>
+      <article class="card warn"><h2>限制與可延伸方向</h2><ul><li>180 nm 製程的結果不能直接代表先進節點；RRAM endurance、retention 與 variability 仍需長期量測。</li><li>系統層 break-even time 與完整微處理器整合可再評估。</li></ul></article>
+    </div>
+    <article class="card"><h2>後續研究建議</h2>
+      <p>可將本研究放到更新的製程、實體 FPGA／ASIC／GPU 平台或更大資料集驗證，並加入跨工作負載、跨電壓溫度、長期可靠度及實際控制延遲。若是機器學習方法，也可加入可解釋性、泛化與線上學習；若是電路研究，可加入 Monte Carlo、post-layout、晶片量測與系統層應用準確率。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="refs">
+    <article class="card"><h2>原論文參考文獻摘錄</h2>
+      <p class="note">以下內容由原 PDF 末段參考文獻頁擷取，保留原始編號與格式，方便回查。</p>
+      <pre> 
+59 
+ 
+參考文獻 
+[1] 
+Statista Research Department, “2016. Internet of Things - number of connected 
+devices 
+worldwide 
+2015-2025.,” 
+2016. 
+https://www.statista.com/statistics/471264/iot-number-of-connected-devices-
+worldwide/ (accessed Nov. 27, 2016). 
+[2] 
+J. Gubbi, R. Buyya, S. Marusic, and M. Palaniswami, “Internet of Things (IoT):A 
+vision, architectural elements, and future directions,” Future Generation Computer 
+Systems, vol. 29, no. 7, pp. 1645–1660, 2013. 
+[3] 
+T. Adegbija, A. Rogacs, C. Patel, and A. Gordon-Ross, “Microprocessor 
+optimizations for the internet of things: A survey,” IEEE Transactions on Computer-
+Aided Design of Integrated Circuits and System., vol. 37, no. 1, pp. 7–20, 2018. 
+[4] 
+S. Popli, R. K. Jha, and S. Jain, “A Survey on Energy Efficient Narrowband Internet 
+of Things (NBIoT): Architecture, Application and Challenges,” IEEE Access, vol. 7, 
+pp. 16739–16776, 2019. 
+[5] 
+M. H. Abu-Rahma and M. Anis, Nanometer Variation-Tolerant SRAM. Springer, 
+2013. 
+[6] 
+N. Verma, “Analysis towards minimization of total SRAM energy over active and idle 
+operating modes,” IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 
+vol. 19, no. 9, pp. 1695-1703, 2011. 
+[7] 
+C. R. Huang, K. L. Wu, C. H. Wu, and L. Y. Chiou, “Ultra-Low Standby Power SRAM 
+with Adaptive Data-Retention-Voltage-Regulating Scheme,” in Proceeding of IEEE 
+International Symposium on Circuits and Systems, vol. 2018-May, 2018, pp. 2018–
+2021. 
+[8] 
+Y. Shuto, S. Yamamoto, and S. Sugahara, “New power-gating architectures using 
+nonvolatile retention: Comparative study of nonvolatile power-gating (NVPG) and 
+normally-off architectures for SRAM,” in Proceeding of IEEE International 
+Conference on  Microelectronic Test Structures, vol. 2016-May, 2016, pp. 136–141. 
+[9] 
+Z. Wang, Y. Liu, A. Lee, F. Su, C. P. Lo, Z. Yuan, J. Li, C. C. Lin, W. H. Chen, H. Y. Chiu, 
+W. E. Lin, Y. C. King ; C. J. Lin, P. K. Amiri, K. L. Wang, M. F. Chang and H. Yang, “A 
+65-nm ReRAM-Enabled Nonvolatile Processor with Time-Space Domain Adaption 
+and Self-Write-Termination Achieving &gt; 4× Faster Clock Frequency and &gt; 6× Higher 
+Restore Speed,” IEEE Journal of Solid-State Circuits, vol. 52, no. 10, pp. 2769–2785,  
+2017. 
+[10] M. F. Chang and S. J. Shen, “A process variation tolerant embedded split-gate flash 
+memory using pre-stable current sensing scheme,” IEEE Journal of Solid-State 
+Circuits, vol. 44, no. 3, pp. 987–994, 2009. 
+doi:10.6844/NCKU202002443
+
+ 
+60 
+ 
+[11] S. S. Sheu, K. H. Cheng, M. F. Chang, P. C. Chiang, W. P. Lin, H. Y. Lee, P. S. Chen, 
+Y. S. Chen, T. Y. Wu, F. T. Chen, K. L. Su, M. J. Kao and M. J. Tsai, “Fast-write 
+resistive RAM (RRAM) for embedded applications,” IEEE Design and Test of 
+Computers, vol. 28, no. 1, pp. 64–71, 2011. 
+[12] Y. Xie and Y. Zhao, “Emerging memory technologies,” IEEE Micro, vol. 39, no. 1, 
+pp. 6–7, 2019. 
+[13] C. Wang, H. Wu, B. Gao, T. Zhang, Y. Yang, and H. Qian, “Conduction mechanisms, 
+dynamics and stability in ReRAMs,” Microelectronic Engineering, vol. 187–188, pp. 
+121–133, 2018. 
+[14]  A. Lee, M. F. Chang, C. C. Lin, C. F. Chen, M. S. Ho, C. C. Kuo, P. L. Tseng, S. S. 
+Sheu and T. K. Ku, “RRAM-based 7T1R nonvolatile SRAM with 2x reduction in store 
+energy and 94x reduction in restore energy for frequent-off instant-on applications,” 
+in Proceeding of IEEE Symposium on VLSI Circuits, Digest Technical Papers, vol. 
+2015-Augus, 2015, pp. C76–C77. 
+[15] S. S. Sheu, C. C. Kuo, M. F. Chang, P. L. Tseng, C. S. Lin, M. C. Wang, C. H. Lin, W. 
+P. Lin, T. K. Chien, S. H. Lee, S. C. Liu, H. Y. Lee, P. S. Chen, Y. S. Chen, C. C. Hsu, 
+F. T. Chen, K. L. Su, T. K. Ku, M. J. Tsai and M. J. Kao, “A ReRAM integrated 7T2R 
+non-volatile SRAM for normally-off computing application,” in Proceeding of 2013 
+IEEE Asian Solid-State Circuits Conference (A-SSCC), 2013, pp. 245–248. 
+[16] P. F. Chiu, M. F. Chang, C. W. Wu, C. H. Chuang, S. S. Sheu, Y. S. Chen and M. J. 
+Tsai, “Low store energy, low VDDmin, 8T2R nonvolatile latch and SRAM with 
+vertical-stacked resistive memory (memristor) devices for low power mobile 
+applications,” IEEE Journal Solid-State Circuits, vol. 47, no. 6, pp. 1483–1496, 2012. 
+[17] T. K. Chien, L. Y. Chiou, Y. S. Tsou, S. S. Sheu, P. H. Wang, M. J. Tsai and C. I. Wu, 
+“Write-energy-saving ReRAM-based nonvolatile SRAM with redundant bit-write-
+aware controller for last-level caches,” in Proceeding of International Symposium on  
+Low Power Electronics and Design (ISLPED), 2017. 
+[18] L. Bagheriye, S. Toofan, R. Saeidi, B. Zeinali, and F. Moradi, “A Reduced 
+Store/Restore Energy MRAM-Based SRAM Cell for a Non-Volatile Dynamically 
+Reconfigurable FPGA,” IEEE Transactions on Circuits and System II: Express Briefs, 
+vol. 65, no. 11, pp. 1708–1712, 2018. 
+[19] Y. Shuto, S. Yamamoto, and S. Sugahara, “Analysis of static noise margin and power-
+gating efficiency of a new nonvolatile SRAM cell using pseudo-spin-MOSFETs,”  
+in Proceeding of 2012 IEEE Silicon Nanoelectronic Workshop (SNW), vol. 1, 2012, 
+pp. 3–6. 
+[20] K. Monga, A. Malhotra, N. Chaturvedi, and S. Gurunayaranan, “A Novel Low Power 
+Non-Volatile SRAM Cell with Self Write Termination,” in Proceeding of 2019 10th 
+doi:10.6844/NCKU202002443
+
+ 
+61 
+ 
+International Conference on Computing, Communication and Networking 
+Technologies (ICCCNT), 2019, pp. 11–14. 
+[21] C. Dray, N. Badereddine, and C. Chanussot, “A 40nm low power SRAM retention 
+circuit with PVT-aware self-refreshing virtual VDD regulation,” in Proceeding of  
+2010 IEEE International Memory Workshop (IMW), 2010, pp. 11–14. 
+[22] M. Roy and Mahmoodi-Meimand, “Leakage current mechanisms and leakage 
+reduction techniques in deep-submicrometer CMOS circuits,” Proceedings of IEEE, 
+vol. 91, no. 2, p. 303, 2003. 
+[23] Z. Shi, D. Zhou, K. Qiu, and J. Shu, “Leveraging energy cycle regularity to predict 
+adaptive mode for non-volatile processors,” in Proceeding of International 
+Conference on Application-Specific Systems, Architectures and Processors, vol. 
+2019-July, 2019, pp. 189–196. 
+[24] S. Yamamoto, Y. Shuto, and S. Sugahara, “Nonvolatile SRAM (NV-SRAM) using 
+functional MOSFET merged with resistive switching devices,” in Proceeding of 
+Custom Integrated Circuits Conference, 2009, pp. 531–534. 
+[25] K. S. Li, C. H. Ho, M. T. Lee, M. C. Chen, C. L. Hsu, J. M. Lu, C. H. Lin, C. C. Chen, 
+B. W. Wu, Y. F. Hou, C. Yi. Lin, Y. J. Chen, T. Y. Lai, M. Y. Li, I. Yang, C. S. Wu, and 
+F. L. Yang, “Utilizing Sub-5 nm sidewall electrode technology for atomic-scale 
+resistive memory fabrication,” in Proceeding of Digest of Technical Papers – 
+Symposium on VLSI Technology, 2014, pp. 210–211. 
+ 
+doi:10.6844/NCKU202002443
+</pre>
+    </article>
+  </div>
+</section>
+
+<section class="paper-page" id="paper-6">
+  <div class="hero">
+    <div>
+      <span class="tag">GPGPU／熱平衡／工作排程／DVFS</span>
+      <h1>針對通用圖形處理器的智能熱管理方法</h1>
+      <p class="meta">作者：張峻豪　年份：2020　DOI：10.6844/NCKU202002413</p>
+      <p class="lead">提出 Thermal Balance Methodology（TBM），根據最熱與最冷 SM 核心之溫差，把核心分成 hot cluster 與 cold cluster；暫停熱核心派工並 clock-gate，將工作移往冷核心，同時對冷核心施行 DVFS，以低效能代價降低峰值溫度。</p>
+      <a class="pdfbtn" href="papers/針對通用圖形處理器的智能熱管理方法(2).pdf" target="_blank">開啟原始論文 PDF</a>
+    </div>
+  </div>
+  <div class="subtabs">
+    <button data-tab="overview" class="active">研究總覽</button>
+    <button data-tab="method">研究方法</button>
+    <button data-tab="results">實驗結果</button>
+    <button data-tab="figures">原論文圖片</button>
+    <button data-tab="critique">貢獻與限制</button>
+    <button data-tab="refs">文獻參考</button>
+  </div>
+  <div class="tabpane active" data-pane="overview">
+    <div class="grid two">
+      <article class="card"><h2>摘要重點</h2><p>提出 Thermal Balance Methodology（TBM），根據最熱與最冷 SM 核心之溫差，把核心分成 hot cluster 與 cold cluster；暫停熱核心派工並 clock-gate，將工作移往冷核心，同時對冷核心施行 DVFS，以低效能代價降低峰值溫度。</p></article>
+      <article class="card"><h2>研究定位</h2><p>本論文屬於邱瀝毅教授實驗室在「低功耗計算、智慧系統、安全硬體、記憶體與訊號處理」方向的研究成果。它從明確的系統瓶頸出發，提出可實作的演算法、架構或電路，並以模擬或實驗結果驗證。</p></article>
+    </div>
+    <article class="card"><h2>問題意識與研究流程</h2>
+      <ol>
+        <li>辨識現有方法的核心瓶頸與評估指標。</li>
+        <li>建立基準架構、資料集或模擬平台。</li>
+        <li>提出新的控制機制、演算法或電路架構。</li>
+        <li>設計多組參數與對照實驗。</li>
+        <li>以效能、能量、溫度、正確率、BER、INL 或安全性等指標分析。</li>
+      </ol>
+    </article>
+    <article class="card"><h2>論文章節結構</h2><pre>doi:10.6844/NCKU202002413
+ 
+- vii - 
+ 
+目錄 
+摘   要 .......................................................................................................................... i 
+致 謝 ............................................................................................................................ vi 
+目錄 ............................................................................................................................. vii 
+表目錄 .......................................................................................................................... ix 
+圖目錄 ........................................................................................................................... x 
+第 1 章 
+緒論 ........................................................................................................... 1 
+1.1 研究背景 ......................................................................................................... 1 
+1.1.1 
+邊緣運算 ......................................................................................... 1 
+1.1.2 
+通用計算圖形處理器 ..................................................................... 2 
+1.1.3 
+功率消耗對溫度之影響與相關熱管理 ......................................... 3 
+1.2 研究動機 ......................................................................................................... 4 
+1.3 研究貢獻 ......................................................................................................... 5 
+1.4 論文架構 ......................................................................................................... 5 
+第 2 章 
+相關研究背景 ........................................................................................... 6 
+2.1 通用計算圖形處理器整體架構 ..................................................................... 6 
+2.2 功率消耗之來源介紹與動態熱管理技術簡介 ............................................. 8 
+第 3 章 
+相關文獻探討 ......................................................................................... 12 
+3.1 通用計算圖形處理器之功率管理 ............................................................... 12 
+3.1.1 
+關鍵功率路徑分析 ....................................................................... 12 
+3.2 通用計算圖形處理器之相關動態熱管理 ................................................... 15 
+3.2.1 
+應用於多核心系統之具溫度感知之工作排程技術 ................... 15 
+3.2.2 
+應用於移動裝置平台之動態熱預測與功率管理技術 ............... 17 
+3.2.3 
+應用於多核心系統之混合式動態熱管理技術 ........................... 18 
+
+doi:10.6844/NCKU202002413
+ 
+- ix - 
+ 
+ 
+表目錄 
+表 3-1 相關文獻總結 ........................................................................................................ 21 
+表 5-1 CASLAB-GPUSIM 之實驗環境 ............................................................................ 44 
+表 5-2 CASLAB-GPUSIM 平台之頻率電壓設定 ............................................................ 44 
+ 
+ 
+ 
+
+doi:10.6844/NCKU202002413
+ 
+- x - 
+ 
+圖目錄 
+圖 1-1 邊緣運算市場大小及預測[3] ................................................................................. 1 
+圖 2-1 通用計算圖形處理器架構(以CASLab-GPU[16][17]平台為例).......................... 7 
+圖 3-1 文獻之系統架構圖[4] ............................................................................................ 13 
+圖 3-2 文獻之內部串流處理器[4] ................................................................................... 14 
+圖 3-3 文獻之整體功率比例圖[4] ................................................................................... 14 
+圖 3-4 文獻所使用之工作搬移[5] ................................................................................... 15 
+圖 3-5 文獻所使用之DVFS[5] ........................................................................................ 16 
+圖 3-6 文獻之演算法流程圖[6] ....................................................................................... 17 
+圖 3-7 文獻之Hybrid DTM 系統架構圖[7] .................................................................... 18 
+圖 3-8 文獻之決策熱平衡[7] ............................................................................................ 19 
+圖 3-9 文獻之DVFS[7] ..................................................................................................... 20 
+圖 4-1 HSAIL[8] ................................................................................................................ 24 
+圖 4-2 CASLAB-GPUSIM 平台架構圖 [8] ..................................................................... 25 
+圖 4-3 多重串流處理器架構 ............................................................................................ 26 
+圖 4-4 非記憶體元件功率資訊取得流程圖 .................................................................... 29 
+圖 4-5 非記憶體元件功率模型誤差 ................................................................................. 31 
+圖 4-6 使用於熱模擬引擎之GPGPU 佈局 ..................................................................... 32 
+圖 4-7 使用於熱模擬引擎之GPGPU 冷卻機制 .............................................................. 32 
+圖 4-8 熱溫差機制(一) ...................................................................................................... 34 
+圖 4-9 熱溫差機制(二) ...................................................................................................... 35 
+圖 4-10 熱溫差機制(三) .................................................................................................... 35 
+圖 4-11 熱溫差閾值 ........................................................................................................... 37 
+圖 4-12 平衡熱溫差流程 ................................................................................................... 37 
+
+</pre></article>
+  </div>
+  <div class="tabpane" data-pane="method">
+    <article class="card"><h2>研究方法詳解</h2><ul><li>CASLAB-GPUSIM 16 SM core 平台，整合功率模型與熱模擬引擎。</li><li>即時取得各核心溫度，以 hottest–coldest temperature difference 作為控制指標。</li><li>task dispatcher 停止向 hot cluster 發派新工作，使其完成剩餘工作後進入 clock gating。</li><li>提升 cold cluster 的 V/F，承接工作並降低整體效能損失。</li><li>以 workload-aware dynamic threshold 與狀態流程控制重新啟用熱核心。</li></ul></article>
+    <article class="card"><h2>方法論解讀</h2>
+      <p>此研究不是只提出單一公式，而是將問題拆成感測／特徵取得、決策或運算核心、硬體控制、系統整合與驗證五個層次。閱讀時應特別注意：輸入訊號如何取得、控制狀態如何定義、參數如何選擇、以及基準方法是否公平。</p>
+      <p>若從 IC 與系統設計角度評估，可再檢查 critical path、記憶體存取、控制週期、額外面積、功率模型與製程／溫度／電壓變異。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="results">
+    <article class="card highlight"><h2>主要實驗結果</h2><ul><li>相較 baseline，平均峰值溫度降低約 13.6%。</li><li>平均效能代價僅約 1.1%。</li><li>平均能量額外消耗約 1.3%。</li><li>能在熱安全與效能間取得較佳折衷。</li></ul></article>
+    <article class="card"><h2>結果詮釋</h2>
+      <p>結果應同時觀察「主要目標改善」與「為此付出的代價」。例如節能方法不能只看功率下降，也要把執行時間納入能量；熱管理不能只看溫度，也要檢查效能與額外能量；安全機制需同時看攻擊成功率與硬體成本；辨識系統則應避免只呈現單一最佳案例。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="figures">
+    <div class="gallery"><figure><img src="assets/thermal_p3.jpg" alt="針對通用圖形處理器的智能熱管理方法 第 3 頁"><figcaption>原論文第 3 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/thermal_p4.jpg" alt="針對通用圖形處理器的智能熱管理方法 第 4 頁"><figcaption>原論文第 4 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/thermal_p38.jpg" alt="針對通用圖形處理器的智能熱管理方法 第 38 頁"><figcaption>原論文第 38 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/thermal_p45.jpg" alt="針對通用圖形處理器的智能熱管理方法 第 45 頁"><figcaption>原論文第 45 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/thermal_p63.jpg" alt="針對通用圖形處理器的智能熱管理方法 第 63 頁"><figcaption>原論文第 63 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/thermal_p71.jpg" alt="針對通用圖形處理器的智能熱管理方法 第 71 頁"><figcaption>原論文第 71 頁：重要內容／圖表頁面</figcaption></figure></div>
+  </div>
+  <div class="tabpane" data-pane="critique">
+    <div class="grid two">
+      <article class="card good"><h2>研究貢獻</h2><ul><li>把 per-core 溫度、工作排程與 cluster-level DVFS 同時納入控制。</li><li>利用冷熱核心之間的空間熱差進行工作搬移。</li><li>避免傳統全域降頻造成過大效能損失。</li></ul></article>
+      <article class="card warn"><h2>限制與可延伸方向</h2><ul><li>熱模型與模擬佈局對結果影響大，實體封裝與散熱環境需要校準。</li><li>工作搬移成本、cache locality 與 memory contention 可與熱控制共同最佳化。</li></ul></article>
+    </div>
+    <article class="card"><h2>後續研究建議</h2>
+      <p>可將本研究放到更新的製程、實體 FPGA／ASIC／GPU 平台或更大資料集驗證，並加入跨工作負載、跨電壓溫度、長期可靠度及實際控制延遲。若是機器學習方法，也可加入可解釋性、泛化與線上學習；若是電路研究，可加入 Monte Carlo、post-layout、晶片量測與系統層應用準確率。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="refs">
+    <article class="card"><h2>原論文參考文獻摘錄</h2>
+      <p class="note">以下內容由原 PDF 末段參考文獻頁擷取，保留原始編號與格式，方便回查。</p>
+      <pre>doi:10.6844/NCKU202002413
+ 
+- 57 - 
+ 
+參考文獻 
+[1] 
+Y. Hengzhou, G. Yang, and M. Zhuo, “A 40nm/65nm process adaptive low jitter 
+phase-locked loop,” in Proc. 2014 International Symposium on Integrated Circuits 
+(ISIC), 2014, pp. 500–503. 
+[2] 
+Y. H. J. Shi, E. Soenen, and A. R. and J. Gaither, “A wide-range DC/DC converter 
+with 2ndorder digital compensation and direct battery connection in 40nm CMOS,” 
+in Proc. IEEE Cust. Integr. Circuits Conf., 2011, pp. 1-4. 
+[3] 
+E. Fernandes, “Internet of Things Market Size, Growth | IoT Industry Report [2020-
+2027].”https://www.fortunebusinessinsights.com/industry-reports/internet-of-things-
+iot-market-100307. 
+[4] 
+C. -P. Chang, “An Energy-Efficient General-Purpose Computing on GPU for Edge 
+Computing Devices Using Hardware Runtime Utilization,” M.S. thesis, Department 
+of Electrical Engineering, National Cheng Kung University, Tainan, Taiwan, 2019. 
+[5] 
+M. S. Mohammed, A. K. Al-Dhamari, A. A. H. Ab Rahman, N. Paraman, A. A. M. 
+Al-Kubati, and M. N. Marsono, “Temperature-aware task scheduling for dark silicon 
+many-core system-on-chip,” in Proc. 2019 8th International Conference on Modeling 
+Simulation and Applied Optimization (ICMSAO), Manama, Bahrain, Apr. 2019. 
+[6] 
+G. Singla, G. Kaur, A. K. Unver, and U. Y. Ogras, “Predictive Dynamic Thermal and 
+Power Management for Heterogeneous Mobile Platforms,” in Proc. -Design, Autom. 
+Test Eur. DATE, Apr. 2015, vol. 2015-April, pp. 960–965. 
+[7] 
+P. -H. Yang, “Hybrid DTM for Multi-Core System using Advanced Heterogeneous 
+Package,” M.S. thesis, Department of Electrical Engineering, National Cheng Kung 
+University, Tainan, Taiwan, 2018. 
+
+doi:10.6844/NCKU202002413
+ 
+- 58 - 
+ 
+[8] 
+K. -C. Hsu, “Performance Prediction Model on HSA-Compatible General-Purpose 
+GPU System,” M.S. Thesis, Department of Institute of Computerand Communication 
+Engineer,National Cheng Kung University, Tainan, Taiwan, 2016. 
+[9] 
+V. Lakshminarayanan and N. Sriraam, &quot;The effect of temperature on the reliability of 
+electronic components,&quot; in Proc. 2014 IEEE International Conference on Electronics, 
+Computing and Communication Technologies (CONECCT), Bangalore, 2014, pp. 1-
+6. 
+[10] S. Kalra, “Effect of temperature dependence on performance of digital CMOS circuit 
+technologies,” in Proc. 2013 INTERNATIONAL CONFERENCE ON SIGNAL 
+PROCESSING AND COMMUNICATION (ICSC) , Noida, 2013, pp. 392-395, 
+[11] H. Sultan, “Is Leakage Power a Linear Function of Temperature? | DeepAI.” 
+https://deepai.org/publication/is-leakage-power-a-linear-function-of-temperature  
+[12] D. Cuesta, J. L. Risco-Martín, J. L. Ayala, and J. I. Hidalgo, “Thermal-aware 
+floorplanner for 3D IC, including TSVs, liquid microchannels and thermal domains 
+optimization,” Appl. Soft Computing, vol. 34, pp. 164–177, Sep.2015. 
+[13] S. K. Srivathsa, V. B. Suresh, P. Panchapakeshan, and S. Kundu, “Dynamic thermal 
+management for system-on-chip using bus arbitration,” in Proc. 2010 International 
+SoC Design Conference. Seoul, 2010, pp. 372-375, 
+[14] A. Kumar, L. Shang, L. S. Peh, and N. K. Jha, “System-Level Dynamic Thermal 
+Management for High-Performance Microprocessors,” IEEE Trans. Comput. Des. 
+Integr. Circuits Syst., vol. 27, no. 1, pp. 96–107, Jan.2008. 
+[15] B. Salami, M. Baharani, and H. Noori, “An adaptive temperature threshold schema 
+for dynamic thermal management of multi-core processors,” in Proc. - 17th CSI Int. 
+Symp. Comput. Archit. Digit. Syst. CADS 2013, 2013, pp. 119–120. 
+
+doi:10.6844/NCKU202002413
+ 
+- 59 - 
+ 
+[16] W. -S. Hsieh, “Design of Cycle-accurate SIMT Core and Implementation,” M.S. 
+Thesis, Department of Institute of Computerand Communication Engineer, National 
+Cheng Kung University, Tainan, Taiwan, Tainan, Taiwan, 2016. 
+[17] J. -H. Jheng, “Micro-Architecture Optimization of HSA-Compatible GPU,” M.S. 
+thesis, Department of Institute of Computerand Communication Engineer, National 
+Cheng Kung University, Tainan, Taiwan, Tainan, Taiwan, 2018. 
+[18] L. Liu and D. Qi, “An Independent Task Scheduling Algorithm in Heterogeneous 
+Multi-core Processor Environment,” in Proc. 2018 IEEE 3rd Adv. Inf. Technol. 
+Electron. Autom. Control Conf. IAEAC 2018, Dec. 2018, pp. 142–146. 
+[19] G. Wu, Z. Xu, Q. Xia, J. Ren and F. Xia, &quot;Task Allocation and Migration Algorithm 
+for Temperature-Constrained Real-Time Multi-Core Systems,&quot; in Proc. 2010 
+IEEE/ACM Int&#x27;l Conference on Green Computing and Communications &amp; Int&#x27;l 
+Conference on Cyber, Physical and Social Computing, Hangzhou, 2010, pp. 189-196. 
+[20] J. Cha, J. Kim, and Y. Park, “Core-level DVFS for Spatial Multitasking GPUs,” in 
+Proc. IEEE Reg. 10 Annu. Int. Conf. (TENCON), Feb. 2019, vol. 2018-October, pp. 
+1525–1528. 
+[21] M. H. Vo, “The Merged Clock Gating Architecture for Low Power Digital Clock 
+Application on FPGA,” in Proc. Int. Conf. Adv. Technol. Commun., Dec. 2018, vol. 
+2018-October, pp. 282–286. 
+[22] G. Bhargave, S. Uniyal, and P. Sheokand, “Low Power Adiabatic 4-Bit Johnson 
+Counter Based on Power-Gating Cpal Logic,” in Proc. 2nd IEEE Int. Conf. Innov. 
+Appl. Comput. Intell. Power, Energy Control. with their Impact Humanit. CIPECH 
+2016, May 2017, pp. 297–301. 
+
+doi:10.6844/NCKU202002413
+ 
+- 60 - 
+ 
+[23] B. Yu, S. Dong, and S. Goto, “Multi-Voltage and Level-Shifter Assignment Driven 
+Floorplanning,” in ASICON 2009 - Proc. 2009 8th IEEE Int. Conf. ASIC, 2009, pp. 
+1264–1267. 
+[24] “JEDEC 
+STANDARD.” 
+http://www.softnology.biz/pdf/JESD79-
+4_DDR4_SDRAM.pdf?fbclid=IwAR1doOEVrs8Y6UK3JsNjaiUs9gvu1OhXSxNV
+UjVbKFAc8kxROPRAAN8T58A (accessed Jul. 15, 2020). 
+[25] W. -X. YANG, “Fast and Effective Thermal Analysis for Integrated Circuits Using 
+3-Dimensional Discontinuous Galerkin Method,” M.S. thesis, Department of 
+Electrical Engineering, National Cheng Kung University, Tainan, Taiwan, 2019. 
+ 
+</pre>
+    </article>
+  </div>
+</section>
+
+<section class="paper-page" id="paper-7">
+  <div class="hero">
+    <div>
+      <span class="tag">GPGPU／DDQN／DVFS／Cache contention-aware task dispatch</span>
+      <h1>使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器</h1>
+      <p class="meta">作者：蔡宗蕙　年份：2021　DOI：10.6844/NCKU202100037</p>
+      <p class="lead">以 Double Deep Q-Learning 在 GPGPU 執行期決定 DVFS 動作，並提出 cache-contention-aware task dispatch，讓快取競爭嚴重的 SM 少拿工作、利用率不足的 SM 多拿工作，兼顧效能提升與能量節省。</p>
+      <a class="pdfbtn" href="papers/使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器(2).pdf" target="_blank">開啟原始論文 PDF</a>
+    </div>
+  </div>
+  <div class="subtabs">
+    <button data-tab="overview" class="active">研究總覽</button>
+    <button data-tab="method">研究方法</button>
+    <button data-tab="results">實驗結果</button>
+    <button data-tab="figures">原論文圖片</button>
+    <button data-tab="critique">貢獻與限制</button>
+    <button data-tab="refs">文獻參考</button>
+  </div>
+  <div class="tabpane active" data-pane="overview">
+    <div class="grid two">
+      <article class="card"><h2>摘要重點</h2><p>以 Double Deep Q-Learning 在 GPGPU 執行期決定 DVFS 動作，並提出 cache-contention-aware task dispatch，讓快取競爭嚴重的 SM 少拿工作、利用率不足的 SM 多拿工作，兼顧效能提升與能量節省。</p></article>
+      <article class="card"><h2>研究定位</h2><p>本論文屬於邱瀝毅教授實驗室在「低功耗計算、智慧系統、安全硬體、記憶體與訊號處理」方向的研究成果。它從明確的系統瓶頸出發，提出可實作的演算法、架構或電路，並以模擬或實驗結果驗證。</p></article>
+    </div>
+    <article class="card"><h2>問題意識與研究流程</h2>
+      <ol>
+        <li>辨識現有方法的核心瓶頸與評估指標。</li>
+        <li>建立基準架構、資料集或模擬平台。</li>
+        <li>提出新的控制機制、演算法或電路架構。</li>
+        <li>設計多組參數與對照實驗。</li>
+        <li>以效能、能量、溫度、正確率、BER、INL 或安全性等指標分析。</li>
+      </ol>
+    </article>
+    <article class="card"><h2>論文章節結構</h2><pre>- iv -
+doi:10.6844/NCKU202100037
+Contents
+摘要........................................................................................................................................i
+Abstract..................................................................................................................................ii
+Contents................................................................................................................................iv
+List of Tables ........................................................................................................................vi
+List of Figures......................................................................................................................vii
+CHAPTER 1
+INTRODUCTION....................................................................................... 1
+1.1
+OVERVIEW............................................................................................................ 1
+1.2
+MOTIVATION......................................................................................................... 5
+1.3
+CONTRIBUTIONS ................................................................................................... 6
+1.4
+THESIS ORGANIZATION......................................................................................... 6
+CHAPTER 2
+BACKGROUND......................................................................................... 7
+2.1
+GENERAL-PURPOSE GRAPH PROCESSING UNIT .................................................... 7
+2.2
+DOUBLE DEEP Q-LEARNING ................................................................................. 8
+CHAPTER 3
+RELATED WORKS.................................................................................. 12
+3.1
+DEFINITION OF COMPUTE-INTENSIVE, MEMORY-INTENSIVE AND HYBRID [13] .... 12
+3.2
+SHIFTING OF COMPUTE-BOUND AND MEMORY-BOUND [21]................................. 13
+3.3
+CONTENTION REDUCTION [16]............................................................................ 15
+3.4
+DDQN ON GPU POWER MANAGEMENT [25] ...................................................... 18
+3.5
+SUMMARY OF RELATED WORKS ......................................................................... 20
+CHAPTER 4
+THE PROPOSED GPU POWER MANAGEMENT................................ 23
+4.1
+CACHE-CONTENTION-AWARE TASK DISPATCH ALGORITHM .............................. 23
+4.2
+DVFS BASED ON DDQN.................................................................................... 30
+
+</pre></article>
+  </div>
+  <div class="tabpane" data-pane="method">
+    <article class="card"><h2>研究方法詳解</h2><ul><li>以硬體監測器蒐集 GPU runtime features，作為 DDQN state。</li><li>action 為不同核心／記憶體電壓與頻率組合，reward 同時反映能量與效能目標。</li><li>CCATD 觀察每個 SM 的 memory-related task 與 cache contention，動態回報所需 task 數量。</li><li>以 experience replay、target network 等 DDQN 技術訓練。</li><li>另評估把 action decision／inference 放在 RISC-V CPU 上的系統 overhead。</li></ul></article>
+    <article class="card"><h2>方法論解讀</h2>
+      <p>此研究不是只提出單一公式，而是將問題拆成感測／特徵取得、決策或運算核心、硬體控制、系統整合與驗證五個層次。閱讀時應特別注意：輸入訊號如何取得、控制狀態如何定義、參數如何選擇、以及基準方法是否公平。</p>
+      <p>若從 IC 與系統設計角度評估，可再檢查 critical path、記憶體存取、控制週期、額外面積、功率模型與製程／溫度／電壓變異。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="results">
+    <article class="card highlight"><h2>主要實驗結果</h2><ul><li>平均效能提升 18%。</li><li>平均能量消耗降低 59%。</li><li>對 compute-intensive 與 memory-intensive 程式交錯序列，能量仍可降低 53% 以上，效能損失低於 5%。</li><li>顯示策略具跨工作負載適應性。</li></ul></article>
+    <article class="card"><h2>結果詮釋</h2>
+      <p>結果應同時觀察「主要目標改善」與「為此付出的代價」。例如節能方法不能只看功率下降，也要把執行時間納入能量；熱管理不能只看溫度，也要檢查效能與額外能量；安全機制需同時看攻擊成功率與硬體成本；辨識系統則應避免只呈現單一最佳案例。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="figures">
+    <div class="gallery"><figure><img src="assets/rl_gpu_p1.jpg" alt="使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器 第 1 頁"><figcaption>原論文第 1 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/rl_gpu_p4.jpg" alt="使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器 第 4 頁"><figcaption>原論文第 4 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/rl_gpu_p31.jpg" alt="使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器 第 31 頁"><figcaption>原論文第 31 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/rl_gpu_p45.jpg" alt="使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器 第 45 頁"><figcaption>原論文第 45 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/rl_gpu_p52.jpg" alt="使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器 第 52 頁"><figcaption>原論文第 52 頁：重要內容／圖表頁面</figcaption></figure><figure><img src="assets/rl_gpu_p63.jpg" alt="使用任務發派管理及基於強化學習之動態電壓及頻率調整之高能源效率通用計算圖形處理器 第 63 頁"><figcaption>原論文第 63 頁：重要內容／圖表頁面</figcaption></figure></div>
+  </div>
+  <div class="tabpane" data-pane="critique">
+    <div class="grid two">
+      <article class="card good"><h2>研究貢獻</h2><ul><li>將 task dispatch 與 DVFS 聯合最佳化，而非只調頻。</li><li>以 DDQN 處理非線性、跨 benchmark 的策略選擇。</li><li>評估推論移至 RISC-V CPU 的可實作性與額外成本。</li></ul></article>
+      <article class="card warn"><h2>限制與可延伸方向</h2><ul><li>RL 的訓練資料覆蓋度、reward 權重與安全探索會影響泛化。</li><li>真實 GPU 上的觀測延遲、控制週期與不可見狀態仍需硬體驗證。</li></ul></article>
+    </div>
+    <article class="card"><h2>後續研究建議</h2>
+      <p>可將本研究放到更新的製程、實體 FPGA／ASIC／GPU 平台或更大資料集驗證，並加入跨工作負載、跨電壓溫度、長期可靠度及實際控制延遲。若是機器學習方法，也可加入可解釋性、泛化與線上學習；若是電路研究，可加入 Monte Carlo、post-layout、晶片量測與系統層應用準確率。</p>
+    </article>
+  </div>
+  <div class="tabpane" data-pane="refs">
+    <article class="card"><h2>原論文參考文獻摘錄</h2>
+      <p class="note">以下內容由原 PDF 末段參考文獻頁擷取，保留原始編號與格式，方便回查。</p>
+      <pre>- 51 -
+doi:10.6844/NCKU202100037
+Reference
+[1]
+A. Coates, B. Huval, T. Wang, D. Wu, B. Catanzaro, and N. Andrew, &quot;Deep
+Learning with COTS HPC Systems,&quot; in Proc. International Conference on
+Machine Learning, 2013, pp. 1337-1345.
+[2]
+R. Raina, A. Madhavan, and A. Y. Ng, &quot;Large-Scale Deep Unsupervised
+Learning Using Graphics Processors,&quot; in Proc. 26th Annual International
+Conference on Machine Learning, 2009, pp. 873-880.
+[3]
+S. Shi, Q. Wang, P. Xu, and X. Chu, &quot;Benchmarking state-of-the-art deep
+learning software tools,&quot; in Proc. International Conference on Cloud Computing
+and Big Data (CCBD), 2016, pp. 99-104.
+[4]
+M. McNaughton, C. Urmson, J. M. Dolan, and J.-W. Lee, &quot;Motion Planning for
+Autonomous Driving with a Conformal Spatiotemporal Lattice,&quot; in Proc. IEEE
+International Conference on Robotics and Automation, 2011, pp. 4889-4895.
+[5]
+Q. Zhang, M. Lin, L. T. Yang, Z. Chen, and P. Li, &quot;Energy-Efficient Scheduling
+for Real-Time Systems Based on Deep Q-Learning Model,&quot; IEEE Trans. on
+Sustainable Computing, vol. 4, no. 1, pp. 132-141, 2019.
+[6]
+S. F. Region. &quot;Edge Computing Market Size, Share &amp; Trends Analysis Report By
+Component.&quot;
+https://www.grandviewresearch.com/industry-analysis/edge-computing-market
+(accessed Oct. 12, 2020).
+[7]
+M. Gebhart et al., &quot;Energy-Efficient Mechanisms for Managing Thread Context
+in Throughput Processors,&quot; in Proc. 38th Annual International Symposium on
+Computer Architecture (ISCA), 2011, pp. 235-246.
+[8]
+M. Gebhart, S. W. Keckler, B. Khailany, R. Krashinsky, and W. J. Dally,
+&quot;Unifying Primary Cache, Scratch, and Register File Memories in a Throughput
+Processor,&quot; in Proc. 45th Annual IEEE/ACM International Symposium on
+Microarchitecture, 2012, pp. 96-106.
+[9]
+S. Hong and H. Kim, &quot;An Integrated GPU Power and Performance Model,&quot; in
+Proc. 37th Annual International Symposium on Computer Architecture,
+Saint-Malo, France, 2010, pp. 280–289.
+[10]
+Y. Wang and N. Ranganathan, &quot;An Instruction-Level Energy Estimation and
+Optimization Methodology for GPU,&quot; in
+Proc. IEEE 11th International
+Conference on Computer and Information Technology, 2011, pp. 621-628.
+[11]
+G. Wang, Y. Lin, and W. Yi, &quot;Kernel Fusion: an Effective Method for Better
+Power Efficiency on Multithreaded GPU,&quot; in Proc. IEEE/ACM Int&#x27;l Conference
+
+- 52 -
+doi:10.6844/NCKU202100037
+on Green Computing and Communications &amp;amp; Int&#x27;l Conference on Cyber,
+Physical and Social Computing, 2010, pp. 344–350.
+[12]
+Y. Yang, P. Xiang, M. Mantor, and H. Zhou, &quot;Fixing Performance Bugs: an
+Empirical Study of Open-Source GPGPU Programs,&quot; in Proc. 41th International
+Conference on Parallel Processing, 2012, pp. 329-339.
+[13]
+Y. Jiao, H. Lin, P. Balaji, and W. Feng, &quot;Power and Performance
+Characterization of Computational Kernels on the GPU,&quot; in Proc. IEEE/ACM Int&#x27;l
+Conference on Green Computing and Communications &amp; Int&#x27;l Conference on
+Cyber, Physical and Social Computing, 2010, pp. 221-228.
+[14]
+K. Ma, X. Li, W. Chen, C. Zhang, and X. Wang, &quot;GreenGPU: A Holistic
+Approach to Energy Efficiency in GPU-CPU Heterogeneous Architectures,&quot; in
+Proc. International Conference on Parallel Processing, 2012, pp. 48-57.
+[15]
+X. Mei, L. S. Yung, K. Zhao, and X. Chu, &quot;A Measurement Study of GPU DVFS
+on Energy Conservation,&quot; in Proc. Workshop on Power-Aware Computing and
+Systems, Farmington, Pennsylvania, 2013, pp. 89-100.
+[16]
+A. Sethia and S. Mahlke, &quot;Equalizer: Dynamic Tuning of GPU Resources for
+Efficient Execution,&quot; in Proc. 47th Annual IEEE/ACM International Symposium
+on Microarchitecture, 2014, pp. 647-658.
+[17]
+Q. Jiao, M. Lu, H. P. Huynh, and T. Mitra, &quot;Improving GPGPU
+Energy-Efficiency Through Concurrent Kernel Execution and DVFS,&quot; in Proc.
+IEEE/ACM International Symposium on Code Generation and Optimization
+(CGO), 2015, pp. 1-11.
+[18]
+J. Li, B. Guo, Y. Shen, D. Li, and Y. Huang, &quot;A Modeling Approach for Energy
+Saving Based on GA-BP Neural Network,&quot; Journal of Electrical Engineering and
+Technology, vol. 11, pp. 1289-1298, Sep. 2016.
+[19]
+A. Majumdar, L. Piga, I. Paul, J. L. Greathouse, W. Huang, and D. H. Albonesi,
+&quot;Dynamic GPGPU Power Management Using Adaptive Model Predictive
+Control,&quot; in Proc. IEEE International Symposium on High Performance
+Computer Architecture (HPCA), 2017, pp. 613-624.
+[20]
+K. Fan, B. Cosenza, and B. Juurlink, &quot;Predictable GPUs Frequency Scaling for
+Energy and Performance,&quot; in Proc. 48th International Conference on Parallel
+Processing, Kyoto, Japan, 2019, pp. 1-10.
+[21]
+J. Guerreiro, A. Ilic, N. Roma, and P. Tomás, &quot;DVFS-aware Application
+Classification to Improve GPGPUs Energy Efficiency,&quot; Parallel Computing, vol.
+83, pp. 93-117, Apr. 2019.
+[22]
+S. Dey, A. Singh, X. Wang, and K. McDonald-Maier, &quot;User Interaction Aware
+Reinforcement Learning for Power and Thermal Efficiency of CPU-GPU Mobile
+
+- 53 -
+doi:10.6844/NCKU202100037
+MPSoCs,&quot; in Proc. Design, Automation, and Test in Europe 2020 (DATE 2020),
+Grenoble, France, 2020, pp. 1728-1733.
+[23]
+A. Choudhary. &quot;A Hands-On Introduction to Deep Q-Learning using OpenAI
+Gym 
+in 
+Python.&quot;
+https://www.analyticsvidhya.com/blog/2019/04/introduction-deep-q-learning-pyth
+on/ (accessed 2020, Aug. 28).
+[24]
+A. Oppermann. &quot;Self Learning AI-Agents III:Deep (Double) Q-Learning.&quot;
+https://towardsdatascience.com/deep-double-q-learning-7fca410b193a
+(accessed
+2020, Aug. 28).
+[25]
+J.-T. Syu, &quot;Intelligent Power Management Based on Reinforcement Learning for
+General-Purpose Computing on Graphics Processing Units,&quot; Master&#x27;s Thesis,
+Department of Electrical Engineering, National Cheng Kung University, Tainan,
+Taiwan, 2019.
+[26]
+W.-S. Hsieh, &quot;Micro-Architecture Optimization of HSA-Compatible GPU,&quot;
+Master&#x27;s Thesis, Department of Electrical Engineering, National Cheng Kung
+University, Tainan, Taiwan, 2016.
+[27]
+J.-H. Jheng, &quot;Design of Cycle-accurate SIMT Core and Implementation,&quot; Master&#x27;s
+Thesis, Department of Electrical Engineering, National Cheng Kung University,
+Tainan, Taiwan, 2018.
+[28]
+DDR4 SDRAM, J. S. S. T. Association, 2012. [Online]. Available:
+http://www.softnology.biz/pdf/JESD79-4_DDR4_SDRAM.pdf?fbclid=IwAR1do
+OEVrs8Y6UK3JsNjaiUs9gvu1OhXSxNVUjVbKFAc8kxROPRAAN8T58A
+[29]
+C.-H. Chang, &quot;An Intelligent Thermal Control Method for General-Purpose
+Graphic Processing Units,&quot; Master&#x27;s Thesis, Department of Electrical Engineering,
+National Cheng Kung University, Tainan, Taiwan, 2020.
+[30]
+C.-H. Chiang, &quot;Design Exploration of a Lightweight Hardware Secure
+Microsystem using Physical Unclonable Function at Electronic System Level,&quot;
+Master&#x27;s Thesis, Department of Electrical Engineering, National Cheng Kung
+University, Tainan, Taiwan, 2018.
+[31]
+C.-W. Chang, &quot;A Nonvolatile Processor Virtual Platform for Energy Efficiency
+and Performance Exploration,&quot; Master&#x27;s Thesis, Department of Electrical
+Engineering, National Cheng Kung University, Tainan, Taiwan, 2018.
+[32]
+J. Shi, Y.-C. Hsu, E. Soenen, A. Roth, and J. Gaither, &quot;A Wide-Range DC/DC
+Converter with 2nd Order Digital Compensation and Direct Battery Connection in
+40nm CMOS,&quot; in Proc. Custom Integrated Circuits Conference, 2011, pp. 1-4.
+
+- 54 -
+doi:10.6844/NCKU202100037
+[33]
+Y. Hengzhou, G. Yang, and M. Zhuo, &quot;A 40nm/65nm Process Adaptive Low
+Jitter Phase-Locked Loop,&quot; in Proc. International Symposium on Integrated
+Circuits (ISIC), 2014, pp. 500-503.
+</pre>
+    </article>
+  </div>
+</section>
+</main><footer>本網站依上傳論文整理，圖片均擷取自原論文頁面；詳細公式、完整表格與引用請以原始 PDF 為準。</footer><script>
+const pages=[...document.querySelectorAll('.paper-page')];
+const pbtns=[...document.querySelectorAll('.pager button')];
+function showPaper(i){pages.forEach((p,n)=>p.classList.toggle('active',n===i));pbtns.forEach((b,n)=>b.classList.toggle('active',n===i));window.scrollTo({top:0,behavior:'smooth'});}
+pbtns.forEach((b,i)=>b.addEventListener('click',()=>showPaper(i)));
+document.querySelectorAll('.paper-page').forEach(page=>{
+ const tabs=[...page.querySelectorAll('.subtabs button')], panes=[...page.querySelectorAll('.tabpane')];
+ tabs.forEach(btn=>btn.addEventListener('click',()=>{
+   const key=btn.dataset.tab; tabs.forEach(x=>x.classList.toggle('active',x===btn));
+   panes.forEach(p=>p.classList.toggle('active',p.dataset.pane===key));
+ }));
+});
+showPaper(0);
+</script></body></html>

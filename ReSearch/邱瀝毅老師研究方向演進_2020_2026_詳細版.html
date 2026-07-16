@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>邱瀝毅老師研究方向演進（2020–2026）</title>
+<style>
+:root{
+  --bg:#07111f;
+  --panel:#0d1b2a;
+  --panel2:#11263b;
+  --text:#ecf4ff;
+  --muted:#a9bbcf;
+  --line:#28445f;
+  --accent:#5cc8ff;
+  --accent2:#7df2c5;
+  --warn:#ffd166;
+  --danger:#ff7b7b;
+  --purple:#bca7ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(92,200,255,.12), transparent 28%),
+    radial-gradient(circle at 90% 10%, rgba(125,242,197,.09), transparent 24%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.8;
+}
+a{color:inherit}
+.hero{
+  min-height:88vh;
+  display:grid;
+  place-items:center;
+  padding:56px 24px 40px;
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{max-width:1120px;width:100%}
+.badge{
+  display:inline-block;padding:7px 12px;border:1px solid #38617f;border-radius:999px;
+  color:var(--accent);background:rgba(92,200,255,.07);font-weight:700;letter-spacing:.04em
+}
+h1{font-size:clamp(2.1rem,5vw,4.5rem);line-height:1.12;margin:20px 0 18px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:900px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;margin-top:36px}
+.hero-card,.card,.phase,.stat,.quote,.table-wrap,.accordion-item{
+  background:linear-gradient(180deg,rgba(17,38,59,.94),rgba(13,27,42,.94));
+  border:1px solid var(--line);border-radius:20px;box-shadow:0 14px 40px rgba(0,0,0,.2)
+}
+.hero-card{padding:22px}
+.hero-svg{width:100%;height:auto;display:block}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{padding:18px}
+.stat strong{display:block;font-size:1.8rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.92rem}
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(7,17,31,.9);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)
+}
+nav .inner{max-width:1180px;margin:auto;padding:10px 18px;display:flex;gap:10px;overflow:auto}
+nav a{white-space:nowrap;text-decoration:none;padding:8px 12px;border-radius:10px;color:var(--muted)}
+nav a:hover{background:var(--panel2);color:var(--text)}
+main{max-width:1180px;margin:auto;padding:44px 20px 90px}
+section{margin:0 0 64px}
+.section-title{font-size:2rem;margin:0 0 10px}
+.section-sub{color:var(--muted);margin:0 0 24px}
+.timeline{position:relative;padding-left:32px}
+.timeline:before{content:"";position:absolute;left:12px;top:8px;bottom:8px;width:3px;background:linear-gradient(var(--accent),var(--accent2),var(--purple))}
+.phase{padding:24px;margin:0 0 22px;position:relative}
+.phase:before{
+  content:"";position:absolute;left:-28px;top:30px;width:16px;height:16px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 0 5px rgba(92,200,255,.12)
+}
+.phase h3{margin:0 0 8px;font-size:1.4rem}
+.phase .period{color:var(--accent);font-weight:800}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:22px}
+.card h3,.card h4{margin-top:0}
+.kicker{font-size:.86rem;color:var(--accent2);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.flow{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin:20px 0}
+.node{
+  flex:1 1 150px;min-height:105px;padding:16px;border-radius:16px;background:#0a1726;border:1px solid #2d506f;
+  display:flex;flex-direction:column;justify-content:center;text-align:center
+}
+.node b{color:var(--accent);font-size:1.02rem}
+.arrow{display:grid;place-items:center;color:var(--accent2);font-size:1.8rem}
+.tag{display:inline-block;padding:4px 9px;border-radius:999px;background:rgba(188,167,255,.1);border:1px solid #554b7a;color:#d9d0ff;margin:3px;font-size:.88rem}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:860px}
+th,td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{background:#10233a;color:var(--accent)}
+tr:last-child td{border-bottom:none}
+.quote{padding:24px;border-left:5px solid var(--accent2)}
+.quote p{font-size:1.08rem;margin:0}
+.note{padding:15px 17px;border-radius:14px;background:rgba(255,209,102,.08);border:1px solid rgba(255,209,102,.3);color:#ffe8a5}
+.diagram{padding:20px;border-radius:20px;background:#091725;border:1px solid var(--line);overflow:auto}
+.accordion-item{margin:0 0 14px;overflow:hidden}
+.accordion-title{width:100%;text-align:left;padding:18px 20px;border:0;background:transparent;color:var(--text);font-size:1rem;font-weight:800;cursor:pointer}
+.accordion-content{display:none;padding:0 20px 20px;color:var(--muted)}
+.accordion-item.active .accordion-content{display:block}
+.footer{color:var(--muted);text-align:center;padding:26px;border-top:1px solid var(--line)}
+.small{font-size:.9rem;color:var(--muted)}
+.highlight{color:var(--accent2);font-weight:800}
+@media(max-width:850px){
+  .hero-grid,.grid-2,.grid-3{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .arrow{transform:rotate(90deg);width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="badge">Research Evolution Map · 2020–2026</span>
+    <h1>邱瀝毅老師研究方向演進</h1>
+    <p class="lead">
+      從物聯網微處理器、記憶體與硬體安全，逐步延伸至記憶體內運算、神經網路系統晶片，
+      再進一步發展為可進行推論與學習的多模態人工智慧融合引擎。
+    </p>
+
+    <div class="hero-grid">
+      <div class="hero-card">
+        <svg class="hero-svg" viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="研究方向演進圖">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#5cc8ff"/><stop offset="1" stop-color="#7df2c5"/></linearGradient>
+            <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".28"/></filter>
+          </defs>
+          <rect x="35" y="70" width="230" height="280" rx="28" fill="#10243a" stroke="#315777" filter="url(#shadow)"/>
+          <rect x="335" y="70" width="230" height="280" rx="28" fill="#10243a" stroke="#315777" filter="url(#shadow)"/>
+          <rect x="635" y="70" width="230" height="280" rx="28" fill="#10243a" stroke="#315777" filter="url(#shadow)"/>
+          <text x="150" y="115" text-anchor="middle" fill="#5cc8ff" font-size="24" font-weight="700">2020–2022</text>
+          <text x="450" y="115" text-anchor="middle" fill="#7df2c5" font-size="24" font-weight="700">2023–2026</text>
+          <text x="750" y="115" text-anchor="middle" fill="#d9d0ff" font-size="24" font-weight="700">2024–2026</text>
+
+          <circle cx="150" cy="190" r="48" fill="#0a1726" stroke="#5cc8ff" stroke-width="4"/>
+          <path d="M126 190h48M150 166v48M118 226h64" stroke="#5cc8ff" stroke-width="7" stroke-linecap="round"/>
+          <text x="150" y="275" text-anchor="middle" fill="#ecf4ff" font-size="20" font-weight="700">IoT Processor</text>
+          <text x="150" y="303" text-anchor="middle" fill="#a9bbcf" font-size="16">Memory · PUF · Security</text>
+
+          <rect x="404" y="145" width="92" height="92" rx="18" fill="#0a1726" stroke="#7df2c5" stroke-width="4"/>
+          <path d="M420 171h60M420 190h60M420 209h60M438 153v76M462 153v76" stroke="#7df2c5" stroke-width="4"/>
+          <text x="450" y="275" text-anchor="middle" fill="#ecf4ff" font-size="20" font-weight="700">Compute-in-Memory</text>
+          <text x="450" y="303" text-anchor="middle" fill="#a9bbcf" font-size="16">AI Accelerator · SoC</text>
+
+          <circle cx="750" cy="190" r="52" fill="#0a1726" stroke="#bca7ff" stroke-width="4"/>
+          <circle cx="730" cy="175" r="11" fill="#5cc8ff"/><circle cx="772" cy="175" r="11" fill="#7df2c5"/>
+          <circle cx="750" cy="215" r="11" fill="#bca7ff"/>
+          <path d="M740 184l6 18M762 184l-7 18M741 211h19" stroke="#ecf4ff" stroke-width="4"/>
+          <text x="750" y="275" text-anchor="middle" fill="#ecf4ff" font-size="20" font-weight="700">Multimodal AI Engine</text>
+          <text x="750" y="303" text-anchor="middle" fill="#a9bbcf" font-size="16">Inference · Learning · Edge</text>
+
+          <path d="M270 210h55" stroke="url(#g1)" stroke-width="8" stroke-linecap="round"/>
+          <path d="M315 195l18 15-18 15" fill="none" stroke="#7df2c5" stroke-width="7"/>
+          <path d="M570 210h55" stroke="url(#g1)" stroke-width="8" stroke-linecap="round"/>
+          <path d="M615 195l18 15-18 15" fill="none" stroke="#bca7ff" stroke-width="7"/>
+        </svg>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>3</strong><span>主要研究階段</span></div>
+        <div class="stat"><strong>5</strong><span>代表性國科會計畫</span></div>
+        <div class="stat"><strong>2020</strong><span>IoT 與硬體安全起點</span></div>
+        <div class="stat"><strong>2026</strong><span>多模態 AI 融合引擎階段</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="inner">
+    <a href="#overview">總覽</a>
+    <a href="#timeline">研究演進</a>
+    <a href="#phase1">第一階段</a>
+    <a href="#phase2">第二階段</a>
+    <a href="#phase3">第三階段</a>
+    <a href="#architecture">整體架構</a>
+    <a href="#projects">計畫比較</a>
+    <a href="#interview">面談應用</a>
+  </div>
+</nav>
+
+<main>
+<section id="overview">
+  <h2 class="section-title">一、研究方向總覽</h2>
+  <p class="section-sub">
+    邱瀝毅老師的研究並非從單一題目跳到另一個題目，而是沿著「安全、效能、智慧化、系統整合」持續深化。
+  </p>
+  <div class="grid-3">
+    <div class="card">
+      <div class="kicker">Stage 1</div>
+      <h3>安全且節能的 IoT 晶片</h3>
+      <p>研究焦點是物聯網終端裝置中的微處理器、記憶體與硬體安全，核心問題為如何在資源受限的裝置上，同時兼顧低功耗、運算效率與資料保護。</p>
+      <span class="tag">PUF</span><span class="tag">SAT Attack</span><span class="tag">Memory Protection</span>
+    </div>
+    <div class="card">
+      <div class="kicker">Stage 2</div>
+      <h3>記憶體內運算與 AI 系統晶片</h3>
+      <p>研究重心由傳統處理器擴展到 AI 加速器與記憶體內運算，目的在降低資料搬移成本、改善神經網路運算效率，並整合硬體安全機制。</p>
+      <span class="tag">CIM</span><span class="tag">AI Accelerator</span><span class="tag">Medical Electronics</span>
+    </div>
+    <div class="card">
+      <div class="kicker">Stage 3</div>
+      <h3>多模態 AI 融合引擎</h3>
+      <p>進一步把文字、影像、聲音等多模態資料整合至硬體系統，並支援推論與學習，使 AI 模型能更有效率地落地到邊緣裝置與晶片平台。</p>
+      <span class="tag">Multimodal AI</span><span class="tag">Edge AI</span><span class="tag">Learning Engine</span>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2 class="section-title">二、2020–2026 研究演進時間軸</h2>
+  <p class="section-sub">由底層硬體安全與記憶體設計，逐步延伸到 AI 計算架構與多模態融合系統。</p>
+  <div class="timeline">
+    <div class="phase">
+      <div class="period">2020–2021｜109 年度</div>
+      <h3>具硬體安全性及能量效益的物聯網微處理器及記憶體設計之研究（1/2）</h3>
+      <p>研究起點聚焦在 IoT Edge Device。此類裝置通常運算資源少、電池容量有限，卻又需要連網處理個人或組織資料，因此必須同時解決功耗、效能與安全問題。</p>
+    </div>
+    <div class="phase">
+      <div class="period">2021–2022｜110 年度</div>
+      <h3>具硬體安全性及能量效益的物聯網微處理器及記憶體設計之研究（2/2）</h3>
+      <p>延續前期計畫，進一步整合物理不可複製函數、硬體混淆、外部記憶體保護與神經網路保護，代表研究已從單一元件安全走向系統級安全。</p>
+    </div>
+    <div class="phase">
+      <div class="period">2023–2026｜112 年度</div>
+      <h3>具有硬體安全的記憶體內運算之神經網路系統晶片</h3>
+      <p>研究正式進入 AI Hardware。透過 Compute-in-Memory 降低記憶體與運算單元之間的資料搬移，並將 AI 加速、嵌入式系統晶片與硬體安全結合，特別適合醫療電子等高安全需求場景。</p>
+    </div>
+    <div class="phase">
+      <div class="period">2024–2025｜113 年度</div>
+      <h3>具有高延展性、永續性，可進行推論及學習之多模態人工智慧融合引擎（1/2）</h3>
+      <p>研究從單一神經網路運算擴展到多模態資料融合，並強調模型效能、硬體實現、邊緣部署，以及推論與學習能力的共同支援。</p>
+    </div>
+    <div class="phase">
+      <div class="period">2025–2026｜114 年度</div>
+      <h3>具有高延展性、永續性，可進行推論及學習之多模態人工智慧融合引擎（2/2）</h3>
+      <p>進入系統整合與成果深化階段。目標不只是完成模型，而是建立具有高延展性、可持續發展且能落地於晶片與邊緣裝置的完整 AI 融合引擎。</p>
+    </div>
+  </div>
+</section>
+
+<section id="phase1">
+  <h2 class="section-title">三、第一階段：IoT 微處理器、記憶體與硬體安全</h2>
+  <p class="section-sub">對應 109–110 年度計畫，是老師研究架構的底層基礎。</p>
+  <div class="flow">
+    <div class="node"><b>IoT Edge Device</b><span>感測器、智慧裝置、終端設備</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Processor</b><span>嵌入式處理、控制與資料運算</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Memory</b><span>資料、權重與程式儲存</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Security</b><span>PUF、Obfuscation、Memory Protection</span></div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>核心問題</h3>
+      <p><strong>第一個問題是能源效率。</strong> IoT 裝置常依靠電池供電，因此處理器與記憶體必須降低功耗。</p>
+      <p><strong>第二個問題是安全性。</strong> 連網裝置可能遭受竄改、側錄、逆向工程與模型竊取，因此晶片本身需要建立可信任根。</p>
+      <p><strong>第三個問題是系統整合。</strong> 安全功能不能只是額外附加，而必須與微處理器、記憶體控制器與資料路徑共同設計。</p>
+    </div>
+    <div class="card">
+      <h3>代表技術</h3>
+      <p><span class="highlight">PUF：</span>利用晶片製程差異產生難以複製的硬體指紋，可用於裝置認證與金鑰生成。</p>
+      <p><span class="highlight">SAT Attack 防禦：</span>避免攻擊者透過邏輯推導破解硬體混淆或找出金鑰。</p>
+      <p><span class="highlight">External Memory Protection：</span>保護晶片外部記憶體中的程式、資料或神經網路權重。</p>
+      <p><span class="highlight">Neural Network Protection：</span>降低模型參數被竊取、篡改或非法複製的風險。</p>
+    </div>
+  </div>
+  <div class="note">這一階段建立了後續 AI 晶片研究最重要的兩個基礎：一是處理器與記憶體架構能力，二是硬體安全與低功耗設計能力。</div>
+</section>
+
+<section id="phase2">
+  <h2 class="section-title">四、第二階段：記憶體內運算與神經網路系統晶片</h2>
+  <p class="section-sub">對應 112 年度計畫，研究開始從「通用運算」轉向「AI 專用運算」。</p>
+  <div class="diagram">
+    <svg viewBox="0 0 1000 420" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7df2c5"/></marker></defs>
+      <rect x="55" y="80" width="210" height="240" rx="25" fill="#10243a" stroke="#5cc8ff"/>
+      <text x="160" y="125" text-anchor="middle" fill="#5cc8ff" font-size="23" font-weight="700">傳統架構</text>
+      <rect x="95" y="155" width="130" height="55" rx="12" fill="#081725" stroke="#6b8eaa"/>
+      <text x="160" y="189" text-anchor="middle" fill="#ecf4ff" font-size="18">Processor</text>
+      <rect x="95" y="245" width="130" height="55" rx="12" fill="#081725" stroke="#6b8eaa"/>
+      <text x="160" y="279" text-anchor="middle" fill="#ecf4ff" font-size="18">Memory</text>
+      <path d="M135 216v24M185 240v-24" stroke="#ff7b7b" stroke-width="5" marker-end="url(#arr)"/>
+      <text x="160" y="350" text-anchor="middle" fill="#ff9d9d" font-size="17">大量資料搬移</text>
+
+      <path d="M300 200h115" stroke="#7df2c5" stroke-width="8" marker-end="url(#arr)"/>
+      <text x="355" y="178" text-anchor="middle" fill="#7df2c5" font-size="17">架構轉變</text>
+
+      <rect x="455" y="80" width="490" height="240" rx="25" fill="#10243a" stroke="#7df2c5"/>
+      <text x="700" y="125" text-anchor="middle" fill="#7df2c5" font-size="23" font-weight="700">Compute-in-Memory AI SoC</text>
+      <rect x="500" y="160" width="150" height="95" rx="14" fill="#081725" stroke="#7df2c5"/>
+      <text x="575" y="196" text-anchor="middle" fill="#ecf4ff" font-size="18">Memory Array</text>
+      <text x="575" y="223" text-anchor="middle" fill="#a9bbcf" font-size="15">儲存 + 運算</text>
+      <rect x="690" y="160" width="105" height="95" rx="14" fill="#081725" stroke="#5cc8ff"/>
+      <text x="742" y="198" text-anchor="middle" fill="#ecf4ff" font-size="18">Control</text>
+      <text x="742" y="224" text-anchor="middle" fill="#a9bbcf" font-size="15">Dataflow</text>
+      <rect x="835" y="160" width="75" height="95" rx="14" fill="#081725" stroke="#bca7ff"/>
+      <text x="872" y="196" text-anchor="middle" fill="#ecf4ff" font-size="17">Security</text>
+      <text x="872" y="224" text-anchor="middle" fill="#a9bbcf" font-size="14">Protect</text>
+      <path d="M650 208h35M795 208h35" stroke="#7df2c5" stroke-width="5" marker-end="url(#arr)"/>
+      <text x="700" y="350" text-anchor="middle" fill="#d9fced" font-size="17">降低資料搬移、提高能效、支援 AI 加速與安全</text>
+    </svg>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>為什麼需要記憶體內運算？</h3>
+      <p>神經網路需要頻繁讀取大量權重與特徵資料。在傳統 Von Neumann 架構中，處理器與記憶體分離，資料反覆搬移會形成「記憶體牆」，造成延遲與能耗。</p>
+      <p>記憶體內運算讓部分乘加、矩陣運算或資料處理直接在記憶體陣列附近完成，可明顯減少資料搬移。</p>
+    </div>
+    <div class="card">
+      <h3>為什麼強調醫療電子？</h3>
+      <p>醫療電子同時需要低功耗、即時性、隱私與安全。例如穿戴式裝置、醫療感測器、影像分析設備，都可能在邊緣端直接執行 AI 推論。</p>
+      <p>因此，AI Accelerator、Embedded SoC、CIM 與 Hardware Security 可以形成高度互補的研究架構。</p>
+    </div>
+  </div>
+</section>
+
+<section id="phase3">
+  <h2 class="section-title">五、第三階段：多模態人工智慧融合引擎</h2>
+  <p class="section-sub">對應 113–114 年度計畫，是目前研究發展的最高整合層級。</p>
+  <div class="flow">
+    <div class="node"><b>文字 Text</b><span>語意、語境、命令</span></div>
+    <div class="node"><b>影像 Image</b><span>物體、場景、視覺特徵</span></div>
+    <div class="node"><b>聲音 Audio</b><span>語音、環境聲、情緒</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Multimodal Fusion</b><span>跨模態對齊、特徵融合</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>AI Hardware Engine</b><span>Inference + Learning</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Edge Deployment</b><span>低功耗、即時、可延展</span></div>
+  </div>
+  <div class="grid-3">
+    <div class="card">
+      <h3>高延展性</h3>
+      <p>系統需能因應不同模型大小、資料模態與運算需求。硬體不能只支援單一固定網路，而要具備可擴充的模組化架構、可重用資料路徑與彈性記憶體配置。</p>
+    </div>
+    <div class="card">
+      <h3>永續性</h3>
+      <p>此處可理解為更高能源效率、更長生命週期與更容易升級的系統設計。對 AI 晶片而言，降低功耗、改善模型效率與延長硬體可用年限都十分重要。</p>
+    </div>
+    <div class="card">
+      <h3>推論與學習</h3>
+      <p>傳統 Edge AI 多半只做推論；若硬體能支援更新、微調、增量學習或持續學習，便能因應環境變化，讓模型不必每次都回到雲端重新訓練。</p>
+    </div>
+  </div>
+  <div class="quote">
+    <p>真正的研究重點不是只做一個多模態模型，而是研究如何把多模態 AI 模型轉換成可實作、可擴充、低功耗且能部署在邊緣裝置上的硬體系統。</p>
+  </div>
+</section>
+
+<section id="architecture">
+  <h2 class="section-title">六、整體研究架構圖</h2>
+  <p class="section-sub">可將老師的研究視為一個由底層晶片技術向上堆疊的完整 AI Hardware Stack。</p>
+  <div class="diagram">
+    <svg viewBox="0 0 1050 690" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="stack" x1="0" x2="1"><stop offset="0" stop-color="#5cc8ff"/><stop offset="1" stop-color="#7df2c5"/></linearGradient>
+      </defs>
+      <rect x="140" y="550" width="770" height="90" rx="20" fill="#10243a" stroke="#5cc8ff"/>
+      <text x="525" y="587" text-anchor="middle" fill="#5cc8ff" font-size="24" font-weight="700">底層：Digital IC、Processor、Memory、Hardware Security</text>
+      <text x="525" y="617" text-anchor="middle" fill="#a9bbcf" font-size="17">RTL · PUF · Obfuscation · Memory Protection · Low Power</text>
+
+      <rect x="180" y="425" width="690" height="90" rx="20" fill="#10243a" stroke="#7df2c5"/>
+      <text x="525" y="462" text-anchor="middle" fill="#7df2c5" font-size="24" font-weight="700">運算層：Compute-in-Memory 與 AI Accelerator</text>
+      <text x="525" y="492" text-anchor="middle" fill="#a9bbcf" font-size="17">Matrix Operation · Dataflow · Buffer · Energy Efficiency</text>
+
+      <rect x="220" y="300" width="610" height="90" rx="20" fill="#10243a" stroke="#bca7ff"/>
+      <text x="525" y="337" text-anchor="middle" fill="#d9d0ff" font-size="24" font-weight="700">模型層：Neural Network 與 Multimodal Fusion</text>
+      <text x="525" y="367" text-anchor="middle" fill="#a9bbcf" font-size="17">Text · Image · Audio · Cross-modal Alignment</text>
+
+      <rect x="260" y="175" width="530" height="90" rx="20" fill="#10243a" stroke="#ffd166"/>
+      <text x="525" y="212" text-anchor="middle" fill="#ffe39a" font-size="24" font-weight="700">系統層：Inference、Learning 與 Edge Deployment</text>
+      <text x="525" y="242" text-anchor="middle" fill="#a9bbcf" font-size="17">Online Learning · Continual Learning · Real-time AI</text>
+
+      <rect x="310" y="50" width="430" height="90" rx="20" fill="url(#stack)" opacity=".9"/>
+      <text x="525" y="88" text-anchor="middle" fill="#06121f" font-size="25" font-weight="800">應用層：醫療、IoT、智慧裝置、邊緣 AI</text>
+      <text x="525" y="118" text-anchor="middle" fill="#06121f" font-size="17" font-weight="700">安全、低功耗、可延展、可持續</text>
+
+      <path d="M525 545V520M525 420V395M525 295V270M525 170V145" stroke="#7df2c5" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">七、代表性計畫比較表</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>年度</th><th>計畫名稱</th><th>主要研究核心</th><th>關鍵技術</th><th>研究演進意義</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>109</td>
+          <td>具硬體安全性及能量效益的物聯網微處理器及記憶體設計（1/2）</td>
+          <td>建立安全且低功耗的 IoT 晶片基礎</td>
+          <td>IoT Processor、Memory、PUF、Low Power</td>
+          <td>建立底層微處理器與記憶體設計能力</td>
+        </tr>
+        <tr>
+          <td>110</td>
+          <td>具硬體安全性及能量效益的物聯網微處理器及記憶體設計（2/2）</td>
+          <td>系統級硬體安全與記憶體保護</td>
+          <td>SAT Attack、Obfuscation、External Memory Protection</td>
+          <td>從元件安全擴展到系統安全</td>
+        </tr>
+        <tr>
+          <td>112</td>
+          <td>具有硬體安全的記憶體內運算之神經網路系統晶片</td>
+          <td>AI 運算加速、記憶體內運算與安全 SoC</td>
+          <td>CIM、AI Accelerator、Embedded SoC、Medical AI</td>
+          <td>研究正式由傳統處理器跨入 AI Hardware</td>
+        </tr>
+        <tr>
+          <td>113</td>
+          <td>具有高延展性、永續性，可進行推論及學習之多模態 AI 融合引擎（1/2）</td>
+          <td>多模態 AI 架構與硬體融合</td>
+          <td>Multimodal Fusion、Inference、Edge Deployment</td>
+          <td>由單一 AI 運算進入多模態系統</td>
+        </tr>
+        <tr>
+          <td>114</td>
+          <td>具有高延展性、永續性，可進行推論及學習之多模態 AI 融合引擎（2/2）</td>
+          <td>完整融合引擎、推論與學習整合</td>
+          <td>Scalable Architecture、Learning Engine、Sustainable AI Hardware</td>
+          <td>進入完整系統整合與邊緣落地階段</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="interview">
+  <h2 class="section-title">八、面談時可以如何使用這份研究分析</h2>
+  <p class="section-sub">回答重點不是背計畫名稱，而是說出你看見的研究脈絡，以及它與你的能力規劃之間的連結。</p>
+
+  <div class="accordion-item active">
+    <button class="accordion-title">1. 一分鐘正式回答</button>
+    <div class="accordion-content">
+      <p>老師您好，我閱讀過您近幾年的研究計畫，我發現老師的研究方向具有很清楚的演進脈絡。早期主要聚焦於 IoT 微處理器、記憶體與硬體安全，例如 PUF、硬體混淆及記憶體保護；之後進一步發展到具有硬體安全的記憶體內運算與神經網路系統晶片；近兩年則整合多模態 AI、推論、學習與邊緣部署，發展高延展性且具能源效率的 AI 融合引擎。這樣從 Digital IC、Memory Architecture、AI Accelerator 到 Multimodal AI Hardware 的完整研究方向，與我希望投入數位 IC 與 AI 晶片設計的目標非常一致。我希望先扎實建立 RTL、Verification、Computer Architecture 與 Memory System 的能力，再逐步參與 AI Accelerator 或 Edge AI Hardware 相關研究。</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-title">2. 教授追問：「你最有興趣的是哪一段？」</button>
+    <div class="accordion-content">
+      <p>我目前最有興趣的是 AI Accelerator 與 Edge AI Hardware，尤其是模型如何映射到硬體、資料流如何設計，以及記憶體存取如何影響效能與功耗。不過我也了解這些研究需要先具備扎實的 RTL、數位電路、計算機架構與驗證能力，因此我願意先從基礎題目做起，再逐步深入多模態 AI 融合引擎。</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-title">3. 教授追問：「你能為實驗室做什麼？」</button>
+    <div class="accordion-content">
+      <p>我可以從 RTL 模組設計、測試平台撰寫、模擬驗證、技術文件整理與研究結果視覺化開始協助。我過去有邏輯設計、Pipeline CPU、VLSI CAD 與程式實作經驗，也願意持續補強 Verilog/SystemVerilog、Python、模型分析與硬體架構能力，逐步承擔更完整的研究工作。</p>
+    </div>
+  </div>
+
+  <div class="quote">
+    <p><strong>最重要的表達方式：</strong>不要只說「老師做 AI，所以我想加入」，而要說出「硬體安全 → 記憶體內運算 → AI 加速器 → 多模態融合引擎」的研究演進。</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">九、結論</h2>
+  <div class="card">
+    <p>邱瀝毅老師 2020–2026 年的研究可以概括為一條持續上升的技術路線：</p>
+    <div class="flow">
+      <div class="node"><b>安全 IoT 晶片</b><span>Processor + Memory + Security</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><b>AI 系統晶片</b><span>CIM + Accelerator + SoC</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><b>多模態 AI 引擎</b><span>Fusion + Inference + Learning</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><b>Edge AI 應用</b><span>Scalable + Sustainable + Secure</span></div>
+    </div>
+    <p>這條路線顯示，老師的研究核心始終圍繞著一個共同目標：<span class="highlight">如何把智慧演算法轉化為安全、低功耗、高效率且可真正部署的晶片與系統。</span></p>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  邱瀝毅老師研究方向演進（2020–2026）｜互動式 HTML 研究地圖
+</footer>
+
+<script>
+document.querySelectorAll('.accordion-title').forEach(btn=>{
+  btn.addEventListener('click',()=>btn.parentElement.classList.toggle('active'));
+});
+</script>
+</body>
+</html>

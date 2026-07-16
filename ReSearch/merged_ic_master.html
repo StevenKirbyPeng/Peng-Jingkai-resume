@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="數位 IC、類比 IC 與影像處理 IC 的設計、驗證、製造、產品與課程整合總覽">
+  <title>數位 IC＋類比 IC＋影像處理 IC｜完整流程與課程總覽</title>
+  <style>
+    :root{--navy:#123b70;--blue:#2563a8;--green:#188657;--orange:#e87916;--red:#d94b45;--violet:#6647b8;--ink:#17263a;--muted:#5f7086;--line:#c9d8e8;--paper:#fff;--wash:#f3f7fb;--shadow:0 10px 28px rgba(18,59,112,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f7faff,#edf3f9);color:var(--ink);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.65}
+    button,input{font:inherit}.wrap{width:min(1540px,96vw);margin:auto}.hero{background:linear-gradient(135deg,#0d2d59,#174f8c 58%,#197b76);color:white;padding:44px 0 34px}.eyebrow{font-weight:800;letter-spacing:.12em;color:#bfe2ff}.hero h1{font-size:clamp(2rem,4vw,3.65rem);line-height:1.13;margin:.25rem 0 .7rem}.hero p{max-width:1020px;margin:0;color:#e2effc;font-size:1.08rem}.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.badge{padding:7px 12px;border:1px solid #ffffff5b;border-radius:999px;background:#ffffff13;font-weight:700}
+    .toolbar{position:sticky;top:0;z-index:20;background:#ffffffef;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 5px 16px #163d6714}.toolbar .wrap{display:flex;align-items:center;gap:9px;padding:10px 0;overflow:auto}.tab,.tool{border:1px solid var(--line);background:white;color:var(--navy);padding:9px 14px;border-radius:10px;font-weight:800;white-space:nowrap;cursor:pointer}.tab.active{background:var(--navy);color:white;border-color:var(--navy)}.search{margin-left:auto;min-width:220px;border:1px solid var(--line);border-radius:10px;padding:9px 12px}.tool:hover,.tab:hover{transform:translateY(-1px);box-shadow:0 4px 12px #133c681b}
+    main{padding:26px 0 60px}.panel{display:none}.panel.active{display:block}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:22px;margin:0 0 20px}.card h2{color:var(--navy);margin:0 0 8px;font-size:1.65rem}.card h3{color:var(--navy);margin:0 0 8px}.lead{font-size:1.05rem;color:#3d526b}.note{background:#fff7e7;border-left:5px solid var(--orange);padding:13px 16px;border-radius:8px}.grid{display:grid;gap:16px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+    .branch{border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:13px;padding:17px;background:#fbfdff}.branch.analog{border-top-color:var(--orange)}.branch.isp{border-top-color:var(--green)}.branch h3{display:flex;justify-content:space-between}.pill{font-size:.75rem;border-radius:999px;padding:3px 8px;background:#e9f2fb;color:var(--navy)}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:26px 18px;margin:20px 0}.step{position:relative;border:1.5px solid var(--line);border-top:5px solid var(--green);border-radius:13px;background:white;padding:14px;min-height:134px}.step:nth-child(n+5){border-top-color:var(--orange)}.step:nth-child(n+8){border-top-color:var(--violet)}.step:not(:nth-child(5)):not(:nth-child(10))::after{content:"➜";position:absolute;right:-24px;top:42%;font-size:22px;color:var(--blue);font-weight:900}.n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--navy);color:white;font-weight:900;margin-right:6px}.step strong{color:var(--navy)}.step small{display:block;color:var(--muted);margin-top:5px}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;background:white;min-width:850px}th,td{padding:11px 12px;border-bottom:1px solid #dce6f0;vertical-align:top;text-align:left}th{background:#eaf2fa;color:var(--navy);position:sticky;top:0}tr:nth-child(even) td{background:#f9fbfd}.digital-col{border-top:4px solid var(--blue)}.analog-col{border-top:4px solid var(--orange)}.isp-col{border-top:4px solid var(--green)}
+    .figure{margin:14px 0 0;border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff}.figure img{display:block;width:100%;height:auto}.figure figcaption{padding:10px 14px;background:#eef5fb;color:#51647b}.wide-img{overflow:auto}.wide-img img{min-width:1120px}
+    details{background:#fbfdff;border:1px solid var(--line);border-radius:12px;margin:10px 0;overflow:hidden}summary{cursor:pointer;font-weight:850;color:var(--navy);padding:13px 16px;background:#eef5fb}details>div{padding:14px 17px}.stage-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px}.label{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{background:#eef4fa;border:1px solid #cfdeec;border-radius:999px;padding:4px 9px;font-size:.88rem}.check{margin:5px 0;padding-left:1.2rem}.check li::marker{color:var(--green)}
+    .product{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:16px;align-items:stretch}.product>div{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fbfdff}.arrowbox{display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:2.1rem;font-weight:900}.course-map td:first-child{font-weight:850;color:var(--navy)}.footer{color:#65768a;text-align:center;padding:20px}.hidden-search{display:none!important}.legend{display:flex;gap:14px;flex-wrap:wrap;color:#52667d}.dot::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:currentColor;margin-right:5px}.blue{color:var(--blue)}.orange{color:var(--orange)}.green{color:var(--green)}
+    @media(max-width:1000px){.g3,.g2,.product{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.step::after{display:none}.stage-grid{grid-template-columns:1fr}.search{display:none}}
+    @media(max-width:600px){.flow{grid-template-columns:1fr}.card{padding:16px}.hero{padding:32px 0}.toolbar .wrap{padding-left:2vw;padding-right:2vw}}
+    @media print{body{background:white}.toolbar{display:none}.wrap{width:100%}.panel{display:block!important;break-before:page}.panel:first-child{break-before:auto}.card{box-shadow:none;break-inside:avoid}.wide-img img{min-width:0}.hero{padding:22px;color:#102f55;background:white;border-bottom:3px solid #123b70}.hero p,.eyebrow{color:#40556d}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">IC DESIGN × MANUFACTURING × PRODUCT × CURRICULUM</div>
+      <h1>數位 IC＋類比 IC＋影像處理 IC<br>完整流程與技術總覽</h1>
+      <p>把三條常被分開介紹的路徑放進同一張工程地圖：從產品需求、架構與設計，走到驗證、實體實現、晶圓製造、封裝測試與系統量產；並標示每一階段所需工具、交付物、品質指標與可對應的大學課程。</p>
+      <div class="badges"><span class="badge">數位：RTL → Gate → P&amp;R</span><span class="badge">類比：Schematic → SPICE → Layout</span><span class="badge">ISP：演算法 → 定點化 → RTL → 調校</span></div>
+    </div>
+  </header>
+
+  <nav class="toolbar" aria-label="內容分頁">
+    <div class="wrap">
+      <button class="tab active" data-tab="overview">整合總覽</button>
+      <button class="tab" data-tab="digital">數位 IC</button>
+      <button class="tab" data-tab="analog">類比 IC</button>
+      <button class="tab" data-tab="isp">影像處理 IC</button>
+      <button class="tab" data-tab="courses">課程與職涯</button>
+      <button class="tool" id="expandBtn">展開說明</button>
+      <button class="tool" onclick="window.print()">列印／PDF</button>
+      <input class="search" id="search" type="search" aria-label="搜尋技術、工具或課程" title="搜尋技術、工具或課程">
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="panel active" id="overview">
+      <article class="card searchable">
+        <h2>一張圖看懂三條設計路徑</h2>
+        <p class="lead">三者並不是互相排斥的產業分類，而是同一個產品中的不同設計層次。以手機相機 SoC 為例：類比前端負責把感測器訊號穩定送入晶片，ISP 以影像演算法改善畫質，數位 SoC 則負責控制、記憶體、介面與運算整合。</p>
+        <div class="grid g3">
+          <div class="branch"><h3>數位 IC <span class="pill">狀態與邏輯</span></h3><p>以 0/1、暫存器與時脈描述行為，重視功能正確、時序收斂、功耗與面積。</p><div class="chips"><span class="chip">Verilog / SystemVerilog</span><span class="chip">Synthesis</span><span class="chip">STA</span><span class="chip">DFT</span></div></div>
+          <div class="branch analog"><h3>類比 IC <span class="pill">連續訊號</span></h3><p>處理電壓、電流、頻率與雜訊，重視增益、頻寬、線性度、穩定度與匹配。</p><div class="chips"><span class="chip">Transistor</span><span class="chip">SPICE</span><span class="chip">Layout</span><span class="chip">PVT</span></div></div>
+          <div class="branch isp"><h3>影像處理 IC <span class="pill">演算法＋硬體</span></h3><p>將 RAW 影像轉為可觀看、可分析的 RGB/YUV 資料，橫跨畫質演算法、定點化、RTL、記憶體資料流與實機調校。</p><div class="chips"><span class="chip">Demosaic</span><span class="chip">HDR / NR</span><span class="chip">Fixed-point</span><span class="chip">MIPI</span></div></div>
+        </div>
+      </article>
+
+      <article class="card searchable">
+        <h2>共同生命週期：從構想到量產</h2>
+        <div class="legend"><span class="dot green">前端設計</span><span class="dot orange">實體與簽核</span><span class="dot" style="color:var(--violet)">製造與產品</span></div>
+        <div class="flow">
+          <div class="step"><span class="n">1</span><strong>需求與規格</strong><small>功能、PPA、畫質、成本、介面、製程與可靠度目標</small></div>
+          <div class="step"><span class="n">2</span><strong>系統架構</strong><small>模組切分、資料流、時脈／電源、頻寬與介面</small></div>
+          <div class="step"><span class="n">3</span><strong>設計實現</strong><small>RTL、電晶體電路、影像演算法與定點模型</small></div>
+          <div class="step"><span class="n">4</span><strong>前端驗證</strong><small>Testbench、SPICE、Golden Model、Coverage</small></div>
+          <div class="step"><span class="n">5</span><strong>實體設計</strong><small>合成、Floorplan、P&amp;R；或客製化 Layout</small></div>
+          <div class="step"><span class="n">6</span><strong>Sign-off</strong><small>DRC、LVS、STA、IR Drop、EM、PVT、Formal</small></div>
+          <div class="step"><span class="n">7</span><strong>Tape-out</strong><small>輸出 GDSII／OASIS、Mask Data 與製造檢核</small></div>
+          <div class="step"><span class="n">8</span><strong>晶圓製造</strong><small>光刻、蝕刻、沉積、離子植入、金屬互連與良率</small></div>
+          <div class="step"><span class="n">9</span><strong>封裝與測試</strong><small>Wafer Sort、封裝、ATE、Final Test、分級</small></div>
+          <div class="step"><span class="n">10</span><strong>產品整合</strong><small>Bring-up、韌體、調校、可靠度、量產回饋與 ECO</small></div>
+        </div>
+        <p class="note"><strong>關鍵觀念：</strong>「Tape-out」不是專案結束。真正的產品仍須經過製造良率、封裝、測試、驅動／韌體、系統驗證與客戶端量產爬坡。</p>
+      </article>
+
+      <article class="card searchable">
+        <h2>三者差異比較矩陣</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>比較面向</th><th class="digital-col">數位 IC</th><th class="analog-col">類比 IC</th><th class="isp-col">影像處理 IC（ISP）</th></tr></thead>
+          <tbody>
+            <tr><td>核心問題</td><td>邏輯與狀態是否正確、時序能否收斂</td><td>連續訊號能否在雜訊與製程變異下維持性能</td><td>畫質演算法能否在即時、低功耗硬體上正確運作</td></tr>
+            <tr><td>主要抽象層</td><td>系統／RTL／Gate／Physical</td><td>系統／Schematic／Transistor／Layout</td><td>浮點模型／定點模型／RTL／系統調校</td></tr>
+            <tr><td>代表設計內容</td><td>CPU、NPU、控制器、介面、記憶體子系統</td><td>Op Amp、ADC/DAC、PLL、LDO、RF、Sensor AFE</td><td>BLC、Demosaic、AWB/CCM、NR、HDR、Tone、Scaler</td></tr>
+            <tr><td>主要驗證</td><td>模擬、Assertion、Coverage、Formal、STA</td><td>DC/AC/Transient、Noise、Corner、Monte Carlo</td><td>Golden Model、影像資料集、Bit-accurate、FPGA、實機 IQ</td></tr>
+            <tr><td>主要指標</td><td>Frequency、Latency、Area、Dynamic/Leakage Power</td><td>Gain、BW、SNR、THD、Linearity、Phase Margin</td><td>PSNR/SSIM、Color Error、Artifact、fps、Latency、Bandwidth</td></tr>
+            <tr><td>代表工具</td><td>VCS/Xcelium、Design Compiler/Genus、Innovus/ICC2、PrimeTime</td><td>Virtuoso、Spectre/HSPICE、Calibre/PVS、ADS</td><td>MATLAB/Python/OpenCV、VCS/Xcelium、FPGA、IQ Viewer</td></tr>
+            <tr><td>物理實現</td><td>標準元件自動 P&amp;R 為主</td><td>客製化版圖、匹配、對稱與寄生控制</td><td>數位 P&amp;R 為主，常與 SRAM、CPU、Sensor PHY 混合整合</td></tr>
+            <tr><td>典型產品</td><td>處理器、MCU、AI 加速器、通訊 SoC</td><td>電源、資料轉換器、RF、感測器介面</td><td>手機相機、車載 ADAS、監控、機器視覺、醫療影像</td></tr>
+          </tbody>
+        </table></div>
+      </article>
+
+      <article class="card searchable">
+        <h2>產品視角：一個相機模組如何同時用到三者</h2>
+        <div class="product">
+          <div><h3>感測與類比前端</h3><ul class="check"><li>CMOS Image Sensor 像素陣列</li><li>放大器、CDS、ADC、PLL、LDO</li><li>低雜訊、動態範圍、線性與匹配</li></ul></div>
+          <div><h3>ISP＋數位 SoC</h3><ul class="check"><li>RAW Pipeline：BLC → Demosaic → NR → HDR → CCM → Tone</li><li>Line Buffer、SRAM、DMA、AXI、MIPI CSI-2</li><li>CPU／NPU 控制、3A 統計、韌體與演算法參數</li></ul></div>
+          <div><h3>系統與產品</h3><ul class="check"><li>鏡頭、模組、散熱與電源</li><li>Driver、Camera Framework、應用程式</li><li>實機 IQ 調校、可靠度、量產測試</li></ul></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel" id="digital">
+      <article class="card searchable"><h2>數位 IC：完整設計流程</h2><p class="lead">數位流程將可執行的產品需求轉換成 RTL，再經邏輯合成與實體設計成為可製造的版圖。最大風險通常來自功能漏洞、跨時脈／重置信號、時序不收斂、功耗過高與 DFT 覆蓋不足。</p>
+        <figure class="figure wide-img"><img src="digital_ic_flow_user(1).png" alt="數位 IC 設計完整流程與相關技術總覽"><figcaption>數位 IC 流程原圖：規格、RTL、功能驗證、合成、P&amp;R、Sign-off、Tape-out 與產品。</figcaption></figure>
+      </article>
+      <article class="card searchable"><h2>數位 IC 階段詳解</h2>
+        <details><summary>1–2｜規格定義與系統架構</summary><div class="stage-grid"><p><span class="label">工作</span><br>定義功能、資料寬度、吞吐量、延遲、時脈、電源域、介面與製程；將系統拆為可驗證模組。</p><p><span class="label">工具</span><br>Excel、Word、DOORS/Jira、MATLAB/Simulink、SystemC、Specman。</p><p><span class="label">交付物</span><br>PRD/Spec、微架構圖、Register Map、介面規格、PPA Budget、驗證計畫。</p></div></details>
+        <details><summary>3–4｜RTL 設計與功能驗證</summary><div class="stage-grid"><p><span class="label">工作</span><br>以 Verilog/SystemVerilog 描述 Datapath、FSM、Pipeline；建立 UVM/Testbench、Assertion、Coverage 與回歸測試。</p><p><span class="label">檢查</span><br>Lint、CDC、RDC、X-propagation、Formal、Code/Functional Coverage。</p><p><span class="label">完成條件</span><br>需求可追溯、Coverage 達標、無高風險 Bug、RTL 與 Golden Reference 一致。</p></div></details>
+        <details><summary>5–7｜合成、實體設計與 Sign-off</summary><div class="stage-grid"><p><span class="label">工作</span><br>RTL→Gate、SDC 約束、Floorplan、Power Grid、Placement、CTS、Routing、ECO。</p><p><span class="label">分析</span><br>STA、SI/Crosstalk、IR Drop、EM、Power、DRC/LVS、Formal Equivalence。</p><p><span class="label">交付物</span><br>Netlist、GDSII/OASIS、SPEF、SDF、STA/DRC/LVS/IR/EM 報告。</p></div></details>
+        <details><summary>8–9｜Tape-out、製造、封裝與測試</summary><div class="stage-grid"><p><span class="label">製造</span><br>Mask、晶圓前段 FEOL、後段 BEOL、Wafer Sort、切割、封裝。</p><p><span class="label">測試</span><br>Scan/ATPG、MBIST、JTAG、ATE、速度／功耗 Bin、Burn-in。</p><p><span class="label">產品</span><br>Silicon Bring-up、量產測試程式、良率分析、Failure Analysis、ECO。</p></div></details>
+      </article>
+    </section>
+
+    <section class="panel" id="analog">
+      <article class="card searchable"><h2>類比 IC：完整設計流程</h2><p class="lead">類比設計直接處理電晶體、連續時間與雜訊，版圖寄生與元件匹配會改變電路性能。因此「前模擬」與「後模擬」的差距、PVT/Monte Carlo 統計以及可靠度驗證是核心。</p>
+        <figure class="figure wide-img"><img src="analog_ic_flow_user(1).png" alt="類比 IC 設計完整流程與相關技術總覽"><figcaption>類比 IC 流程原圖：規格、系統架構、Schematic、SPICE、Layout、Physical Verification、Post-layout 與量產。</figcaption></figure>
+      </article>
+      <article class="card searchable"><h2>類比 IC 階段詳解</h2>
+        <details><summary>1–2｜規格、拓撲與預算分配</summary><div class="stage-grid"><p><span class="label">工作</span><br>把系統需求轉為 Gain、BW、Noise、Linearity、PSRR、CMRR、Power、Load 與 Stability 指標。</p><p><span class="label">方法</span><br>行為模型、Hand Calculation、Noise/Headroom Budget、Top-down/Bottom-up。</p><p><span class="label">風險</span><br>拓撲選錯會使後續尺寸最佳化無法補救；規格必須含 PVT 與負載邊界。</p></div></details>
+        <details><summary>3–4｜Schematic 與 SPICE 模擬</summary><div class="stage-grid"><p><span class="label">工作</span><br>偏壓、增益級、補償、共模回授、啟動與保護電路設計；元件尺寸與工作點最佳化。</p><p><span class="label">模擬</span><br>DC、AC、Transient、Noise、PSS/PNoise、Corner、Monte Carlo、Mismatch。</p><p><span class="label">判定</span><br>所有角落滿足規格，穩定度與啟動無例外，統計良率在目標範圍。</p></div></details>
+        <details><summary>5–7｜Layout、版圖驗證與 Post-layout</summary><div class="stage-grid"><p><span class="label">Layout</span><br>Common-centroid、交叉耦合、Dummy、對稱、Guard Ring、Shield、電流密度。</p><p><span class="label">Physical Verify</span><br>DRC、LVS、ERC、Antenna；PEX 萃取 R/C 寄生。</p><p><span class="label">Post-layout</span><br>含寄生重新跑 PVT/Monte Carlo、EM/IR、可靠度與 Yield Analysis。</p></div></details>
+        <details><summary>8–10｜Tape-out、晶圓量測與產品化</summary><div class="stage-grid"><p><span class="label">準備</span><br>GDSII/OASIS、Tape-out Checklist、Foundry Sign-off、測試結構與 Pad Ring。</p><p><span class="label">量測</span><br>Wafer Probe、Bench Characterization、ATE、Correlation、Trim/Calibration。</p><p><span class="label">量產</span><br>良率監控、製程漂移、可靠度、Datasheet Guard-band 與客戶應用驗證。</p></div></details>
+      </article>
+    </section>
+
+    <section class="panel" id="isp">
+      <article class="card searchable"><h2>影像處理 IC（ISP）：完整設計與製造流程</h2><p class="lead">ISP 是數位 IC 的專門應用，但設計起點不是 RTL，而是影像品質與相機系統。成功的 ISP 必須讓浮點演算法、定點模型、RTL、FPGA、晶片與真實 Sensor 的輸出逐層一致。</p>
+        <figure class="figure wide-img"><img src="影像處理IC_完整流程與相關技術總覽_v2(1).png" alt="影像處理 IC 設計完整流程與相關技術總覽"><figcaption>ISP 流程原圖：影像規格、演算法、定點化、RTL、驗證、P&amp;R、Tape-out、Bring-up 與 IQ 調校。</figcaption></figure>
+      </article>
+      <article class="card searchable"><h2>ISP 階段詳解</h2>
+        <details><summary>1–2｜影像規格與 ISP 架構</summary><div class="stage-grid"><p><span class="label">規格</span><br>Sensor RAW 格式、解析度、fps、Bit Depth、Dynamic Range、Latency、MIPI、功耗與成本。</p><p><span class="label">架構</span><br>Pipeline 順序、Pixels/Cycle、Line/Frame Buffer、DMA、SRAM、CPU/Firmware 邊界。</p><p><span class="label">交付物</span><br>ISP Spec、Data-flow、Bandwidth/Latency Budget、Register Map、IQ 指標。</p></div></details>
+        <details><summary>3｜浮點演算法與 Golden Model</summary><div class="stage-grid"><p><span class="label">Pipeline</span><br>BLC/DPC/LSC → Demosaic → AWB/CCM → NR/HDR → Tone → Sharpen/Scaler/CSC。</p><p><span class="label">工具</span><br>MATLAB、Python、NumPy/SciPy、OpenCV、RAW Viewer、Color Chart。</p><p><span class="label">評估</span><br>PSNR、SSIM、ΔE/Color Error、Artifact、Texture、Edge、Visual Review 與資料集覆蓋。</p></div></details>
+        <details><summary>4–5｜定點化、RTL 與功能驗證</summary><div class="stage-grid"><p><span class="label">定點化</span><br>Q-format、位元寬度、Round/Truncate/Saturate、Overflow、LUT 與係數量化。</p><p><span class="label">RTL</span><br>Valid/Ready Pipeline、Line Buffer、MAC、AXI/APB、CDC/RDC、寄存器介面。</p><p><span class="label">驗證</span><br>Bit-exact 比對、Scoreboard、Assertion、Coverage、Formal、FPGA Camera Prototype。</p></div></details>
+        <details><summary>6–8｜合成、P&amp;R、Sign-off 與製造</summary><div class="stage-grid"><p><span class="label">實體</span><br>高吞吐 Datapath、SRAM Macro、Clock Gating、CTS、Routing、Timing/Power Closure。</p><p><span class="label">簽核</span><br>STA/PVT/OCV、DRC/LVS/ERC、IR/EM、Crosstalk、LEC、DFM、Density Fill。</p><p><span class="label">製造</span><br>GDSII/OASIS、Mask/OPC、Wafer Sort、Packaging、Final Test、Known Good Die。</p></div></details>
+        <details><summary>9–10｜Silicon Bring-up、IQ 調校與產品</summary><div class="stage-grid"><p><span class="label">Bring-up</span><br>Power/Clock/JTAG、Memory/DMA/MIPI、Driver、真實 Sensor、Lab 儀器與 FPGA 對照。</p><p><span class="label">調校</span><br>AE/AWB/AF、CCM、NR、HDR、Tone、Sharpen；依鏡頭、Sensor 與場景建立參數。</p><p><span class="label">量產</span><br>Qualification、長時間／溫度測試、客戶平台整合、良率／RMA 回饋與下一版 ECO。</p></div></details>
+      </article>
+      <article class="card searchable"><h2>典型 ISP 資料路徑</h2><div class="table-wrap"><table><thead><tr><th>階段</th><th>輸入 → 輸出</th><th>目的</th><th>硬體注意事項</th></tr></thead><tbody>
+        <tr><td>RAW 前處理</td><td>Sensor RAW → 校正 RAW</td><td>BLC、DPC、LSC，修正黑階、壞點與鏡頭陰影</td><td>逐像素串流、校正表與溫度／增益參數</td></tr>
+        <tr><td>Demosaic</td><td>Bayer → RGB</td><td>由單色像素估計完整 RGB</td><td>鄰域視窗、Line Buffer、Edge-aware Artifact</td></tr>
+        <tr><td>Color / 3A</td><td>RGB → 校色 RGB＋統計</td><td>AWB、CCM、AE/AF 統計</td><td>Histogram/ROI、韌體迴圈、低延遲 Register Update</td></tr>
+        <tr><td>NR / HDR / Tone</td><td>多曝光／含雜訊影像 → 顯示域</td><td>降噪、融合、動態範圍壓縮</td><td>Frame Buffer、Ghost、Bandwidth、定點誤差</td></tr>
+        <tr><td>輸出處理</td><td>RGB → YUV/縮放影像</td><td>Sharpen、Scaler、CSC、壓縮前處理</td><td>Polyphase、Chroma Subsampling、MIPI/Memory Output</td></tr>
+      </tbody></table></div></article>
+    </section>
+
+    <section class="panel" id="courses">
+      <article class="card searchable"><h2>課程如何連到真實 IC 流程</h2><p class="lead">課程不是獨立的知識清單；每門課都能對應到一段工程交付。下表以 CAD／IC 設計常見課程為骨架，補上 ISP 所需的影像、訊號與系統能力。</p>
+        <div class="table-wrap"><table class="course-map"><thead><tr><th>課程／能力</th><th>數位 IC 對應</th><th>類比 IC 對應</th><th>ISP 對應</th><th>可做作品</th></tr></thead><tbody>
+          <tr><td>邏輯系統、數位設計、HDL</td><td>布林化簡、FSM、RTL、Testbench</td><td>數位控制、校正與介面</td><td>Pipeline、Valid/Ready、Register Map</td><td>計數器／UART／影像卷積 RTL</td></tr>
+          <tr><td>程式設計、資料結構、演算法</td><td>EDA Automation、驗證腳本</td><td>模擬資料分析與最佳化</td><td>Golden Model、影像演算法、資料集處理</td><td>Python ISP 模擬器／EDA 小工具</td></tr>
+          <tr><td>計算機組織、VLSI 系統設計</td><td>Pipeline CPU、Cache、Bus、SoC</td><td>Mixed-signal System Interface</td><td>SRAM、DMA、AXI、吞吐與頻寬</td><td>五級 Pipeline CPU／簡化 ISP SoC</td></tr>
+          <tr><td>電子學、電路學、半導體元件</td><td>IO、Power、Timing 的電路基礎</td><td>MOS、偏壓、放大器、回授、雜訊</td><td>Sensor AFE、ADC、MIPI PHY、PVT</td><td>Op Amp／Comparator／LDO 模擬</td></tr>
+          <tr><td>訊號與系統、線性代數、機率</td><td>DSP Datapath、Filter Accelerator</td><td>頻率響應、Noise、隨機變異</td><td>Filter、Demosaic、NR、Color Matrix、3A</td><td>濾波器／去雜訊／色彩校正</td></tr>
+          <tr><td>VLSI CAD、實體設計、EDA</td><td>Synthesis、P&amp;R、STA、DRC/LVS</td><td>Layout、PEX、Physical Verification</td><td>大型 Datapath 與 SRAM 的 PPA Closure</td><td>Gaussian/CCL/BBox Accelerator ASIC Flow</td></tr>
+          <tr><td>測試、可靠度與專題研究</td><td>DFT、ATPG、BIST、Silicon Debug</td><td>ATE、Characterization、PVT、Aging</td><td>FPGA Bring-up、IQ Tuning、Camera Qualification</td><td>FPGA Camera Pipeline／晶片量測報告</td></tr>
+        </tbody></table></div>
+      </article>
+      <article class="card searchable"><h2>建議學習順序與職涯出口</h2><div class="grid g3">
+        <div class="branch"><h3>數位 IC 路線</h3><ol><li>邏輯與 HDL</li><li>計組與 RTL 專題</li><li>驗證／CDC／Formal</li><li>合成、STA、P&amp;R</li><li>DFT 或低功耗深化</li></ol><p><strong>職涯：</strong>RTL、DV、DFT、APR、STA、SoC Integration。</p></div>
+        <div class="branch analog"><h3>類比 IC 路線</h3><ol><li>電路與電子學</li><li>MOS 小訊號與回授</li><li>SPICE/PVT/Noise</li><li>Layout/PEX/Matching</li><li>量測與產品驗證</li></ol><p><strong>職涯：</strong>Analog/Mixed-signal、Layout、Characterization、Product Engineer。</p></div>
+        <div class="branch isp"><h3>ISP 路線</h3><ol><li>訊號、影像與 Python</li><li>浮點 Golden Model</li><li>定點化與 RTL</li><li>FPGA Camera Prototype</li><li>ASIC Flow 與 IQ Tuning</li></ol><p><strong>職涯：</strong>ISP Algorithm、ISP RTL/DV、Camera IQ、Imaging System。</p></div>
+      </div></article>
+      <article class="card searchable"><h2>從作品集證明能力</h2><div class="table-wrap"><table><thead><tr><th>作品層級</th><th>建議內容</th><th>應附證據</th></tr></thead><tbody>
+        <tr><td>基礎</td><td>K-map／Quine–McCluskey、FSM、可合成 Verilog 模組</td><td>規格、波形、Testbench、Corner Case、資源報告</td></tr>
+        <tr><td>系統</td><td>Pipeline CPU、DMA、AXI Peripheral 或小型 ISP Pipeline</td><td>架構圖、介面、性能測量、Coverage、Debug 記錄</td></tr>
+        <tr><td>實體</td><td>Gaussian/CCL/BBox 或其他 Accelerator 完成 RTL-to-GDS</td><td>STA、Area/Power、DRC/LVS、Floorplan、P&amp;R 截圖</td></tr>
+        <tr><td>影像</td><td>RAW→RGB/YUV Golden Model＋Fixed-point＋RTL/FPGA</td><td>資料集、Bit-exact、PSNR/SSIM、fps、Latency、Bandwidth</td></tr>
+        <tr><td>類比</td><td>Op Amp/ADC/LDO 的 Schematic→Layout→Post-layout</td><td>PVT/Monte Carlo、Noise、Stability、DRC/LVS、量測計畫</td></tr>
+      </tbody></table></div></article>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap">整合總覽｜Digital IC × Analog IC × Image Signal Processor｜可使用上方分頁、搜尋、展開與列印功能</div></footer>
+  <script>
+    const tabs=[...document.querySelectorAll('.tab')], panels=[...document.querySelectorAll('.panel')];
+    function openTab(id){tabs.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));panels.forEach(p=>p.classList.toggle('active',p.id===id));document.getElementById('search').value='';document.querySelectorAll('.hidden-search').forEach(x=>x.classList.remove('hidden-search'));window.scrollTo({top:document.querySelector('.toolbar').offsetTop,behavior:'smooth'});}
+    tabs.forEach(b=>b.addEventListener('click',()=>openTab(b.dataset.tab)));
+    let expanded=false;document.getElementById('expandBtn').addEventListener('click',e=>{expanded=!expanded;document.querySelectorAll('details').forEach(d=>d.open=expanded);e.currentTarget.textContent=expanded?'收合說明':'展開說明';});
+    document.getElementById('search').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.panel.active .searchable').forEach(el=>el.classList.toggle('hidden-search',q&&!el.textContent.toLowerCase().includes(q)));});
+  </script>
+</body>
+</html>

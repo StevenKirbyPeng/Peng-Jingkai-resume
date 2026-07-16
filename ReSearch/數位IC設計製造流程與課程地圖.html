@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="數位 IC 從產品需求、RTL、驗證、實體設計、晶圓製造到封裝測試的完整流程，以及成大電機 CAD 組課程地圖對應。">
+  <title>數位 IC 設計 × 製造 × 課程地圖｜完整互動導讀</title>
+  <style>
+    :root{--navy:#102a43;--blue:#1565c0;--cyan:#00838f;--green:#2e7d32;--orange:#ef6c00;--red:#c62828;--purple:#6a1b9a;--ink:#22313f;--muted:#5d6b78;--line:#d9e2ec;--soft:#f4f8fb;--white:#fff;--shadow:0 12px 32px rgba(16,42,67,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:130px}body{margin:0;background:#edf3f7;color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif}a{color:var(--blue)}button,input{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.hero{background:linear-gradient(125deg,#0b2034,#123f64 57%,#006c77);color:white;padding:72px 0 58px}.eyebrow{display:inline-block;border:1px solid #ffffff55;border-radius:99px;padding:5px 13px;letter-spacing:.08em;font-size:.84rem}.hero h1{font-size:clamp(2.15rem,5vw,4.25rem);line-height:1.08;margin:18px 0}.hero p{max-width:820px;color:#d8ebf6;font-size:1.15rem}.snapshot{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}.snapshot div{background:#ffffff12;border:1px solid #ffffff25;border-radius:14px;padding:17px}.snapshot b{display:block;font-size:1.5rem;color:white}.snapshot span{color:#cce3ef;font-size:.9rem}.tools{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 20px #102a4312}.toolrow{display:flex;align-items:center;gap:9px;padding:10px 0;overflow:auto}.toolrow input{min-width:250px;flex:1;border:1px solid #b8c7d4;border-radius:9px;padding:9px 12px}.btn{white-space:nowrap;border:1px solid #b8c7d4;background:white;color:var(--navy);border-radius:9px;padding:8px 12px}.btn:hover,.btn:focus{border-color:var(--blue);outline:3px solid #1565c025}.chapters{background:#102a43}.chapters .wrap{display:flex;overflow:auto}.chapters a{color:#dceaf3;text-decoration:none;white-space:nowrap;padding:10px 14px;font-size:.9rem}.chapters a:hover{background:#ffffff12}.main{padding:32px 0 70px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,4vw,36px);margin:22px 0;box-shadow:var(--shadow)}h2{color:var(--navy);font-size:clamp(1.45rem,3vw,2.15rem);line-height:1.3;margin:0 0 8px}h3{color:#173f5f;margin:8px 0}.lead{color:var(--muted);font-size:1.05rem;max-width:920px}.tag{display:inline-block;padding:3px 9px;border-radius:99px;background:#e7f2fb;color:#15558b;font-size:.8rem;font-weight:700}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff}.card p:last-child{margin-bottom:0}.callout{border-left:5px solid var(--cyan);background:#eef9fa;border-radius:8px;padding:15px 18px;margin:18px 0}.warn{border-left-color:var(--orange);background:#fff7ed}.tablebox{overflow:auto;border:1px solid var(--line);border-radius:12px;margin:16px 0}table{width:100%;border-collapse:collapse;min-width:860px;background:#fff}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px 13px}th{position:sticky;top:0;background:#173f5f;color:white;font-size:.9rem}tr:last-child td{border-bottom:0}tbody tr:hover{background:#f6fafc}.course-link{display:inline-block;text-decoration:none;font-weight:750;color:#0c5aa6;border-bottom:1px dashed #0c5aa6}.stage-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin:22px 0}.stage{position:relative;border-radius:14px;padding:17px 15px;min-height:125px;color:#fff}.stage:not(:last-child):after{content:"→";position:absolute;right:-12px;top:42%;z-index:2;background:white;color:#315b76;border-radius:50%;width:25px;height:25px;text-align:center;font-weight:bold}.stage b{display:block;font-size:1.05rem}.stage small{display:block;margin-top:7px;color:#e6f4fa}.s1{background:#1565c0}.s2{background:#00838f}.s3{background:#5e35b1}.s4{background:#ef6c00}.s5{background:#455a64}.flow-list{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:item}.flow-item{position:relative;border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:12px;padding:17px;background:#fff}.flow-item:before{counter-increment:item;content:counter(item);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;font-weight:800}.flow-item.design{border-top-color:var(--blue)}.flow-item.verify{border-top-color:var(--purple)}.flow-item.physical{border-top-color:var(--orange)}.flow-item.fab{border-top-color:var(--green)}.flow-item.test{border-top-color:var(--red)}.legend{display:flex;gap:8px;flex-wrap:wrap}.legend span{border-radius:99px;padding:4px 10px;background:#edf3f7;font-size:.82rem}.triad{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:12px;margin:22px 0}.triad .core{border-radius:16px;padding:22px;color:white}.triad .arrow{display:grid;place-items:center;font-size:2rem;color:#55768d}.logic{background:linear-gradient(140deg,#1565c0,#3385cf)}.arch{background:linear-gradient(140deg,#00838f,#23a2aa)}.cad{background:linear-gradient(140deg,#6a1b9a,#9348b6)}.core h3{color:white}.core p{color:#eff9ff}.course-map{display:grid;grid-template-columns:155px repeat(4,minmax(160px,1fr));gap:7px;overflow:auto}.course-map>*{padding:12px;border-radius:9px;min-width:150px}.map-head{background:#102a43;color:white;font-weight:700}.map-lane{background:#dde8ef;font-weight:750;color:#183b55}.map-cell{background:#f4f8fb;border:1px solid var(--line)}details{border:1px solid var(--line);border-radius:12px;margin:11px 0;background:#fff}summary{padding:15px 18px;font-weight:780;color:var(--navy);cursor:pointer}details>div{padding:0 18px 18px}.kpi{font-weight:800;color:var(--red)}.hidden-by-search{display:none!important}.highlight{background:#fff1a8;color:#111}.timeline{border-left:4px solid #b9d5e5;margin-left:12px;padding-left:23px}.timeline article{position:relative;margin:0 0 18px}.timeline article:before{content:"";position:absolute;left:-33px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--blue);border:3px solid white;box-shadow:0 0 0 2px var(--blue)}footer{background:#102a43;color:#c7d9e5;padding:28px;text-align:center}.small{font-size:.88rem;color:var(--muted)}@media(max-width:900px){.snapshot,.grid{grid-template-columns:1fr 1fr}.stage-flow{grid-template-columns:1fr 1fr}.stage:not(:last-child):after{display:none}.flow-list{grid-template-columns:1fr 1fr}.triad{grid-template-columns:1fr}.triad .arrow{transform:rotate(90deg)}}@media(max-width:580px){.snapshot,.grid,.stage-flow,.flow-list{grid-template-columns:1fr}.hero{padding-top:48px}.panel{border-radius:12px}.toolrow input{min-width:180px}}@media print{.tools,.chapters,.btn{display:none!important}body{background:white;font-size:11pt}.hero{padding:28px 0}.panel{box-shadow:none;break-inside:avoid;margin:12px 0}.main{padding:0}.wrap{width:96%}details>div{display:block!important}details{break-inside:avoid}.stage,.core{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+  </style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">DIGITAL IC • RTL-TO-GDS • SEMICONDUCTOR FABRICATION</span>
+  <h1>數位 IC 設計、製造<br>與課程地圖</h1>
+  <p>從產品需求、演算法、微架構、RTL、驗證、邏輯合成與實體設計，一路連到光罩、晶圓製程、封裝、量產測試；並將每一階段對應到電機／CAD 組課程與實作能力。</p>
+  <div class="snapshot"><div><b>5 大階段</b><span>產品與前端、後端、製造、封裝測試</span></div><div><b>25+ 步驟</b><span>從規格到量產與產品回饋</span></div><div><b>3 門主線</b><span>邏輯系統 × 計算機組織 × VLSI CAD</span></div><div><b>3 條課群</b><span>EDA × 數位 IC × 類比／半導體</span></div></div>
+</div></header>
+<div class="tools"><div class="wrap toolrow"><label for="search"><b>搜尋：</b></label><input id="search" type="search" aria-label="搜尋 RTL、STA、光刻或課程名稱"><button class="btn" id="expand">全部展開</button><button class="btn" id="collapse">全部收合</button><button class="btn" onclick="window.print()">列印／PDF</button></div></div>
+<nav class="chapters" aria-label="章節導覽"><div class="wrap"><a href="#overview">總流程</a><a href="#master">完整步驟表</a><a href="#triad">三門主線</a><a href="#map">課程地圖</a><a href="#front">前端設計</a><a href="#back">後端設計</a><a href="#fab">晶圓製造</a><a href="#package">封裝測試</a><a href="#product">影像 IC 實例</a><a href="#plan">學習規劃</a></div></nav>
+<main class="main wrap">
+
+<section class="panel searchable" id="overview">
+  <span class="tag">全局總覽</span><h2>一張圖看懂：從想法到可量產晶片</h2>
+  <p class="lead">數位 IC 的「設計」主要產出可製造的 GDSII；晶圓廠把 GDSII 轉成光罩並在矽晶圓上反覆形成電晶體與金屬互連；封裝測試廠再把裸晶變成可交付的 IC 產品。</p>
+  <div class="stage-flow">
+    <div class="stage s1"><b>① 產品與架構</b><small>市場需求 → 系統規格 → 演算法 → ISA／微架構</small></div>
+    <div class="stage s2"><b>② IC 前端設計</b><small>RTL Coding → 功能驗證 → DFT → 邏輯合成</small></div>
+    <div class="stage s3"><b>③ IC 後端設計</b><small>Floorplan → Placement → CTS → Routing → Sign-off</small></div>
+    <div class="stage s4"><b>④ 晶圓製造</b><small>光罩 → FEOL 電晶體 → MOL 接觸 → BEOL 金屬互連</small></div>
+    <div class="stage s5"><b>⑤ 封裝與測試</b><small>Wafer Sort → Dicing → Packaging → Final Test → System</small></div>
+  </div>
+  <div class="callout"><b>設計與製造的交界：</b>設計端交付 GDSII、時序／功耗／可靠度簽核資料與測試結構；製造端依 PDK、Design Rule 與光罩資料完成製程。兩端透過 PDK、Standard Cell Library、SRAM Compiler、I/O Library 與 DRC/LVS 規則相互約束。</div>
+</section>
+
+<section class="panel searchable" id="master">
+  <span class="tag">核心表格</span><h2>完整數位 IC 設計製造流程 × 產出物 × 課程</h2>
+  <p class="lead">表格中的課程名稱可點擊，會跳到下方課程地圖說明。實際公司會依 Fabless、Foundry、OSAT 或 IDM 分工調整責任邊界。</p>
+  <div class="tablebox"><table><thead><tr><th>階段</th><th>工作內容</th><th>主要輸入</th><th>關鍵輸出／檢查</th><th>工具或方法</th><th>對應課程</th></tr></thead><tbody>
+    <tr><td>1. 產品定義</td><td>確定應用、功能、成本、功耗、效能、介面與製程節點</td><td>市場需求、使用情境</td><td>PRD、PPA 目標、風險清單</td><td>Benchmark、模型估算</td><td><a class="course-link" href="#c-signal">訊號與系統</a>、<a class="course-link" href="#c-prog">程式設計</a></td></tr>
+    <tr><td>2. 演算法／Golden Model</td><td>以 C/C++／Python 建立位元精確參考模型與測試資料</td><td>功能規格、Dataset</td><td>Golden Output、誤差界線</td><td>C++、Python、MATLAB</td><td><a class="course-link" href="#c-prog">程式設計</a>、<a class="course-link" href="#c-signal">訊號與系統</a></td></tr>
+    <tr><td>3. 系統與微架構</td><td>模組切分、資料路徑、控制路徑、Pipeline、Memory、Bus</td><td>演算法、PPA 目標</td><td>Architecture Spec、Block Diagram</td><td>Latency／Throughput／Bandwidth 分析</td><td><a class="course-link" href="#c-arch">計算機組織</a></td></tr>
+    <tr><td>4. 邏輯設計</td><td>設計組合電路、暫存器、Counter、FSM、Handshake</td><td>微架構規格</td><td>狀態圖、時序圖、邏輯方程</td><td>K-map、QM、FSM</td><td><a class="course-link" href="#c-logic">邏輯系統</a>、邏輯系統實驗</td></tr>
+    <tr><td>5. RTL Coding</td><td>以 Verilog/SystemVerilog 描述可合成硬體</td><td>Block Spec、介面規格</td><td>RTL、Lint-clean Report</td><td>HDL、Lint、CDC/RDC</td><td><a class="course-link" href="#c-vlsi">VLSI CAD</a>、HDL／FPGA</td></tr>
+    <tr><td>6. 功能驗證</td><td>Testbench、Assertion、Coverage、Formal、Regression</td><td>RTL、Golden Model</td><td>Pass/Fail、Coverage、Bug Database</td><td>UVM、SVA、Formal</td><td>邏輯系統、VLSI CAD、正規驗證</td></tr>
+    <tr><td>7. DFT</td><td>Scan、MBIST、JTAG、ATPG 與測試點插入</td><td>已驗證 RTL／Netlist</td><td>Scan Netlist、Pattern、Coverage</td><td>ATPG、Fault Simulation</td><td>數位 IC、VLSI 系統、測試相關課程</td></tr>
+    <tr><td>8. 邏輯合成</td><td>RTL 映射到 Standard Cell，依時序／面積／功耗最佳化</td><td>RTL、SDC、Library</td><td>Gate-level Netlist、QoR Report</td><td>Synthesis、STA</td><td><a class="course-link" href="#c-vlsi">VLSI CAD</a>、VLSI 電路設計</td></tr>
+    <tr><td>9. 等價與 Gate 驗證</td><td>檢查 RTL 與 Netlist 等價，必要時做 GLS</td><td>RTL、Netlist、SDF</td><td>LEC Pass、GLS 結果</td><td>Formal Equivalence、SDF</td><td>正規驗證、VLSI CAD</td></tr>
+    <tr><td>10. Floorplan</td><td>Die/Core 尺寸、Macro、I/O、Power Grid 初步規劃</td><td>Netlist、LEF、功耗需求</td><td>Floorplan、Pin／Macro 位置</td><td>P&R、IR 預估</td><td>VLSI CAD、實體設計、資料結構</td></tr>
+    <tr><td>11. Placement</td><td>放置 Standard Cells，改善壅塞與時序</td><td>Floorplan、Netlist</td><td>Placed Database、Pre-CTS Timing</td><td>Optimization、Graph／Heuristic</td><td><a class="course-link" href="#c-ds">資料結構</a>、EDA、演算法</td></tr>
+    <tr><td>12. CTS</td><td>建立時脈樹，控制 Skew、Latency、Transition</td><td>Placement、Clock Constraints</td><td>Clock Tree、Post-CTS Timing</td><td>Buffer Tree、Useful Skew</td><td>VLSI CAD、VLSI 電路設計</td></tr>
+    <tr><td>13. Routing</td><td>Global／Detailed Routing，形成實體金屬連線</td><td>Placed Cells、Tech LEF</td><td>Routed Database、Antenna Check</td><td>Graph Search、DRC-aware Routing</td><td>EDA、圖形理論、演算法</td></tr>
+    <tr><td>14. Sign-off</td><td>STA、SI、IR Drop、EM、功耗、DRC、LVS、ERC</td><td>Routed Layout、RC Extract</td><td>Sign-off Reports、Tape-out Ready</td><td>Extraction、STA、Physical Verification</td><td>VLSI CAD、電路學、電子學、半導體物理</td></tr>
+    <tr><td>15. Tape-out／光罩</td><td>提交 GDSII/OASIS，做資料準備、OPC 與 Mask</td><td>Sign-off Layout</td><td>Mask Data、Reticle</td><td>Fracturing、OPC、Mask Inspection</td><td>VLSI CAD、微影／半導體製程</td></tr>
+    <tr><td>16. FEOL</td><td>隔離、Well、Gate、Source/Drain 等電晶體結構</td><td>裸晶圓、光罩、製程配方</td><td>形成 MOSFET</td><td>氧化、沉積、光刻、蝕刻、離子佈植、退火</td><td>半導體物理、半導體元件、製程</td></tr>
+    <tr><td>17. MOL／BEOL</td><td>接觸孔、介電層與多層金屬互連</td><td>已完成電晶體的晶圓</td><td>完整晶圓電路</td><td>CVD/PVD/ALD、CMP、Dual Damascene</td><td>半導體製程、材料、VLSI 電路</td></tr>
+    <tr><td>18. Wafer Sort</td><td>以 Probe Card 測試每顆 Die 並建立 Wafer Map</td><td>完成製程的晶圓、ATPG Pattern</td><td>Known Good Die、良率資料</td><td>ATE、Probe Station</td><td>測試、機率與統計</td></tr>
+    <tr><td>19. 封裝</td><td>切割、Die Attach、Wire Bond／Flip-Chip、Molding</td><td>Known Good Die、封裝基板</td><td>封裝 IC</td><td>Dicing、Bonding、Underfill</td><td>電子封裝、材料、熱傳</td></tr>
+    <tr><td>20. Final Test／量產</td><td>功能、速度、功耗、溫度與可靠度分級，再進系統驗證</td><td>封裝 IC、Test Program</td><td>出貨 Bin、品質／失效分析資料</td><td>ATE、Burn-in、FA、SPC</td><td>測試、統計、可靠度、專題</td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="panel searchable" id="triad">
+  <span class="tag">三門主線</span><h2>邏輯系統 × 計算機組織 × VLSI CAD</h2>
+  <p class="lead">三門課形成「基本電路 → 系統架構 → 晶片實現」的連續能力鏈，而不是三個互不相干的科目。</p>
+  <div class="triad">
+    <article class="core logic"><h3>邏輯系統</h3><b>設計電路</b><p>把需求轉成真值表、布林函數、MUX、Adder、Register 與 FSM；回答「電路邏輯怎麼做才正確且精簡」。</p></article><div class="arrow">→</div>
+    <article class="core arch"><h3>計算機組織</h3><b>組成系統</b><p>把 ALU、Register File、Controller、Memory 與 Pipeline 串成能執行指令的硬體；回答「資料怎麼流、控制怎麼走」。</p></article><div class="arrow">→</div>
+    <article class="core cad"><h3>VLSI CAD</h3><b>實現晶片</b><p>把演算法／微架構轉成 RTL，完成模擬、合成與實體設計並檢查 PPA；回答「如何做成可製造的 IC」。</p></article>
+  </div>
+  <div class="tablebox"><table><thead><tr><th>比較面向</th><th>邏輯系統</th><th>計算機組織</th><th>VLSI CAD</th></tr></thead><tbody>
+    <tr><td>抽象層級</td><td>Gate／Boolean／FSM</td><td>Datapath／Controller／Microarchitecture</td><td>RTL／Netlist／Layout</td></tr>
+    <tr><td>主要輸入</td><td>功能條件、真值表</td><td>ISA、系統功能、效能需求</td><td>RTL、Clock、Library、PDK</td></tr>
+    <tr><td>主要輸出</td><td>化簡邏輯與電路結構</td><td>CPU／Accelerator 微架構</td><td>Netlist、Layout、GDSII、PPA 報告</td></tr>
+    <tr><td>你的代表成果</td><td>K-map 與 Quine–McCluskey Minimizer</td><td>Pipeline CPU Micro-Architecture</td><td>Draw Bounding Box Engine：Gaussian、CCL、Bounding Box</td></tr>
+    <tr><td>產業角色</td><td>RTL 基礎、Logic Design</td><td>Digital Design、CPU/SoC Architect</td><td>RTL、Verification、Synthesis、Physical Design／EDA</td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="panel searchable" id="map">
+  <span class="tag">課程地圖</span><h2>課程群與數位 IC 流程的連結</h2>
+  <p class="lead">依附件課程地圖重整。位置代表常見學習順序；實際開課、先修與學分認定仍應以當年度系所公告為準。</p>
+  <div class="course-map" aria-label="課程地圖">
+    <div class="map-head">課群</div><div class="map-head">基礎</div><div class="map-head">核心</div><div class="map-head">進階</div><div class="map-head">對應 IC 工作</div>
+    <div class="map-lane">EDA／CAD</div><div class="map-cell">離散數學<br>程式設計<br>機率與統計</div><div class="map-cell">資料結構<br>演算法<br>EDA 概論</div><div class="map-cell">圖形理論<br>正規驗證<br>實體設計</div><div class="map-cell">Synthesis、Formal、Placement、Routing、STA</div>
+    <div class="map-lane">數位 IC</div><div class="map-cell">邏輯系統<br>邏輯實驗<br>計算機概論</div><div class="map-cell">計算機組織<br>HDL／FPGA<br>VLSI CAD</div><div class="map-cell">VLSI 電路<br>VLSI 系統<br>SoC／實體設計</div><div class="map-cell">Architecture、RTL、Verification、DFT、PPA</div>
+    <div class="map-lane">電路／元件</div><div class="map-cell">電路學<br>電子學<br>電子實驗</div><div class="map-cell">半導體物理<br>半導體元件</div><div class="map-cell">類比 IC<br>RF／PLL<br>Mixed-Signal</div><div class="map-cell">Standard Cell、I/O、Memory、Sign-off、Process</div>
+    <div class="map-lane">應用／數學</div><div class="map-cell">微積分<br>工程數學<br>線性代數</div><div class="map-cell">訊號與系統<br>資料結構</div><div class="map-cell">影像處理<br>AI Accelerator<br>嵌入式系統</div><div class="map-cell">Golden Model、DSP、Accelerator、System Demo</div>
+  </div>
+  <details open id="c-logic"><summary>邏輯系統｜數位電路的文法與最底層基礎</summary><div><p>布林代數、K-map、Quine–McCluskey、組合／循序邏輯與 FSM，直接支援 RTL 的控制與資料路徑。化簡會影響 Gate Count、Critical Path、Area 與 Switching Power。</p></div></details>
+  <details id="c-arch"><summary>計算機組織｜從元件到 CPU／加速器微架構</summary><div><p>理解 ISA、ALU、Register File、Controller、Pipeline、Hazard、Memory Hierarchy 與介面。它把「單一電路正確」提升為「整個系統能在每個 Clock 正確流動」。</p></div></details>
+  <details id="c-vlsi"><summary>VLSI CAD｜把架構轉成可驗證、可合成、可製造的晶片</summary><div><p>涵蓋 Verilog/SystemVerilog、Simulation、Synthesis、STA、Floorplan、Placement、CTS、Routing、DRC/LVS 與 PPA Trade-off，是設計端連接製造端的核心課程。</p></div></details>
+  <details id="c-prog"><summary>程式設計｜Golden Model、驗證與 EDA 自動化</summary><div><p>C/C++／Python 不只用於軟體，也用於演算法參考模型、測試向量生成、Log 解析、Regression、EDA Script 與 CAD 工具開發。</p></div></details>
+  <details id="c-ds"><summary>資料結構與演算法｜EDA 工具的計算核心</summary><div><p>Graph、Tree、Hash、Priority Queue、Dynamic Programming 與 Optimization，支援 Netlist 儲存、Partition、Placement、Routing、Timing Graph 與 CAD Runtime 改善。</p></div></details>
+  <details id="c-signal"><summary>訊號與系統｜影像、聲音與通訊演算法的硬體前導</summary><div><p>卷積、濾波、頻域與取樣概念會先成為演算法，再經過 Fixed-point、Pipeline 與 Memory Architecture 轉換成 DSP／影像處理 IC。</p></div></details>
+  <details><summary>離散數學、機率統計與工程數學｜設計與最佳化的數學支撐</summary><div><p>離散與圖論支援 EDA；機率統計支援製程變異、良率與 Statistical Timing；工程數學與線性代數支援模型、訊號、數值最佳化及 AI Accelerator。</p></div></details>
+  <details><summary>電路學、電子學、半導體物理與元件｜理解 RTL 以下發生什麼</summary><div><p>數位設計最後仍由 MOSFET 實現。這組課程讓設計者理解 Cell Delay、Dynamic/Leakage Power、Noise、IR Drop、EM、PVT Corner、I/O 與製程縮放。</p></div></details>
+</section>
+
+<section class="panel searchable" id="front"><span class="tag">Design Front-end</span><h2>前端設計：從規格到 Gate-level Netlist</h2>
+  <div class="flow-list"><article class="flow-item design"><h3>規格與建模</h3><p>明確定義介面、精度、Latency、Throughput、Clock、Reset 與例外行為，建立 C++ Golden Model。</p></article><article class="flow-item design"><h3>微架構與 RTL</h3><p>做模組切分、Pipeline、Buffer、位寬與資源共享，再撰寫可合成 HDL。</p></article><article class="flow-item verify"><h3>驗證與 Coverage</h3><p>Directed/Random Test、Assertion、Functional/Code Coverage 與 Regression。</p></article><article class="flow-item verify"><h3>DFT 與合成</h3><p>加入 Scan/MBIST/JTAG，再依 SDC 與 Cell Library 產生 Netlist。</p></article></div>
+  <div class="callout warn"><b>常見誤解：</b>RTL 模擬通過不等於晶片完成。還要處理 CDC、Reset、X-propagation、Synthesis Constraint、DFT、STA、功耗與實體可實現性。</div>
+</section>
+
+<section class="panel searchable" id="back"><span class="tag">Physical Design</span><h2>後端設計：從 Netlist 到 GDSII</h2>
+  <div class="timeline"><article><h3>Floorplan & Power Planning</h3><p>決定 Die/Core、Macro、I/O、Keep-out、Power Ring/Stripe，先確保供電與可繞性。</p></article><article><h3>Placement & Optimization</h3><p>放置 Standard Cell，修正壅塞、Transition、Capacitance、Setup/Hold 與 Fanout。</p></article><article><h3>Clock Tree Synthesis</h3><p>建立低 Skew 時脈網路，分析 Clock Latency、Jitter、OCV 與功耗。</p></article><article><h3>Routing & Extraction</h3><p>完成全域／詳細繞線，萃取寄生 R/C，再進行 Post-route Optimization。</p></article><article><h3>Sign-off & Tape-out</h3><p>完成 STA、SI、IR/EM、Power、DRC、LVS、ERC、Antenna 與密度檢查，交付 GDSII/OASIS。</p></article></div>
+  <div class="tablebox"><table><thead><tr><th>簽核項目</th><th>要回答的問題</th><th>失敗時的典型修正</th></tr></thead><tbody><tr><td>STA</td><td>所有 Setup/Hold 路徑在 PVT/OCV 下是否滿足？</td><td>Cell Sizing、Buffer、Pipeline、Useful Skew</td></tr><tr><td>IR Drop／EM</td><td>供電壓降與金屬電流密度是否安全？</td><td>加寬金屬、增加 Via/Stripe、分散高切換 Cell</td></tr><tr><td>SI／Noise</td><td>Crosstalk 是否造成 Delay 或功能錯誤？</td><td>Spacing、Shielding、Reroute、Driver Adjustment</td></tr><tr><td>DRC／LVS</td><td>版圖是否符合製程規則且與 Netlist 一致？</td><td>修 Geometry／Connectivity，重新驗證</td></tr></tbody></table></div>
+</section>
+
+<section class="panel searchable" id="fab"><span class="tag">Wafer Fabrication</span><h2>晶圓製造：如何在矽上形成數十億顆電晶體</h2>
+  <p class="lead">製程不是單一路徑，而是多次重複「薄膜形成 → 塗光阻 → 曝光顯影 → 蝕刻／佈植 → 去光阻 → 清洗 → 量測」，逐層建立元件與互連。</p>
+  <div class="tablebox"><table><thead><tr><th>製程工法</th><th>作用</th><th>典型設備</th><th>對設計端的影響</th></tr></thead><tbody>
+    <tr><td>氧化／熱處理</td><td>形成氧化層、活化摻雜、修復晶格</td><td>Furnace、RTP/RTA</td><td>元件電性、可靠度、熱預算</td></tr><tr><td>薄膜沉積</td><td>形成介電、導體與阻障層</td><td>CVD、PVD、ALD、Epitaxy</td><td>RC、Leakage、Metal/Via Reliability</td></tr><tr><td>光刻</td><td>把光罩圖形轉印到光阻</td><td>Coater/Developer、DUV/EUV Scanner</td><td>Minimum Pitch、Overlay、Design Rule</td></tr><tr><td>蝕刻</td><td>選擇性移除薄膜並形成圖形</td><td>RIE、ICP、Wet Bench</td><td>Line Width、Profile、Variation</td></tr><tr><td>離子佈植</td><td>控制 Well 與 Source/Drain 摻雜</td><td>Ion Implanter</td><td>Vt、Drive Current、Leakage</td></tr><tr><td>CMP</td><td>晶圓表面平坦化以利多層堆疊</td><td>CMP Polisher</td><td>Metal Density、Dummy Fill、RC</td></tr><tr><td>清洗與量測</td><td>移除污染並監控制程</td><td>Wet Clean、SEM、CD-SEM、Ellipsometer</td><td>Defect、CD、Yield、SPC</td></tr>
+  </tbody></table></div>
+  <div class="grid"><div class="card"><h3>FEOL</h3><p>形成隔離、Well、Gate、Source/Drain 等 MOSFET 主體。</p></div><div class="card"><h3>MOL</h3><p>形成 Contact 與局部連接，銜接電晶體和金屬層。</p></div><div class="card"><h3>BEOL</h3><p>以多層 Metal/Via 建立 Cell、Macro、Clock、Power 與訊號互連。</p></div></div>
+</section>
+
+<section class="panel searchable" id="package"><span class="tag">Assembly & Test</span><h2>封裝、測試、良率與產品驗證</h2>
+  <div class="flow-list"><article class="flow-item test"><h3>Wafer Sort</h3><p>Probe Card 接觸 Pad/Bump，由 ATE 套用 Scan、MBIST 與功能 Pattern，建立 Wafer Map。</p></article><article class="flow-item test"><h3>Dicing & Attach</h3><p>切割晶圓、挑選 Known Good Die，固定於 Leadframe 或 Package Substrate。</p></article><article class="flow-item test"><h3>Interconnect</h3><p>以 Wire Bond 或 Flip-Chip Bump 連接 Die 與封裝，再 Underfill／Molding。</p></article><article class="flow-item test"><h3>Final/System Test</h3><p>進行速度、功耗、溫度、可靠度與系統測試，分 Bin 後量產出貨。</p></article></div>
+  <p><b>良率觀念：</b>晶圓良率受缺陷密度、Die Area 與製程控制影響；設計端可透過 DFM、冗餘、ECC、Repair、合理的 SRAM/Die 規劃與測試覆蓋率改善可製造性與出貨品質。</p>
+</section>
+
+<section class="panel searchable" id="product"><span class="tag">產品案例</span><h2>影像處理 IC：Gaussian → CCL → Bounding Box</h2>
+  <p class="lead">用同一個產品把課程與流程串起來：輸入影像像素後，以串流方式去雜訊、辨識連通區域並輸出物體邊界。</p>
+  <div class="stage-flow"><div class="stage s1"><b>影像輸入</b><small>Pixel Stream、Valid/Ready、Frame/Line Control</small></div><div class="stage s2"><b>Gaussian Filter</b><small>Line Buffer、Window、MAC、Fixed-point</small></div><div class="stage s3"><b>CCL</b><small>Label、Union/Equivalence、Memory、FSM</small></div><div class="stage s4"><b>Bounding Box</b><small>Min/Max Comparator、Coordinate Register</small></div><div class="stage s5"><b>輸出／Demo</b><small>座標、Overlay、FPGA 真實影像</small></div></div>
+  <div class="tablebox"><table><thead><tr><th>產品任務</th><th>邏輯系統</th><th>計算機組織</th><th>VLSI CAD</th><th>應交付證據</th></tr></thead><tbody><tr><td>比較與座標更新</td><td>Comparator、Register、FSM</td><td>Datapath／Control 分離</td><td>RTL、Timing、Area</td><td>Waveform、Assertion、Corner Cases</td></tr><tr><td>串流與 Pipeline</td><td>Counter、Handshake</td><td>Latency、Hazard、Bandwidth</td><td>STA、Critical Path、Throughput</td><td>每周期像素率、延遲表</td></tr><tr><td>記憶體與 Buffer</td><td>Address／Enable Logic</td><td>Memory Architecture</td><td>SRAM/BRAM 推論、Floorplan</td><td>容量、Port、Bandwidth 表</td></tr><tr><td>完整實現</td><td>功能正確</td><td>模組整合</td><td>RTL-to-GDS／FPGA</td><td>功能、時序、面積、功耗、測試報告</td></tr></tbody></table></div>
+</section>
+
+<section class="panel searchable" id="plan"><span class="tag">學習規劃</span><h2>從現有三門課走向完整 RTL-to-GDS</h2>
+  <div class="grid"><article class="card"><h3>第一層｜補強前端</h3><p>整理 K-map/QM、Pipeline CPU 與 Bounding Box；補 C++ Golden Model、自動 Testbench、Assertion、Coverage、Lint 與 CDC。</p></article><article class="card"><h3>第二層｜完成系統</h3><p>整合 Gaussian、CCL、Bounding Box 為 Streaming Pipeline，在 FPGA 執行真實影像 Demo。</p></article><article class="card"><h3>第三層｜完成 ASIC 流程</h3><p>做 Synthesis、STA、Floorplan、Placement、CTS、Routing、DRC/LVS，產出 GDSII 與 PPA 報告。</p></article></div>
+  <div class="callout"><b>面談一句話：</b>「邏輯系統讓我會設計基本電路，計算機組織讓我會規劃資料路徑與 Pipeline，VLSI CAD 讓我把架構轉成 RTL 並理解從合成到實體實現；下一步是把影像處理模組完成 Golden Model、驗證、FPGA 與 RTL-to-GDS，形成可量測的數位 IC 產品作品。」</div>
+  <details><summary>建議成果檢查表</summary><div><ul><li>規格：介面、位寬、Clock、Reset、Latency、Throughput。</li><li>功能：Golden Model、Regression、Assertion、Coverage、邊界案例。</li><li>效能：Fmax、Critical Path、Pixels/Cycle、Memory Bandwidth。</li><li>PPA：Cell Area、Register/Memory、Dynamic/Leakage Power。</li><li>實體：Floorplan、CTS、Routing、STA、IR/EM、DRC/LVS。</li><li>展示：FPGA 真實影像、Overlay、測試影片與教授面談簡報。</li></ul></div></details>
+  <details><summary>資料來源與使用限制</summary><div><p>課程名稱與分群依使用者提供的「CAD 組課程地圖｜一至九主題完整解析」重整；個人專題內容依本次對話提供的邏輯系統、Pipeline CPU 與 Draw Bounding Box Engine 資訊整合。製程與職務對應為教學性綜合整理，不代表特定公司唯一流程。正式選課、擋修與開課時間請以當年度校方公告為準。</p></div></details>
+</section>
+</main>
+<footer>數位 IC 設計 × 製造 × 課程地圖｜可離線搜尋、展開與列印</footer>
+<script>
+  const details=[...document.querySelectorAll('details')];
+  document.getElementById('expand').addEventListener('click',()=>details.forEach(x=>x.open=true));
+  document.getElementById('collapse').addEventListener('click',()=>details.forEach(x=>x.open=false));
+  const search=document.getElementById('search');
+  search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();document.querySelectorAll('.searchable').forEach(s=>{const hit=!q||s.innerText.toLowerCase().includes(q);s.classList.toggle('hidden-by-search',!hit);if(q&&hit)s.querySelectorAll('details').forEach(d=>{if(d.innerText.toLowerCase().includes(q))d.open=true})})});
+</script>
+</body>
+</html>
