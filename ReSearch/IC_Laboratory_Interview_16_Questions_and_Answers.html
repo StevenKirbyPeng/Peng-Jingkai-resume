@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="彭靖凱 IC 實驗室面談十六題完整問答與練習工具">
+  <title>IC 實驗室面談｜十六題完整問答</title>
+  <style>
+    :root{--navy:#0b1f3a;--blue:#1769aa;--cyan:#16a3b6;--ink:#172033;--muted:#64748b;--line:#dbe4ee;--paper:#fff;--bg:#eef4f8;--soft:#eff8fb;--accent:#f3b33d}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(145deg,#edf5fa,#f8fafc 45%,#e8f2f5);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.8}
+    .hero{position:relative;overflow:hidden;padding:72px 24px 56px;color:#fff;background:linear-gradient(120deg,#071b35 0%,#0c3b68 58%,#0c7c89 100%)}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #ffffff30;border-radius:50%;right:-90px;top:-220px;box-shadow:0 0 0 60px #ffffff0a,0 0 0 120px #ffffff08}
+    .hero-inner,.wrap{max-width:1180px;margin:auto}.eyebrow{color:#7ce0e7;font-weight:800;letter-spacing:.16em}.hero h1{font-size:clamp(2rem,5vw,4.2rem);line-height:1.12;margin:.3rem 0 1rem}.hero p{max-width:760px;color:#d8e8f3;font-size:1.05rem}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.stat{padding:9px 15px;border-radius:999px;background:#ffffff17;border:1px solid #ffffff2c}
+    .toolbar{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.tools{max-width:1180px;margin:auto;padding:13px 20px;display:flex;gap:10px;align-items:center}.search{flex:1;min-width:190px;border:1px solid #bdccda;border-radius:12px;padding:11px 14px;font:inherit;background:white}.btn{border:0;border-radius:10px;padding:11px 14px;font:inherit;font-weight:700;cursor:pointer;background:var(--navy);color:white}.btn.alt{background:#e6f2f5;color:#12556a}.wrap{padding:32px 20px 70px}.tip{padding:18px 20px;border-left:5px solid var(--accent);background:#fff9e9;border-radius:10px;margin-bottom:24px}.count{color:var(--muted);font-size:.92rem;margin:0 0 12px}
+    .qa-list{display:grid;gap:15px}.qa{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px #17324d0b}.qa[hidden]{display:none}.qhead{width:100%;border:0;background:white;text-align:left;padding:0;display:grid;grid-template-columns:82px 1fr 52px;align-items:stretch;cursor:pointer;color:inherit}.num{display:grid;place-items:center;background:linear-gradient(150deg,var(--navy),var(--blue));color:white;font-size:1.35rem;font-weight:900}.question{padding:19px 22px}.question strong{display:block;font-size:1.1rem}.question small{display:block;color:var(--muted);margin-top:2px}.arrow{display:grid;place-items:center;font-size:1.35rem;color:var(--blue);transition:.2s}.qa.open .arrow{transform:rotate(180deg)}.answer{display:none;border-top:1px solid var(--line);padding:22px 26px 24px 104px;background:linear-gradient(90deg,#f7fbfd,#fff)}.qa.open .answer{display:block}.answer h3{font-size:.8rem;letter-spacing:.15em;color:var(--cyan);margin:0 0 7px}.answer p{margin:0;text-align:justify}.keywords{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.tag{font-size:.78rem;color:#15536a;background:#e5f4f7;border-radius:999px;padding:3px 9px}
+    .empty{display:none;text-align:center;padding:50px;background:white;border-radius:16px;color:var(--muted)}footer{text-align:center;color:var(--muted);padding:0 20px 35px}
+    @media(max-width:650px){.hero{padding:48px 20px 38px}.tools{flex-wrap:wrap}.search{width:100%;flex-basis:100%}.qhead{grid-template-columns:58px 1fr 38px}.question{padding:15px 12px}.question strong{font-size:1rem}.question small{font-size:.77rem}.answer{padding:18px}.num{font-size:1.05rem}}
+    @media print{body{background:white;font-size:11pt}.hero{padding:25px;color:#111;background:white;border-bottom:3px solid #111}.hero p,.eyebrow{color:#333}.toolbar,.tip,.arrow,.keywords,footer{display:none!important}.wrap{padding:15px}.qa-list{display:block}.qa{break-inside:avoid;box-shadow:none;margin:0 0 12px;border-radius:0}.qhead{grid-template-columns:52px 1fr}.num{color:#111;background:#eee}.answer{display:block!important;padding:12px 16px;border-top:1px solid #aaa}.question{padding:10px 14px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">LPHP LAB · INTERVIEW PREPARATION</div>
+      <h1>IC 實驗室面談<br>十六題完整問答</h1>
+      <p>以數位 IC、低功耗設計、AI Hardware 與研究態度為主軸，整理成可搜尋、可收合、可列印的面談練習頁面。</p>
+      <div class="stats"><span class="stat">16 題核心問答</span><span class="stat">中英題目對照</span><span class="stat">彭靖凱｜面談準備</span></div>
+    </div>
+  </header>
+  <nav class="toolbar" aria-label="問答工具列"><div class="tools">
+    <input id="search" class="search" type="search" placeholder="搜尋題目、答案或關鍵字……" aria-label="搜尋問答">
+    <button class="btn alt" id="openAll">全部展開</button><button class="btn alt" id="closeAll">全部收合</button><button class="btn" onclick="window.print()">列印／存成 PDF</button>
+  </div></nav>
+  <main class="wrap">
+    <aside class="tip"><strong>練習建議：</strong>先記住每題的「核心邏輯與關鍵字」，再用自己的語氣回答。面談時不必逐字背誦，約控制在 45–90 秒。</aside>
+    <p class="count" id="count">目前顯示 16 / 16 題</p>
+    <section class="qa-list" id="qaList"></section>
+    <div class="empty" id="empty">找不到符合條件的題目，請嘗試其他關鍵字。</div>
+  </main>
+  <footer>IC Laboratory Interview Guide · Prepared for Peng Jing-Kai</footer>
+  <script>
+  const data=[
+    ["請簡單介紹你自己。","Please briefly introduce yourself.","老師您好，我是彭靖凱。高中就讀數理資優班，具備良好的數理基礎與邏輯分析能力。從小曾參加科展、發明展及數學奧林匹亞等競賽，因此對研究、實作與競賽並不陌生。進入大學後，我逐漸確立對 IC 設計的興趣，修課主要朝邏輯系統、計算機組織及 VLSI CAD 等方向規劃。我的數學相關科目表現不錯，整體學業成績約維持在系上前 20%。未來希望繼續加強數位 IC、RTL 設計與硬體架構能力，並朝 AI 晶片及低功耗 IC 設計方向發展。",["數理資優","前 20%","數位 IC"]],
+    ["你為什麼想加入我的實驗室？","Why do you want to join my laboratory?","我想加入老師的實驗室，主要是因為大型 AI 模型在訓練與推論時，需要大量的運算資源、記憶體與能源。因此，我認為高效能、低功耗的 AI 硬體將是非常重要的研究方向，而老師在低功耗 VLSI、記憶體架構與 AI 硬體方面的研究，與我的興趣高度契合。另外，我從小就接觸程式設計，也曾透過程式控制及開發機器。數位 IC 可以利用硬體描述語言，將演算法與硬體架構轉換成實際電路，再經過模擬、驗證、合成與實體設計，這個完整流程非常吸引我。我希望加入老師的實驗室，扎實學習數位 IC 與 AI 硬體設計。",["低功耗","VLSI","研究契合"]],
+    ["你覺得 IC 設計未來哪個方向才是主流？","Which IC design directions will become mainstream in the future?","我認為未來 IC 設計的重要主流之一，會是高效能、低功耗的 AI 晶片。隨著 AI 模型的參數量與資料量持續增加，訓練和推論都需要大量的運算時間、記憶體頻寬與能源。因此，如何透過專用硬體架構，在維持效能的同時降低功耗、延遲及資料搬移成本，將會非常重要。我認為 AI Accelerator、Edge AI、Compute-in-Memory、Chiplet、先進封裝及高效率記憶體架構等技術，都會是未來值得發展的方向。",["AI Accelerator","CIM","Chiplet"]],
+    ["如果老師問你想做哪個議題，你要怎麼回答？","Which research topic would you like to work on?","我目前最想嘗試的議題是低功耗 AI 加速器或 Edge AI 硬體架構。AI 運算需要頻繁存取大量權重與特徵資料，如果能透過硬體架構、資料流或記憶體設計降低資料搬移、功耗與延遲，我認為很有研究價值。不過，我對實際題目保持開放，也願意配合老師近期的研究計畫。如果老師有希望切入的新方向，或實驗室過去的成果需要延伸，我會先閱讀相關文獻，整理現有方法、研究限制及可能的改善方向，再向老師報告並討論後續實作。",["Edge AI","資料流","保持開放"]],
+    ["為什麼選 AI Hardware，而不是只做 AI 軟體？","Why AI hardware instead of only AI software?","我認為 AI 模型能否真正落地，不只取決於演算法的準確率，也會受到運算速度、記憶體容量、能源消耗及硬體成本的限制。只從軟體端改善模型，仍可能受到硬體效能與功耗的限制；如果能同時考慮模型、資料流、記憶體與運算架構，就有機會提高整體效率。我本身具備程式設計基礎，也對數位電路與硬體架構有興趣，因此希望把軟體演算法轉換成可以實際執行的 RTL 與硬體電路。我希望透過軟硬體共同設計，讓 AI 系統更快速、更省電，也更適合部署在邊緣裝置。",["軟硬體共同設計","RTL","落地部署"]],
+    ["你對老師研究方向的理解是什麼？","What is your understanding of my research directions?","我閱讀老師近幾年的研究計畫後，認為老師的研究具有清楚且連貫的發展脈絡。早期主要聚焦於低功耗物聯網微處理器、記憶體架構及硬體安全，包括 PUF、硬體混淆與外部記憶體保護。之後進一步延伸到具有硬體安全的記憶體內運算與神經網路系統晶片，透過減少處理器與記憶體之間的資料搬移，降低 AI 運算的功耗與延遲。近年則發展到多模態 AI 融合引擎，整合文字、影像與聲音等資料，並支援推論、學習與邊緣部署。整體研究脈絡可以概括為「硬體安全、記憶體內運算、AI 加速器到多模態 AI 硬體」，核心目標是將 AI 演算法轉化為安全、低功耗、高效率且可以實際部署的晶片系統。",["硬體安全","記憶體內運算","多模態 AI"]],
+    ["你目前具備哪些相關能力？","What relevant skills do you currently have?","我目前具備的能力主要分成數理基礎、程式設計、影像處理及數位 IC 四個部分。首先，我高中就讀數理資優班，數學與自然科基礎扎實，其中數學甲上下學期都是 99 分，也是班上第一名；我也參加過數學奧林匹亞相關競賽並獲獎。程式方面，我從國中開始學習 Python、C++及圖形化程式設計，也曾開發遊戲。影像處理方面，我接觸過 OpenCV，曾利用顏色、輪廓及影像特徵進行辨識，也嘗試運用機器學習與神經網路進行圖形分類。進入大學後，我修習邏輯系統、邏輯系統實驗、計算機組織及 VLSI CAD，學習布林邏輯、Verilog、RTL 電路設計、Pipeline CPU、模擬驗證及基本 IC 設計流程。",["Python / C++","OpenCV","Verilog"]],
+    ["你最需要補強什麼？","What skills do you need to improve most?","我目前最需要補強的是 Verilog、RTL 設計，以及後續的模擬、驗證與邏輯合成流程。雖然我已經在課程中完成過一些 Verilog 作業與專題，也能把基本功能實作出來，但實際完成的專案數量仍然有限，所以熟練度及除錯經驗還需要繼續累積。因此，我暑假特別到圖書館借了大約五本 Verilog 與數位 IC 設計相關書籍，每天安排時間閱讀和練習。接下來，我也希望補強 Testbench、波形分析、Lint、Timing Analysis 及 RTL-to-GDS 流程，讓自己從能完成課程作業，進步到能獨立設計並驗證一個硬體模組。",["Verilog","Verification","RTL-to-GDS"]],
+    ["你如何開始一個陌生的研究題目？","How would you begin an unfamiliar research topic?","面對陌生的研究題目，我會先從文獻調查開始，了解該領域的研究背景、代表性方法及目前成果。我會先閱讀綜述論文與重要文獻，再追蹤近幾年的最新研究。閱讀時，我會整理各篇研究的問題、方法、實驗平台、評估指標、結果與限制，製作文獻比較表及分析報告。建立基礎理解後，我會選擇代表性方法進行重現，確認自己真正理解其流程與結果。接著，再從既有方法的限制，以及效能、功耗、面積或安全性等面向尋找改善方向。最後，我會將文獻整理、重現結果及初步構想向老師報告，依照老師的建議調整研究問題與後續實驗。",["文獻調查","方法重現","改善方向"]],
+    ["你如何安排研究進度？","How do you plan your research schedule?","我會先根據研究題目確認最終目標與預期成果，再把研究拆分成文獻調查、技術學習、環境建置、方法設計、程式或硬體實作、模擬驗證、結果分析及報告撰寫等階段。接著，我會盤點需要的軟硬體資源與技術，確認各項工作的先後順序和相依關係。每個階段都會設定明確時程、查核點與可交付成果，例如完成文獻比較表、重現基準方法、完成 RTL 模組、通過 Testbench，以及產生效能、面積、時序與功耗報告。我也會每週記錄研究進度、問題及下一週目標，並定期向老師報告。",["里程碑","查核點","定期回報"]],
+    ["你能接受先做基礎工作嗎？","Can you accept starting with foundational work?","可以，我認為基礎工作是進入研究領域非常重要的一部分。剛開始時，我會先和老師確認研究方向，再依照老師的建議搜尋及閱讀文獻，將不同方法、技術、實驗結果與限制進行分類整理。我也願意從環境建置、資料整理、程式測試、RTL 模組設計、Testbench 撰寫及實驗結果整理等工作開始。如果研究中已有代表性方法，我會先重現論文或學長姐的成果，確認自己理解完整流程，也驗證環境與基準結果是否正確。我希望先把基礎做好，建立可靠的實驗結果，再逐步找出真正具有研究價值的改進方向。",["基礎工作","成果重現","可靠結果"]],
+    ["你如何與學長姐合作？","How would you work with senior laboratory members?","剛進入實驗室時，我會把自己定位為新人，抱持主動學習、尊重與合作的態度，向學長姐了解實驗室的研究流程、工具使用方式及工作規範。如果學長姐交付工作，我會先確認工作目標、完成標準與期限，再依照分工完成並主動回報進度。遇到問題時，我會先自行查資料、整理已經嘗試過的方法，再帶著具體問題請教學長姐。如果工作與原本的研究進度衝突，我會坦白說明目前安排，協調優先順序與合理完成時間。當我熟悉相關技術後，也願意分享程式、整理文件、協助測試及支援其他成員。",["主動溝通","責任分工","互相支援"]],
+    ["你如何處理課業與研究？","How would you balance coursework and research?","我希望課業與研究能互相結合。未來選課時，我會優先修習與研究方向相關的課程，例如數位 IC、VLSI、計算機架構、訊號處理及 AI 硬體，將課堂理論應用在實驗室研究中。時間安排方面，我會提早整理考試、作業及研究工作的時程，設定每週目標。如果遇到期中、期末考或大型課程專題與研究工作衝突，我會提早向老師或學長姐說明，確認工作的優先順序，而不是等到無法完成才回報。如果研究任務較急迫，我會盡力配合；若時程可以調整，我會提出明確的替代完成日期。",["課研結合","提早規劃","優先順序"]],
+    ["你畢業後的目標是什麼？","What are your goals after graduation?","大學畢業後，我希望能透過研究所甄試繼續升學，並爭取進入老師的實驗室，深入學習數位 IC、AI Hardware、低功耗設計及完整晶片開發流程。研究所期間，我希望完成具有實際成果的研究，例如 RTL 設計、功能驗證、FPGA 實作，甚至參與 RTL-to-GDS 流程。研究所畢業後，我希望進入南部科學園區的 IC 設計或半導體相關公司，從事數位 IC、硬體驗證、AI 加速器或 SoC 設計等工作。我也希望留在南部陪伴父母，並協助家人照顧有特殊需求的弟弟，在專業發展與家庭責任之間取得平衡。",["研究所","南科","IC 職涯"]],
+    ["為什麼老師應該選你？","Why should I select you?","我不敢說自己目前是能力最完整的學生，但我具備良好的數理與程式基礎、研究及競賽經驗，以及主動學習和長期投入的態度。我從小參加科展、發明展與數學競賽，因此對探索問題、實作驗證及成果展示並不陌生。大學期間，我主動將修課方向集中在邏輯系統、計算機組織及 VLSI CAD，希望提早建立數位 IC 與 AI Hardware 所需的能力。我也知道自己的 Verilog 與 RTL 經驗還不夠，因此主動借閱相關書籍並安排練習。如果有機會加入實驗室，我會認真對待老師與學長姐交付的工作，主動回報進度，遇到問題也會先整理、嘗試後再請教。我希望用實際成果證明自己，逐步成為一位可靠、值得長期培養，並能對實驗室有所貢獻的學生。",["主動學習","長期投入","可靠負責"]],
+    ["進入 Lab 之後，你對未來有什麼規劃？","What are your plans after joining the laboratory?","老師，如果有機會加入實驗室，我希望能提早做好準備。想請教老師目前是否有正在進行，或未來預計發展的研究計畫，可以讓我先蒐集資料、閱讀相關文獻並建立基礎？另外，在專業能力方面，老師是否建議我先閱讀哪些書籍，或優先加強 Verilog、RTL 設計、計算機架構、AI Hardware、記憶體系統與低功耗設計等技術？下學期選課時，無論是本系或外系課程，如果有適合未來研究方向的科目，也希望老師能提供建議，我會盡量納入選課規劃。如果情況允許，我也希望能提早參加實驗室的 Meeting，先了解老師與學長姐目前的研究內容、報告方式及實驗室運作。參加的時間與形式，我都願意依照老師的安排配合。我的想法是先從文獻閱讀、工具學習及基礎實作開始，逐步累積能力，再配合老師的研究計畫承擔更完整的工作。",["研究計畫","選課建議","Lab Meeting"]]
+  ];
+  const list=document.querySelector('#qaList');
+  const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  data.forEach((d,i)=>{const article=document.createElement('article');article.className='qa';article.dataset.text=d.join(' ').toLowerCase();article.innerHTML=`<button class="qhead" aria-expanded="false"><span class="num">${String(i+1).padStart(2,'0')}</span><span class="question"><strong>${esc(d[0])}</strong><small>${esc(d[1])}</small></span><span class="arrow">⌄</span></button><div class="answer"><h3>建議回答</h3><p>${esc(d[2])}</p><div class="keywords">${d[3].map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div></div>`;list.appendChild(article)});
+  list.addEventListener('click',e=>{const b=e.target.closest('.qhead');if(!b)return;const q=b.closest('.qa');q.classList.toggle('open');b.setAttribute('aria-expanded',q.classList.contains('open'))});
+  const setAll=open=>document.querySelectorAll('.qa:not([hidden])').forEach(q=>{q.classList.toggle('open',open);q.querySelector('.qhead').setAttribute('aria-expanded',open)});
+  document.querySelector('#openAll').onclick=()=>setAll(true);document.querySelector('#closeAll').onclick=()=>setAll(false);
+  document.querySelector('#search').addEventListener('input',e=>{const s=e.target.value.trim().toLowerCase();let n=0;document.querySelectorAll('.qa').forEach(q=>{const show=!s||q.dataset.text.includes(s);q.hidden=!show;if(show)n++});document.querySelector('#count').textContent=`目前顯示 ${n} / ${data.length} 題`;document.querySelector('#empty').style.display=n?'none':'block'});
+  </script>
+</body>
+</html>
